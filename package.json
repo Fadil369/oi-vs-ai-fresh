@@ -1,0 +1,24 @@
+{
+  "name": "oi-vs-ai-book",
+  "version": "1.0.0",
+  "description": "OI vs AI - Original Intelligence and the Rise of the Machine Mind",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "build": "echo 'No build required for static site'",
+    "deploy": "echo 'Deploy to Cloudflare Pages via Git'"
+  },
+  "keywords": [
+    "OI",
+    "AI",
+    "Original Intelligence",
+    "Artificial Intelligence",
+    "Book",
+    "Dr. Fadil"
+  ],
+  "author": "Dr. Mohamed El Fadil",
+  "license": "All Rights Reserved",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

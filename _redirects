@@ -1,0 +1,13 @@
+# Redirects for Cloudflare Pages
+
+# Redirect home to index
+/home /index.html 301
+
+# Book access (will be handled by JavaScript)
+/book /oi-vs-ai-complete-unified-book.html 200
+
+# API endpoints (for future payment integration)
+/api/* https://your-payment-api.com/api/:splat 200
+
+# 404 page
+/* /index.html 404

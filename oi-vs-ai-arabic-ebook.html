@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الذكاء الأصلي مقابل الذكاء الاصطناعي - د. محمد الفاضل</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500;600;700;800&display=swap');
+        
+        @page {
+            size: A4;
+            margin: 2.5cm;
+            @bottom-center {
+                content: counter(page, arabic-indic);
+                font-family: 'Cairo', sans-serif;
+                font-size: 10pt;
+                color: #666;
+            }
+        }
+        
+        @media print {
+            .page-break {
+                page-break-after: always;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Amiri', serif;
+            font-size: 14pt;
+            line-height: 2;
+            color: #2c3e50;
+            background: #fff;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            direction: rtl;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            color: #1a202c;
+        }
+        
+        h1 {
+            font-size: 32pt;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 1em;
+        }
+        
+        h2 {
+            font-size: 24pt;
+            margin-top: 3em;
+            padding-bottom: 0.5em;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        h3 {
+            font-size: 18pt;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        h4 {
+            font-size: 16pt;
+            color: #34495e;
+        }
+        
+        p {
+            text-align: justify;
+            margin-bottom: 1.5em;
+            text-indent: 2em;
+        }
+        
+        p:first-of-type {
+            text-indent: 0;
+        }
+        
+        .cover-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: -20px;
+            padding: 40px;
+        }
+        
+        .cover-page h1 {
+            font-size: 48pt;
+            margin-bottom: 0.3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 800;
+        }
+        
+        .cover-page .subtitle {
+            font-size: 20pt;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 400;
+            margin-bottom: 3em;
+            line-height: 1.6;
+        }
+        
+        .cover-page .author {
+            font-size: 28pt;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+        }
+        
+        .cover-page .credentials {
+            font-size: 14pt;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        
+        .cover-page .brainsait {
+            margin-top: 4em;
+            font-size: 16pt;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .toc {
+            margin-top: 4em;
+        }
+        
+        .toc h2 {
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 1em;
+            margin-bottom: 2em;
+        }
+        
+        .toc-item {
+            margin-bottom: 1em;
+            font-family: 'Cairo', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 12pt;
+        }
+        
+        .toc-item .title {
+            flex: 1;
+            padding-left: 1em;
+        }
+        
+        .toc-item .dots {
+            flex: 0 0 auto;
+            color: #999;
+            letter-spacing: 3px;
+            direction: ltr;
+        }
+        
+        .toc-item .page {
+            flex: 0 0 auto;
+            padding-right: 1em;
+            font-weight: 600;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .part-divider {
+            text-align: center;
+            margin: 4em 0;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .part-divider h2 {
+            font-size: 28pt;
+            color: #3498db;
+            border: none;
+            margin-bottom: 0.5em;
+            font-weight: 800;
+        }
+        
+        .part-divider .part-title {
+            font-size: 20pt;
+            font-weight: 500;
+            color: #666;
+        }
+        
+        .chapter {
+            margin-top: 4em;
+        }
+        
+        .chapter-header {
+            text-align: center;
+            margin-bottom: 3em;
+        }
+        
+        .chapter-number {
+            font-family: 'Cairo', sans-serif;
+            font-size: 16pt;
+            color: #3498db;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+        
+        .chapter-title {
+            font-size: 32pt;
+            margin-bottom: 0.5em;
+        }
+        
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 2em 4em;
+            color: #666;
+            font-size: 16pt;
+            position: relative;
+            font-family: 'Amiri', serif;
+        }
+        
+        .quote::before {
+            content: '"';
+            font-size: 48pt;
+            position: absolute;
+            right: -30px;
+            top: -20px;
+            color: #ddd;
+        }
+        
+        blockquote {
+            margin: 2em 2em;
+            padding-right: 1em;
+            border-right: 4px solid #3498db;
+            font-style: italic;
+            color: #555;
+        }
+        
+        ul, ol {
+            margin-right: 2em;
+            margin-bottom: 1.5em;
+            margin-left: 0;
+        }
+        
+        li {
+            margin-bottom: 0.5em;
+            line-height: 2;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2em 0;
+            font-family: 'Cairo', sans-serif;
+            font-size: 12pt;
+        }
+        
+        th, td {
+            padding: 0.8em;
+            text-align: right;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background: #f8f9fa;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .summary-box {
+            background: #f0f7ff;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 1.5em;
+            margin: 2em 0;
+        }
+        
+        .summary-box h4 {
+            color: #3498db;
+            margin-top: 0;
+            margin-bottom: 1em;
+            font-weight: 700;
+        }
+        
+        .about-author {
+            background: #f8f9fa;
+            padding: 3em;
+            margin-top: 4em;
+            border-top: 3px solid #3498db;
+        }
+        
+        .about-author h2 {
+            border: none;
+            text-align: center;
+        }
+        
+        .contact-links {
+            margin-top: 2em;
+            text-align: center;
+        }
+        
+        .contact-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 0.5em;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+        
+        strong {
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 4em;
+            padding-top: 2em;
+            border-top: 1px solid #ddd;
+            font-family: 'Cairo', sans-serif;
+            font-size: 12pt;
+            color: #666;
+        }
+        
+        /* Special Arabic typography adjustments */
+        .arabic-ornament {
+            font-size: 24pt;
+            color: #3498db;
+            text-align: center;
+            margin: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- صفحة الغلاف -->
+    <div class="cover-page page-break">
+        <h1>الذكاء الأصلي مقابل الذكاء الاصطناعي</h1>
+        <div class="subtitle">الذكاء الأصيل وصعود العقل الآلي</div>
+        
+        <div class="author">د. محمد الفاضل</div>
+        <div class="credentials">
+            طبيب | باحث في علم الأعصاب والذكاء الاصطناعي<br>
+            رائد أعمال في مجال التكنولوجيا الصحية
+        </div>
+        
+        <div class="brainsait">برينسايت BrainSAIT</div>
+    </div>
+    
+    <!-- جدول المحتويات -->
+    <div class="toc page-break">
+        <h2>جدول المحتويات</h2>
+        
+        <div class="toc-item">
+            <span class="page">٧</span>
+            <span class="dots">.......................</span>
+            <span class="title"><strong>الجزء الأول: نشأة الذكاء</strong></span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٩</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الأول: ما هو الذكاء الأصيل؟</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">١٥</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الثاني: جذور الذكاء الاصطناعي</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٢١</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الثالث: الوعي والتعقيد</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٢٧</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الرابع: OI و AI — تأثير المرآة</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٣٣</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الخامس: العاطفة، الأخلاق، والنوايا</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٣٩</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل السادس: الإبداع والفضول</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٤٥</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل السابع: البنية البيولوجية للذكاء الأصلي</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٥١</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الثامن: البنية الرقمية للذكاء الاصطناعي</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٥٧</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل التاسع: اللغة، الرموز، والمعنى</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٦٣</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل العاشر: الإرادة الحرة والاستقلالية</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٦٩</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الحادي عشر: المخاطر، التحكم، والعواقب</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٧٥</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الثاني عشر: المستقبل الذي نختاره</span>
+        </div>
+        
+        <div class="toc-item" style="margin-top: 2em;">
+            <span class="page">٨١</span>
+            <span class="dots">.......................</span>
+            <span class="title"><strong>الجزء الثاني: التحليل المقارن</strong></span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٨٣</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الثالث عشر: العقل والفهم</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٨٩</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الرابع عشر: الذاكرة والاستدعاء</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">٩٥</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الخامس عشر: اللغة والمعنى</span>
+        </div>
+        
+        <div class="toc-item" style="margin-top: 2em;">
+            <span class="page">١٠١</span>
+            <span class="dots">.......................</span>
+            <span class="title"><strong>الجزء السادس: السياق، الاحتمال والتنبؤات</strong></span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">١٠٣</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل السادس عشر: بناء السياق — بين الإنسان والآلة</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">١٠٩</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل السابع عشر: الاحتمال وطبيعة الإيمان</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">١١٥</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل الثامن عشر: الذات المستقبلية والأنظمة القادمة</span>
+        </div>
+        
+        <div class="toc-item" style="margin-top: 2em;">
+            <span class="page">١٢١</span>
+            <span class="dots">.......................</span>
+            <span class="title"><strong>الجزء السابع: أفق الذكاء</strong></span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">١٢٣</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل التاسع عشر: تلاقي العقول</span>
+        </div>
+        
+        <div class="toc-item">
+            <span class="page">١٢٩</span>
+            <span class="dots">.......................</span>
+            <span class="title">الفصل العشرون: ماذا بعد؟</span>
+        </div>
+        
+        <div class="toc-item" style="margin-top: 2em;">
+            <span class="page">١٣٥</span>
+            <span class="dots">.......................</span>
+            <span class="title">نبذة عن المؤلف</span>
+        </div>
+    </div>
+    
+    <!-- الجزء الأول -->
+    <div class="part-divider page-break">
+        <h2>الجزء الأول</h2>
+        <div class="part-title">نشأة الذكاء</div>
+        <div class="arabic-ornament">❦</div>
+    </div>
+    
+    <!-- الفصل الأول -->
+    <div class="chapter page-break">
+        <div class="chapter-header">
+            <div class="chapter-number">الفصل الأول</div>
+            <h1 class="chapter-title">ما هو الذكاء الأصيل؟</h1>
+        </div>
+        
+        <div class="quote">
+            "العقل ليس وعاءً نملؤه، بل نارًا نشعلها." — بلوتارخ
+        </div>
+        
+        <h3>مقدمة</h3>
+        <p>قبل أن تبدأ الآلات في التفكير، كان البشر يبدعون، يتعلمون، ويتكيفون مع البيئة من حولهم. الذكاء الأصلي (OI) هو الذكاء الحيوي والعاطفي العميق الذي شكّل بقاءنا وتطورنا كنوع بشري.</p>
+        
+        <p>لكن ما هو OI تحديدًا؟ وكيف يختلف عن الذكاء الاصطناعي (AI)؟ ولماذا أصبحت معرفته ضرورة ملحة في زمن التقنية؟</p>
+        
+        <h3>ما هو الذكاء الأصيل؟</h3>
+        <p>الذكاء الأصيل ليس مجرد "تفكير بشري"، بل هو الذكاء الطبيعي الذي يولد معنا، ويتشكل عبر ملايين السنين من التطور. يشمل:</p>
+        
+        <ul>
+            <li><strong>الوعي الذاتي</strong></li>
+            <li><strong>العاطفة والتعاطف</strong></li>
+            <li><strong>المرونة والحدس</strong></li>
+            <li><strong>الخيال والسرد القصصي</strong></li>
+            <li><strong>التعلم من التجربة والفشل</strong></li>
+        </ul>
+        
+        <p>الذكاء الأصيل ينمو في السياق—الثقافي، التاريخي، الشخصي والعاطفي.</p>
+        
+        <h3>OI في حياتنا اليومية</h3>
+        <p>حين ينصت طبيب لمريضه، أو تشعر أمّ بأن طفلها يعاني، أو يتخذ قائد قرارًا شجاعًا في وقت غامض—كل هذه أمثلة حيّة على الذكاء الأصلي.</p>
+        
+        <p>يتعلم OI من خلال:</p>
+        <ul>
+            <li>الإحساس (اللمس، السمع، الرائحة)</li>
+            <li>التجارب العاطفية العميقة</li>
+            <li>السياق والمعنى والتأمل</li>
+        </ul>
+        
+        <p>هو فوضوي أحيانًا، غير خطي، وغير عقلاني—لكن قوته تكمن في العمق وليس فقط السرعة.</p>
+        
+        <h3>أصول الذكاء الأصيل</h3>
+        <p>من الرسوم على جدران الكهوف إلى اختراع اللغة، طوّر الإنسان قدرته على الخيال والتجريد والتواصل—وهي لبنات OI.</p>
+        
+        <p>بعكس الذكاء الاصطناعي الذي يُدرّب على قواعد بيانات، فإن OI يتشكل عبر:</p>
+        <ul>
+            <li>التجارب الحياتية</li>
+            <li>الذاكرة الوراثية</li>
+            <li>البصمة العاطفية</li>
+            <li>تطور الثقافة</li>
+        </ul>
+        
+        <p>لا يمكن تحميله—بل يجب أن يُعاش.</p>
+        
+        <h3>لماذا ما زال OI مهمًا؟</h3>
+        <p>في عالم تسيطر عليه الخوارزميات والأتمتة، يظل الذكاء الأصلي هو بوصلة الأخلاق، وشرارة الإبداع، والقدرة على التعاطف والرعاية. لا يمكن نسخه، بل يجب أن يُزرع وينمو.</p>
+        
+        <p>كلما تطورنا في بناء AI، علينا أن نُقدّر ونفهم أولاً حكمة OI.</p>
+    </div>
+    
+    <!-- ستستمر بقية الفصول بنفس التنسيق -->
+    
+    <!-- نبذة عن المؤلف -->
+    <div class="about-author page-break">
+        <h2>نبذة عن المؤلف</h2>
+        
+        <h3>الدكتور محمد الفاضل</h3>
+        <p><em>طبيب | باحث في علم الأعصاب والذكاء الاصطناعي | رائد أعمال في مجال التكنولوجيا الصحية<br>
+        مؤسس برينسايت BrainSAIT – "حيث يلتقي الذكاء الأصلي بالابتكار"</em></p>
+        
+        <p>الدكتور محمد الفاضل هو طبيب ذو رؤية فكرية يجمع بين فهمه العميق للعقل البشري وشغفه بتقنيات الذكاء الاصطناعي. بخبرة طبية تتجاوز عشر سنوات، وانغماسٍ مستمر في أبحاث الدماغ والذكاء، كرّس مسيرته لفهم كيف يمكن للذكاء الأصلي (OI) أن يتعايش ويتكامل بل ويتطور جنبًا إلى جنب مع الذكاء الاصطناعي (AI).</p>
+        
+        <p>بصفته مؤسس شركة برينسايت (BrainSAIT)، يقود د. الفاضل ثورة في مجال الرعاية الصحية من خلال الأتمتة الذكية، والأنظمة الأخلاقية للذكاء الاصطناعي، وتصميم الحلول المستقبلية. عمله يجمع بين الطب، وعلم الأعصاب، والتكنولوجيا—ليُمكّن الأفراد والمؤسسات من الانتقال من الأفكار إلى الإنجاز.</p>
+        
+        <p>هذا الكتاب <em>الذكاء الأصلي مقابل الذكاء الاصطناعي</em> ليس مجرد دليل في عالم الذكاء المعاصر، بل هو أيضًا انعكاس لرحلته الذاتية كمفكر ومبتكر ومتعلّم مدى الحياة.</p>
+        
+        <div class="contact-links">
+            <h4>تواصل مع الدكتور الفاضل:</h4>
+            <p>
+                <a href="https://gp.thefadil.site">🌐 الملف العام</a> |
+                <a href="https://thefadil.site">🧠 الملف الذكي</a> |
+                <a href="https://linkedin.com/in/fadil369">🔗 لينكدإن</a> |
+                <a href="https://x.com/brainsait369">💬 منصة X</a> |
+                <a href="https://github.com/fadil369">🧑‍💻 جيت هب</a> |
+                <a href="https://gravatar.com/fadil369">👤 غرافاتار</a>
+            </p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; ٢٠٢٥ د. محمد الفاضل. جميع الحقوق محفوظة.<br>
+        برينسايت - حيث يلتقي الذكاء الأصلي بالابتكار</p>
+    </div>
+</body>
+</html>
