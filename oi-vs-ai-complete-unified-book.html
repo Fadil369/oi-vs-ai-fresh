@@ -774,32 +774,394 @@
             line-height: 1.8;
         }
         
-        /* Responsive Design Fixes */
+        /* Enhanced Mobile Responsiveness for Book */
         @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+                font-size: 1rem;
+                line-height: 1.6;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            html {
+                font-size: 16px;
+            }
+            
+            /* Book Cover Mobile */
+            .book-cover {
+                padding: 3rem 1.5rem;
+                margin-bottom: 2rem;
+                border-radius: 20px;
+            }
+            
+            .book-title {
+                font-size: clamp(2rem, 8vw, 3rem);
+                line-height: 1.1;
+                margin-bottom: 1rem;
+            }
+            
+            .book-subtitle {
+                font-size: clamp(1rem, 4vw, 1.4rem);
+                margin-bottom: 1.5rem;
+            }
+            
+            .book-author {
+                font-size: clamp(1rem, 3vw, 1.2rem);
+            }
+            
+            /* TOC Mobile */
+            .toc {
+                padding: 2rem 1.5rem;
+                margin: 2rem 0;
+                border-radius: 16px;
+            }
+            
+            .toc h2 {
+                font-size: clamp(1.8rem, 6vw, 2.2rem);
+                margin-bottom: 2rem;
+            }
+            
+            .toc-item {
+                padding: 0.8rem 0;
+                font-size: 0.9rem;
+            }
+            
+            .toc-item .dots {
+                display: none;
+            }
+            
+            .toc-item .page {
+                margin-left: auto;
+            }
+            
+            /* Chapter Headers Mobile */
+            .chapter-header {
+                padding: 2rem 1rem;
+                margin-bottom: 2rem;
+                border-radius: 16px;
+            }
+            
+            .chapter-number {
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .chapter-title {
+                font-size: clamp(1.5rem, 6vw, 2.2rem);
+                line-height: 1.2;
+            }
+            
+            /* Part Dividers Mobile */
+            .part-divider {
+                padding: 2.5rem 1.5rem;
+                margin: 3rem 0;
+                border-radius: 20px;
+            }
+            
+            .part-divider h2 {
+                font-size: clamp(1.2rem, 4vw, 1.6rem);
+                margin-bottom: 0.8rem;
+            }
+            
+            .part-title {
+                font-size: clamp(2rem, 7vw, 2.8rem);
+            }
+            
+            /* Typography Mobile */
+            h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+            h2 { font-size: clamp(1.6rem, 5vw, 2rem); }
+            h3 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
+            h4 { font-size: clamp(1.2rem, 3.5vw, 1.5rem); }
+            
+            p {
+                margin-bottom: 1.5rem;
+                text-align: left;
+                hyphens: auto;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* Quote Mobile */
+            .quote {
+                font-size: clamp(1rem, 3vw, 1.3rem);
+                margin: 2rem 0;
+                padding: 1.5rem;
+                border-radius: 12px;
+                text-align: center;
+            }
+            
+            /* Lists Mobile */
+            ul, ol {
+                margin: 1.5rem 0;
+                padding-left: 1.5rem;
+            }
+            
+            li {
+                margin-bottom: 0.8rem;
+                line-height: 1.6;
+            }
+            
+            /* Concept Flow Mobile */
             .concept-flow {
                 flex-direction: column;
                 gap: 1rem;
+                align-items: stretch;
             }
             
             .concept-box {
                 min-width: 100%;
-                min-height: 100px;
+                min-height: 80px;
                 padding: 1rem;
                 font-size: 0.8rem;
+                text-align: center;
             }
             
+            .arrow {
+                font-size: 1rem;
+                transform: rotate(90deg);
+                align-self: center;
+                margin: 0.5rem 0;
+            }
+            
+            /* Diagrams Mobile */
+            .diagram {
+                margin: 2rem 0;
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+            
+            .diagram h4 {
+                font-size: clamp(1.2rem, 4vw, 1.5rem);
+                margin-bottom: 1.5rem;
+            }
+            
+            /* Stat Grid Mobile */
             .stat-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                grid-template-columns: 1fr;
                 gap: 1rem;
+                margin: 1.5rem 0;
             }
             
             .stat-item {
-                min-height: 120px;
+                min-height: 100px;
                 padding: 1rem;
+                border-radius: 12px;
             }
             
             .stat-number {
-                font-size: clamp(1rem, 4vw, 1.5rem);
+                font-size: clamp(1.2rem, 5vw, 1.6rem);
+            }
+            
+            .stat-label {
+                font-size: 0.9rem;
+            }
+            
+            .stat-description {
+                font-size: 0.8rem;
+            }
+            
+            /* Infographics Mobile */
+            .infographic {
+                padding: 1.5rem;
+                margin: 2rem 0;
+                border-radius: 16px;
+            }
+            
+            /* Summary Boxes Mobile */
+            .summary-box {
+                padding: 1.5rem;
+                margin: 2rem 0;
+                border-radius: 16px;
+            }
+            
+            .summary-box h4 {
+                font-size: clamp(1.2rem, 4vw, 1.4rem);
+                margin-bottom: 1rem;
+            }
+            
+            /* Highlight Boxes Mobile */
+            .highlight-box {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+                border-radius: 12px;
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .highlight-box .icon {
+                font-size: 1.5rem;
+            }
+            
+            /* Tables Mobile */
+            table {
+                font-size: 0.9rem;
+                border-radius: 12px;
+            }
+            
+            th, td {
+                padding: 1rem 0.8rem;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            th {
+                font-size: 0.8rem;
+            }
+            
+            /* Blockquotes Mobile */
+            blockquote {
+                margin: 2rem 1rem;
+                padding: 1.5rem;
+                font-size: 1rem;
+                border-radius: 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 0.8rem;
+                font-size: 0.95rem;
+            }
+            
+            html {
+                font-size: 15px;
+            }
+            
+            /* Ultra Mobile Optimizations */
+            .book-cover {
+                padding: 2rem 1rem;
+                margin-bottom: 1.5rem;
+                border-radius: 16px;
+            }
+            
+            .book-title {
+                font-size: clamp(1.6rem, 9vw, 2.4rem);
+                margin-bottom: 0.8rem;
+            }
+            
+            .book-subtitle {
+                font-size: clamp(0.9rem, 4vw, 1.2rem);
+                margin-bottom: 1rem;
+            }
+            
+            .book-author {
+                font-size: clamp(0.9rem, 3vw, 1rem);
+            }
+            
+            .toc {
+                padding: 1.5rem 1rem;
+                margin: 1.5rem 0;
+                border-radius: 12px;
+            }
+            
+            .toc h2 {
+                font-size: clamp(1.5rem, 7vw, 1.9rem);
+                margin-bottom: 1.5rem;
+            }
+            
+            .toc-item {
+                padding: 0.6rem 0;
+                font-size: 0.85rem;
+            }
+            
+            .chapter-header {
+                padding: 1.5rem 0.8rem;
+                margin-bottom: 1.5rem;
+                border-radius: 12px;
+            }
+            
+            .chapter-number {
+                font-size: 0.8rem;
+                margin-bottom: 0.6rem;
+            }
+            
+            .chapter-title {
+                font-size: clamp(1.3rem, 7vw, 1.8rem);
+                line-height: 1.15;
+            }
+            
+            .part-divider {
+                padding: 2rem 1rem;
+                margin: 2rem 0;
+                border-radius: 16px;
+            }
+            
+            .part-divider h2 {
+                font-size: clamp(1rem, 4vw, 1.3rem);
+                margin-bottom: 0.6rem;
+            }
+            
+            .part-title {
+                font-size: clamp(1.6rem, 8vw, 2.2rem);
+            }
+            
+            h1 { font-size: clamp(1.5rem, 7vw, 2rem); }
+            h2 { font-size: clamp(1.4rem, 6vw, 1.8rem); }
+            h3 { font-size: clamp(1.2rem, 5vw, 1.6rem); }
+            h4 { font-size: clamp(1.1rem, 4vw, 1.4rem); }
+            
+            p {
+                margin-bottom: 1.2rem;
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .quote {
+                font-size: clamp(0.9rem, 4vw, 1.1rem);
+                margin: 1.5rem 0;
+                padding: 1.2rem;
+                border-radius: 10px;
+            }
+            
+            ul, ol {
+                margin: 1.2rem 0;
+                padding-left: 1.2rem;
+            }
+            
+            li {
+                margin-bottom: 0.6rem;
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .concept-box {
+                min-height: 70px;
+                padding: 0.8rem;
+                font-size: 0.7rem;
+                border-radius: 10px;
+            }
+            
+            .arrow {
+                font-size: 0.9rem;
+                margin: 0.3rem 0;
+            }
+            
+            .diagram {
+                margin: 1.5rem 0;
+                padding: 1.2rem;
+                border-radius: 12px;
+            }
+            
+            .diagram h4 {
+                font-size: clamp(1rem, 5vw, 1.3rem);
+                margin-bottom: 1rem;
+            }
+            
+            .stat-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+                margin: 1.2rem 0;
+            }
+            
+            .stat-item {
+                min-height: 90px;
+                padding: 0.8rem;
+                border-radius: 10px;
+            }
+            
+            .stat-number {
+                font-size: clamp(1rem, 6vw, 1.4rem);
             }
             
             .stat-label {
@@ -810,27 +1172,107 @@
                 font-size: 0.7rem;
             }
             
-            .arrow {
-                font-size: 1.2rem;
-                transform: rotate(90deg);
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .concept-box {
-                min-height: 80px;
-                padding: 0.8rem;
-                font-size: 0.75rem;
+            .infographic {
+                padding: 1.2rem;
+                margin: 1.5rem 0;
+                border-radius: 12px;
             }
             
-            .stat-grid {
-                grid-template-columns: 1fr;
+            .summary-box {
+                padding: 1.2rem;
+                margin: 1.5rem 0;
+                border-radius: 12px;
+            }
+            
+            .summary-box h4 {
+                font-size: clamp(1rem, 5vw, 1.2rem);
+                margin-bottom: 0.8rem;
+            }
+            
+            .highlight-box {
+                padding: 1.2rem;
+                margin: 1.2rem 0;
+                border-radius: 10px;
                 gap: 0.8rem;
             }
             
-            .stat-item {
-                min-height: 100px;
-                padding: 0.8rem;
+            .highlight-box .icon {
+                font-size: 1.2rem;
+            }
+            
+            table {
+                font-size: 0.8rem;
+                border-radius: 10px;
+                margin: 1.5rem 0;
+            }
+            
+            th, td {
+                padding: 0.8rem 0.6rem;
+                font-size: 0.8rem;
+            }
+            
+            th {
+                font-size: 0.7rem;
+            }
+            
+            blockquote {
+                margin: 1.5rem 0.5rem;
+                padding: 1.2rem;
+                font-size: 0.9rem;
+                border-radius: 10px;
+            }
+            
+            /* About Author Mobile */
+            .about-author {
+                padding: 2rem 1.2rem;
+                margin-top: 3rem;
+                border-radius: 16px;
+            }
+            
+            .about-author h2 {
+                font-size: clamp(1.5rem, 6vw, 1.8rem);
+                margin-bottom: 1.5rem;
+            }
+            
+            .about-author h3 {
+                font-size: clamp(1.2rem, 5vw, 1.5rem);
+            }
+            
+            .contact-links {
+                padding: 1.5rem;
+                border-radius: 12px;
+            }
+            
+            .contact-links a {
+                margin: 0.3rem 0.5rem;
+                padding: 0.6rem 1rem;
+                border-radius: 20px;
+                font-size: 0.8rem;
+            }
+            
+            .footer {
+                padding: 2rem 1rem;
+                margin-top: 3rem;
+                border-radius: 16px;
+                font-size: 0.8rem;
+            }
+            
+            /* Prevent horizontal overflow */
+            body, html {
+                overflow-x: hidden;
+                max-width: 100vw;
+            }
+            
+            * {
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                box-sizing: border-box;
+            }
+            
+            /* Improve touch interactions */
+            .chapter, .toc-item, .summary-box, .highlight-box {
+                touch-action: manipulation;
             }
         }
         
