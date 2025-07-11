@@ -250,6 +250,7 @@
             border: 2px solid rgba(255,255,255,0.4);
             border-radius: 50px;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             background: rgba(255,255,255,0.1);
         }
         
@@ -267,6 +268,7 @@
             padding: 3rem 0;
             background: var(--glass-primary);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 24px;
             border: 1px solid var(--glass-accent);
             box-shadow: var(--shadow-glass);
@@ -342,6 +344,7 @@
             padding: 4rem 2rem;
             background: var(--glass-primary);
             backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
             border-radius: 32px;
             border: 1px solid var(--glass-accent);
             box-shadow: var(--shadow-glass);
@@ -394,6 +397,7 @@
             padding: 3rem 2rem;
             background: var(--glass-primary);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 24px;
             border: 1px solid var(--glass-accent);
             box-shadow: var(--shadow-glass);
@@ -466,6 +470,7 @@
         .diagram {
             background: var(--glass-primary);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 20px;
             padding: 2.5rem;
             margin: 3rem 0;
@@ -506,16 +511,25 @@
         .concept-box {
             background: var(--glass-secondary);
             backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             border-radius: 16px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: var(--shadow-glass);
-            min-width: 160px;
+            min-width: 180px;
+            min-height: 120px;
             text-align: center;
             font-family: 'Inter', sans-serif;
-            font-size: 1rem;
+            font-size: 0.9rem;
             border: 1px solid var(--glass-accent);
             border-top: 4px solid var(--glow-primary);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            word-wrap: break-word;
+            line-height: 1.4;
         }
         
         .concept-box:hover {
@@ -547,6 +561,7 @@
         .infographic {
             background: var(--glass-primary);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--glass-accent);
             border-radius: 20px;
             padding: 2.5rem;
@@ -556,20 +571,28 @@
         
         .stat-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
             margin: 2rem 0;
         }
         
         .stat-item {
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             background: var(--glass-secondary);
             backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             border-radius: 16px;
             box-shadow: var(--shadow-glass);
             border: 1px solid var(--glass-accent);
             transition: all 0.3s ease;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            word-wrap: break-word;
         }
         
         .stat-item:hover {
@@ -579,7 +602,7 @@
         }
         
         .stat-number {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
             font-weight: 800;
             background: var(--gradient-glow);
             -webkit-background-clip: text;
@@ -588,27 +611,34 @@
             font-family: 'Inter', sans-serif;
             margin-bottom: 0.5rem;
             filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .stat-label {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--sepia-light);
             font-family: 'Inter', sans-serif;
             margin-bottom: 0.5rem;
             font-weight: 600;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .stat-description {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--sepia-dark);
             font-family: 'Inter', sans-serif;
             line-height: 1.4;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         /* Enhanced Content Boxes */
         .summary-box {
             background: var(--glass-primary);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 2px solid var(--glow-primary);
             border-radius: 20px;
             padding: 2.5rem;
@@ -664,6 +694,7 @@
             font-size: 1rem;
             background: var(--glass-primary);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow-glass);
@@ -734,6 +765,7 @@
             border-left: 4px solid var(--glow-primary);
             background: var(--glass-primary);
             backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             font-style: italic;
             color: var(--sepia-light);
             border-radius: 0 16px 16px 0;
@@ -742,10 +774,71 @@
             line-height: 1.8;
         }
         
+        /* Responsive Design Fixes */
+        @media (max-width: 768px) {
+            .concept-flow {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .concept-box {
+                min-width: 100%;
+                min-height: 100px;
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+            
+            .stat-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                min-height: 120px;
+                padding: 1rem;
+            }
+            
+            .stat-number {
+                font-size: clamp(1rem, 4vw, 1.5rem);
+            }
+            
+            .stat-label {
+                font-size: 0.8rem;
+            }
+            
+            .stat-description {
+                font-size: 0.7rem;
+            }
+            
+            .arrow {
+                font-size: 1.2rem;
+                transform: rotate(90deg);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .concept-box {
+                min-height: 80px;
+                padding: 0.8rem;
+                font-size: 0.75rem;
+            }
+            
+            .stat-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            
+            .stat-item {
+                min-height: 100px;
+                padding: 0.8rem;
+            }
+        }
+        
         /* Enhanced About Author */
         .about-author {
             background: var(--glass-primary);
             backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
             padding: 4rem;
             margin-top: 5rem;
             border-top: 4px solid var(--glow-primary);
@@ -777,6 +870,7 @@
             padding: 2rem;
             background: var(--glass-secondary);
             backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             border-radius: 16px;
             box-shadow: var(--shadow-glass);
         }
@@ -798,6 +892,7 @@
             background: var(--glass-primary);
             border: 1px solid var(--glass-accent);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
         
         .contact-links a:hover {
@@ -818,6 +913,7 @@
             color: var(--sepia-dark);
             background: var(--glass-primary);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 16px;
             box-shadow: var(--shadow-glass);
         }
