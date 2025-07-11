@@ -1,0 +1,154 @@
+{
+  "book": {
+    "title": "OI vs AI: Original Intelligence and the Rise of the Machine Mind",
+    "subtitle": "A groundbreaking exploration of what makes us human in the age of artificial intelligence",
+    "description": "Discover the fascinating intersection between human Original Intelligence and Artificial Intelligence, exploring consciousness, creativity, and the future of human-machine collaboration.",
+    "icon": "🧠",
+    "filename": "oi-vs-ai-complete-unified-book.html"
+  },
+  "author": {
+    "name": "Dr. Mohamed El Fadil",
+    "firstName": "Dr. Fadil",
+    "title": "Physician | Neuroscience & AI Researcher | Healthcare & Technology Entrepreneur",
+    "credentials": "Founder of BrainSAIT – \"Where Original Intelligence Meets Innovation\"",
+    "avatar": "👨‍⚕️",
+    "bio": "Dr. Mohamed El Fadil is a visionary physician whose passion bridges the realms of human cognition and artificial intelligence. With over a decade of clinical experience and a deep fascination with the brain's complexity, he has dedicated his career to understanding how Original Intelligence (OI) can coexist, collaborate, and even converge with Artificial Intelligence (AI).",
+    "description": "As the founder of BrainSAIT, Dr. Fadil leads a movement to transform healthcare through hyper-automation, ethical AI systems, and intelligent design. His work integrates medicine, neuroscience, and technology—empowering individuals and institutions to move from ideas to impact.",
+    "links": [
+      {"text": "🌐 General Profile", "url": "https://gp.thefadil.site"},
+      {"text": "🧠 The Intelligent Profile", "url": "https://thefadil.site"},
+      {"text": "🔗 LinkedIn", "url": "https://linkedin.com/in/fadil369"},
+      {"text": "💬 X (Twitter)", "url": "https://x.com/brainsait369"},
+      {"text": "🧑‍💻 GitHub", "url": "https://github.com/fadil369"},
+      {"text": "👤 Gravatar", "url": "https://gravatar.com/fadil369"}
+    ]
+  },
+  "branding": {
+    "companyName": "BrainSAIT - Where Original Intelligence Meets Innovation",
+    "brandName": "OI vs AI",
+    "colors": {
+      "primary": "#00d4ff",
+      "secondary": "#7c3aed", 
+      "accent": "#fbbf24"
+    }
+  },
+  "pricing": {
+    "originalPrice": "420 SAR",
+    "currentPrice": "340 SAR",
+    "currency": "SAR",
+    "amount": "340",
+    "savings": "Save 80 SAR!",
+    "note": "Limited time offer - Web access only"
+  },
+  "meta": {
+    "description": "Discover the groundbreaking book exploring the convergence of Original Intelligence and Artificial Intelligence. Limited time offer: 340 SAR (Original: 420 SAR)",
+    "keywords": "OI vs AI, Original Intelligence, Artificial Intelligence, Dr. Fadil, BrainSAIT, consciousness, machine learning",
+    "ogDescription": "A revolutionary exploration of human and artificial intelligence. Limited offer: Save 80 SAR!",
+    "url": "https://oi.thefadil.site",
+    "faviconEmoji": "🧠"
+  },
+  "content": {
+    "hero": {
+      "title": "Discover the Future of Intelligence",
+      "subtitle": "A groundbreaking exploration of what makes us human in the age of artificial intelligence",
+      "ctaText": "Get Instant Access",
+      "disclaimer": "Perfect for healthcare professionals, technology enthusiasts, business leaders, and anyone curious about the future of human-machine collaboration"
+    },
+    "features": {
+      "title": "What You'll Discover",
+      "subtitle": "Through 20 meticulously crafted chapters, discover how Original Intelligence (OI) differs from Artificial Intelligence (AI) and why both matter for our future",
+      "cards": [
+        {
+          "icon": "🌱",
+          "title": "A Journey Through Two Minds",
+          "description": "In \"OI vs AI,\" Dr. Mohamed El Fadil takes readers on an extraordinary journey through the landscape of intelligence. From the biological foundations of human cognition to the algorithmic precision of artificial minds, discover what makes each type of intelligence unique and powerful."
+        },
+        {
+          "icon": "🔍", 
+          "title": "20 Compelling Chapters",
+          "description": "Through 20 meticulously crafted chapters, discover how Original Intelligence (OI) differs from Artificial Intelligence (AI), why consciousness matters, how creativity emerges, and what the future holds for human-machine collaboration."
+        },
+        {
+          "icon": "🎯",
+          "title": "For Everyone",
+          "description": "Perfect for healthcare professionals, technology enthusiasts, business leaders, and anyone curious about the future of human-machine collaboration. Written in accessible language that bridges technical depth with human insight."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Why This Book Matters",
+      "subtitle": "Gain insights that will transform how you think about intelligence, technology, and the future of human potential",
+      "list": [
+        {
+          "icon": "🧠",
+          "title": "Understand Your Own Mind",
+          "description": "Discover what makes human intelligence unique and irreplaceable in an age of artificial minds"
+        },
+        {
+          "icon": "🤖",
+          "title": "Navigate AI Confidently", 
+          "description": "Learn how AI really works and how to collaborate with artificial intelligence effectively"
+        },
+        {
+          "icon": "🔮",
+          "title": "Prepare for the Future",
+          "description": "Gain insights into emerging technologies and their impact on society, work, and human relationships"
+        },
+        {
+          "icon": "⚖️",
+          "title": "Make Ethical Decisions",
+          "description": "Understand the ethical implications of AI and how to ensure technology serves humanity"
+        },
+        {
+          "icon": "💡",
+          "title": "Enhance Your Creativity",
+          "description": "Learn how human creativity differs from AI generation and how to amplify your unique capabilities"
+        },
+        {
+          "icon": "🌍",
+          "title": "Shape Tomorrow",
+          "description": "Become part of the conversation about how intelligence will evolve and what role humans will play"
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Get Your Copy Today",
+      "subtitle": "Join thousands of readers exploring the future of intelligence",
+      "features": [
+        "Complete 20-chapter digital book",
+        "Elegant glass-morphism design optimized for web reading",
+        "Instant access after payment",
+        "Mobile-responsive reading experience",
+        "Secure web-only access (no downloads)",
+        "Lifetime access to your purchase"
+      ],
+      "buttonText": "Get Instant Access - 340 SAR",
+      "methods": [
+        {"name": "Credit Card", "icon": "💳"},
+        {"name": "PayPal", "icon": "💰"},
+        {"name": "Apple Pay", "icon": "🍎"},
+        {"name": "Google Pay", "icon": "🅖"}
+      ],
+      "disclaimer": "Secure payment processing. Instant digital delivery. 30-day satisfaction guarantee."
+    }
+  },
+  "publication": {
+    "date": "2025",
+    "pages": "100+",
+    "publisher": "BrainSAIT Publications",
+    "year": "2025"
+  },
+  "messages": {
+    "successMessage": "✅ Payment successful! Welcome to the future of intelligence. Redirecting to your book...",
+    "paymentDisclaimer": "Secure payment processing • Instant access • No recurring charges",
+    "footerDisclaimer": "This book represents the author's research and perspectives on intelligence and AI."
+  },
+  "footer": {
+    "links": [
+      {"text": "Privacy Policy", "url": "#privacy"},
+      {"text": "Terms of Service", "url": "#terms"},
+      {"text": "Contact", "url": "#contact"},
+      {"text": "About BrainSAIT", "url": "https://brainsait.com"}
+    ]
+  }
+}

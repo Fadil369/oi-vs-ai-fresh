@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{BOOK_TITLE}} - Complete Edition</title>
+    
+    <!-- Access Control Script -->
+    <script src="book-access.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+        
+        :root {
+            /* Elegant Black Theme with Glassy Accents */
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-black: #2a2a2a;
+            --glass-primary: rgba(255, 255, 255, 0.08);
+            --glass-secondary: rgba(255, 255, 255, 0.04);
+            --glass-accent: rgba(255, 255, 255, 0.12);
+            --sepia-white: #f5f3f0;
+            --sepia-light: #e8e4df;
+            --sepia-dark: #d4cfc7;
+            --glow-primary: {{PRIMARY_COLOR}};
+            --glow-secondary: {{SECONDARY_COLOR}};
+            --glow-accent: {{ACCENT_COLOR}};
+            --gradient-glow: linear-gradient(135deg, var(--glow-primary), var(--glow-secondary));
+            --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.2);
+            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        @page {
+            size: A4;
+            margin: 2.5cm;
+            background: var(--primary-black);
+            color: var(--sepia-white);
+            @bottom-center {
+                content: counter(page);
+                font-family: 'Inter', sans-serif;
+                font-size: 11pt;
+                color: var(--sepia-dark);
+            }
+        }
+        
+        @media print {
+            body { display: none !important; }
+            .no-print { display: none !important; }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        ::selection {
+            background: transparent !important;
+        }
+        
+        ::-moz-selection {
+            background: transparent !important;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 18px;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--sepia-white);
+            background: var(--primary-black);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.03) 0%, transparent 50%);
+            z-index: -1;
+            animation: backgroundFloat 20s ease-in-out infinite;
+        }
+        
+        @keyframes backgroundFloat {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+        
+        /* Book Cover */
+        .book-cover {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: var(--glass-primary);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-radius: 30px;
+            margin-bottom: 4rem;
+            box-shadow: var(--shadow-glass);
+            border: 1px solid var(--glass-accent);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .book-cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-glow);
+        }
+        
+        .book-cover .icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5));
+        }
+        
+        .book-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .book-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: var(--sepia-light);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        
+        .book-author {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: var(--glow-primary);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .book-description {
+            font-size: 1.1rem;
+            color: var(--sepia-dark);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        
+        .publication-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: var(--sepia-dark);
+        }
+        
+        /* Table of Contents */
+        .toc {
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+            box-shadow: var(--shadow-glass);
+            border: 1px solid var(--glass-accent);
+        }
+        
+        .toc h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .toc-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--glass-accent);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-item:hover {
+            background: var(--glass-secondary);
+            padding-left: 1rem;
+            border-radius: 8px;
+        }
+        
+        .toc-item.part-divider {
+            background: var(--glass-accent);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 12px;
+            margin: 2rem 0 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--glow-primary);
+        }
+        
+        .toc-item .title {
+            flex: 1;
+            font-weight: 500;
+        }
+        
+        .toc-item .dots {
+            flex-grow: 1;
+            border-bottom: 2px dotted var(--sepia-dark);
+            margin: 0 1rem;
+            height: 1px;
+        }
+        
+        .toc-item .page {
+            font-weight: 600;
+            color: var(--glow-primary);
+            min-width: 3rem;
+            text-align: right;
+        }
+        
+        /* Chapter Styling */
+        .chapter {
+            margin-bottom: 6rem;
+            page-break-before: always;
+        }
+        
+        .chapter-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 0;
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid var(--glass-accent);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chapter-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-glow);
+        }
+        
+        .chapter-number {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--glow-primary);
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .chapter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+            margin-bottom: 0;
+            filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+        }
+        
+        /* Part Dividers */
+        .part-divider {
+            text-align: center;
+            margin: 5rem 0;
+            padding: 4rem 2rem;
+            background: var(--glass-primary);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-radius: 25px;
+            border: 2px solid var(--glow-primary);
+            box-shadow: var(--shadow-glow);
+            position: relative;
+            overflow: hidden;
+            page-break-before: always;
+        }
+        
+        .part-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-glow);
+        }
+        
+        .part-divider h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 900;
+            color: var(--glow-primary);
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .part-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            margin: 2.5rem 0 1.5rem;
+            color: var(--sepia-white);
+            line-height: 1.4;
+        }
+        
+        h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
+        h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--glow-primary); }
+        h4 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: var(--glow-secondary); }
+        
+        p {
+            margin-bottom: 2rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+        
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            color: var(--glow-accent);
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--glass-secondary);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            border-left: 4px solid var(--glow-accent);
+            box-shadow: var(--shadow-glass);
+            position: relative;
+        }
+        
+        .quote::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--glow-accent);
+            position: absolute;
+            top: -1rem;
+            left: 1rem;
+            opacity: 0.3;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin: 2rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        li strong {
+            color: var(--glow-primary);
+        }
+        
+        /* Concept Flow Diagrams */
+        .diagram {
+            margin: 3rem 0;
+            padding: 2.5rem;
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid var(--glass-accent);
+            box-shadow: var(--shadow-glass);
+        }
+        
+        .diagram h4 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--sepia-white);
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+        }
+        
+        .concept-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .concept-box {
+            background: var(--glass-secondary);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-glass);
+            min-width: 180px;
+            min-height: 120px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            border: 1px solid var(--glass-accent);
+            border-top: 4px solid var(--glow-primary);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            word-wrap: break-word;
+            line-height: 1.4;
+        }
+        
+        .concept-box:hover {
+            transform: translateY(-8px);
+            border-top-color: var(--glow-accent);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .concept-box.oi {
+            border-top-color: #e74c3c;
+        }
+        
+        .concept-box.ai {
+            border-top-color: var(--glow-primary);
+        }
+        
+        .concept-box.hybrid {
+            border-top-color: var(--glow-secondary);
+        }
+        
+        .arrow {
+            font-size: 1.8rem;
+            color: var(--glow-primary);
+            font-weight: bold;
+            filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.5));
+        }
+        
+        /* Enhanced Data Visualization */
+        .infographic {
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-accent);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-glass);
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--glass-secondary);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            box-shadow: var(--shadow-glass);
+            border: 1px solid var(--glass-accent);
+            transition: all 0.3s ease;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--glow-primary);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .stat-number {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 800;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 0.5rem;
+            filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--sepia-light);
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .stat-description {
+            font-size: 0.8rem;
+            color: var(--sepia-dark);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.4;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        /* Enhanced Content Boxes */
+        .summary-box {
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 2px solid var(--glow-primary);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-glow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .summary-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-glow);
+        }
+        
+        .summary-box h4 {
+            color: var(--glow-primary);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+            font-weight: 700;
+        }
+        
+        .highlight-box {
+            background: var(--glass-primary);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 2px solid var(--glow-accent);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            box-shadow: 0 5px 20px rgba(251, 191, 36, 0.2);
+        }
+        
+        .highlight-box .icon {
+            font-size: 1.8rem;
+            color: var(--glow-accent);
+            filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
+        }
+        
+        /* Enhanced Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-glass);
+            border: 1px solid var(--glass-accent);
+        }
+        
+        th, td {
+            padding: 1.5rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--glass-accent);
+        }
+        
+        th {
+            background: var(--gradient-glow);
+            color: var(--primary-black);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        td {
+            background: var(--glass-secondary);
+            transition: all 0.3s ease;
+            color: var(--sepia-light);
+        }
+        
+        tr:hover td {
+            background: var(--glass-accent);
+            color: var(--sepia-white);
+        }
+        
+        tr:nth-child(even) td {
+            background: var(--glass-primary);
+        }
+        
+        /* Enhanced Blockquotes */
+        blockquote {
+            margin: 3rem 2rem;
+            padding: 2rem;
+            border-left: 4px solid var(--glow-primary);
+            background: var(--glass-primary);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            font-style: italic;
+            color: var(--sepia-light);
+            border-radius: 0 16px 16px 0;
+            box-shadow: var(--shadow-glass);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Responsive Design Fixes */
+        @media (max-width: 768px) {
+            .concept-flow {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .concept-box {
+                min-width: 100%;
+                min-height: 100px;
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+            
+            .stat-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                min-height: 120px;
+                padding: 1rem;
+            }
+            
+            .stat-number {
+                font-size: clamp(1rem, 4vw, 1.5rem);
+            }
+            
+            .stat-label {
+                font-size: 0.8rem;
+            }
+            
+            .stat-description {
+                font-size: 0.7rem;
+            }
+            
+            .arrow {
+                font-size: 1.2rem;
+                transform: rotate(90deg);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .concept-box {
+                min-height: 80px;
+                padding: 0.8rem;
+                font-size: 0.75rem;
+            }
+            
+            .stat-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            
+            .stat-item {
+                min-height: 100px;
+                padding: 0.8rem;
+            }
+        }
+        
+        /* Enhanced About Author */
+        .about-author {
+            background: var(--glass-primary);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            padding: 4rem;
+            margin-top: 5rem;
+            border-top: 4px solid var(--glow-primary);
+            border-radius: 24px;
+            box-shadow: var(--shadow-glass);
+            border: 1px solid var(--glass-accent);
+        }
+        
+        .about-author h2 {
+            border: none;
+            text-align: center;
+            color: var(--sepia-white);
+            margin-bottom: 2rem;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .about-author h3 {
+            color: var(--glow-primary);
+            margin-top: 0;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        .contact-links {
+            margin-top: 3rem;
+            text-align: center;
+            padding: 2rem;
+            background: var(--glass-secondary);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            border: 1px solid var(--glass-accent);
+        }
+        
+        .contact-links h4 {
+            color: var(--glow-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-links a {
+            display: inline-block;
+            margin: 0.5rem 1rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--glass-accent);
+            color: var(--sepia-white);
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid var(--glow-primary);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .contact-links a:hover {
+            background: var(--glow-primary);
+            color: var(--primary-black);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 5rem;
+            padding: 3rem;
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid var(--glass-accent);
+            color: var(--sepia-dark);
+            font-size: 0.9rem;
+        }
+        
+        /* Page Break Utility */
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+<body>
+    <!-- Book Cover -->
+    <div class="book-cover">
+        <div class="icon">{{BOOK_ICON}}</div>
+        <h1 class="book-title">{{BOOK_TITLE}}</h1>
+        <p class="book-subtitle">{{BOOK_SUBTITLE}}</p>
+        <p class="book-author">{{AUTHOR_NAME}}</p>
+        <p class="book-description">{{BOOK_DESCRIPTION}}</p>
+        <div class="publication-info">
+            <div>📅 {{PUBLICATION_DATE}}</div>
+            <div>📖 {{PAGE_COUNT}} Pages</div>
+            <div>🏢 {{PUBLISHER}}</div>
+        </div>
+    </div>
+    
+    <!-- Table of Contents -->
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        {{TABLE_OF_CONTENTS}}
+    </div>
+    
+    <!-- Book Content -->
+    {{BOOK_CONTENT}}
+    
+    <!-- About the Author -->
+    <div class="about-author page-break">
+        <h2>About the Author</h2>
+        
+        <h3>{{AUTHOR_NAME}}</h3>
+        <p><em>{{AUTHOR_TITLE}}</em></p>
+        
+        {{AUTHOR_BIO}}
+        
+        <div class="contact-links">
+            <h4>Connect with {{AUTHOR_FIRST_NAME}}:</h4>
+            <p>
+                {{AUTHOR_LINKS}}
+            </p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; {{YEAR}} {{AUTHOR_NAME}}. All rights reserved.<br>
+        {{COMPANY_NAME}}<br>
+        <strong>Complete Unified Edition</strong></p>
+        
+        <div style="margin-top: 1rem; padding: 1rem; background: var(--glass-primary); border-radius: 10px; font-size: 0.9rem;">
+            <i class="fas fa-shield-alt"></i> 
+            Licensed Copy - Web Access Only • No Download • No Print
+        </div>
+    </div>
+    
+    <script>
+        // Page load protection
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add subtle animations
+            const elements = document.querySelectorAll('.chapter, .part-divider, .toc');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    el.style.transition = 'all 0.8s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+        
+        // Smooth scrolling enhancement
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

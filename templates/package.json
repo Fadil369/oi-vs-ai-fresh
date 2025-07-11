@@ -1,0 +1,39 @@
+{
+  "name": "elegant-book-template",
+  "version": "1.0.0",
+  "description": "Professional template system for creating beautiful digital books with landing pages",
+  "main": "generate-book.js",
+  "bin": {
+    "generate-book": "./generate-book.js"
+  },
+  "scripts": {
+    "generate": "node generate-book.js",
+    "generate:interactive": "node generate-book.js",
+    "generate:config": "node generate-book.js --config",
+    "start": "node generate-book.js",
+    "help": "node generate-book.js --help"
+  },
+  "keywords": [
+    "book",
+    "template", 
+    "digital-publishing",
+    "ebook",
+    "landing-page",
+    "glass-morphism",
+    "responsive",
+    "payment-integration"
+  ],
+  "author": "Dr. Mohamed El Fadil",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fadil369/elegant-book-template"
+  },
+  "bugs": {
+    "url": "https://github.com/fadil369/elegant-book-template/issues"
+  },
+  "homepage": "https://github.com/fadil369/elegant-book-template#readme"
+}
