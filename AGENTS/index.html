@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="arabic">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>الذكاء الأصلي مقابل الذكاء الاصطناعي | Original Intelligence vs Artificial Intelligence</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي من د. محمد الفاضل، مؤسس BrainSAIT. كتاب ثنائي اللغة متاح حصريًا عبر الإنترنت.">
+    <meta name="keywords" content="الذكاء الأصلي، الذكاء الاصطناعي، د. محمد الفاضل، BrainSAIT، كتاب إلكتروني، ثنائي اللغة">
+    <meta name="author" content="Dr. Mohammed Al-Fadil">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oi.thefadil.site/">
+    <meta property="og:title" content="الذكاء الأصلي مقابل الذكاء الاصطناعي">
+    <meta property="og:description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي">
+    <meta property="og:image" content="https://oi.thefadil.site/assets/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://oi.thefadil.site/">
+    <meta property="twitter:title" content="الذكاء الأصلي مقابل الذكاء الاصطناعي">
+    <meta property="twitter:description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي">
+    <meta property="twitter:image" content="https://oi.thefadil.site/assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="canonical" href="https://oi.thefadil.site">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stripe Payment -->
+    <script src="https://js.stripe.com/v3/"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* Professional Dark Theme */
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-black: #2a2a2a;
+            --glass-primary: rgba(255, 255, 255, 0.1);
+            --glass-secondary: rgba(255, 255, 255, 0.05);
+            --glass-accent: rgba(255, 255, 255, 0.15);
+            --sepia-white: #f5f3f0;
+            --sepia-light: #e8e4df;
+            --sepia-dark: #d4cfc7;
+            --glow-primary: #00d4ff;
+            --glow-secondary: #7c3aed;
+            --glow-accent: #fbbf24;
+            --gradient-glow: linear-gradient(135deg, var(--glow-primary), var(--glow-secondary));
+            --gradient-glass: linear-gradient(135deg, var(--glass-primary), var(--glass-secondary));
+            --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.3);
+            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Success and Error Colors */
+            --success-color: #27ae60;
+            --error-color: #e74c3c;
+            --warning-color: #f39c12;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: clamp(14px, 2.5vw, 18px);
+        }
+        
+        body {
+            font-family: 'Amiri', serif;
+            background: var(--primary-black);
+            color: var(--sepia-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+            transition: var(--transition-smooth);
+        }
+        
+        /* English Language Override */
+        body.english {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+        }
+        
+        body.arabic .english-text { display: none; }
+        body.english .arabic-text { display: none; }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--sepia-white);
+        }
+        
+        body.english h1, body.english h2, body.english h3, 
+        body.english h4, body.english h5, body.english h6 {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Header Navigation */
+        .header-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-accent);
+            padding: 1rem 2rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+        
+        .brand-logo:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .brand-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .brand-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--sepia-white);
+        }
+        
+        .nav-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .language-toggle {
+            background: var(--glass-primary);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--glass-accent);
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.9rem;
+        }
+        
+        .language-toggle:hover {
+            background: var(--glass-accent);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle, var(--glow-primary) 0%, transparent 70%);
+            opacity: 0.1;
+            animation: pulse 15s infinite alternate;
+            z-index: -1;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1) rotate(0deg); opacity: 0.05; }
+            50% { transform: scale(1.1) rotate(180deg); opacity: 0.1; }
+            100% { transform: scale(1) rotate(360deg); opacity: 0.05; }
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-content {
+            text-align: right;
+        }
+        
+        .hero-content.english {
+            text-align: left;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            margin-bottom: 2rem;
+            color: var(--sepia-light);
+            font-weight: 400;
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: var(--sepia-dark);
+            line-height: 1.8;
+        }
+        
+        .pricing-container {
+            background: var(--glass-primary);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--glass-accent);
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-title {
+            font-size: 1.3rem;
+            color: var(--glow-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-offer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .original-price {
+            font-size: 1.1rem;
+            text-decoration: line-through;
+            color: var(--sepia-dark);
+        }
+        
+        .current-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--glow-primary);
+        }
+        
+        .currency-toggle {
+            background: var(--glass-secondary);
+            border-radius: 10px;
+            padding: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .currency-btn {
+            padding: 0.3rem 0.8rem;
+            border: none;
+            background: transparent;
+            color: var(--sepia-light);
+            cursor: pointer;
+            border-radius: 6px;
+            transition: var(--transition-smooth);
+            font-family: inherit;
+        }
+        
+        .currency-btn.active {
+            background: var(--glow-primary);
+            color: var(--primary-black);
+        }
+        
+        .savings-badge {
+            background: var(--gradient-glow);
+            color: var(--primary-black);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 1rem auto;
+            display: table;
+        }
+        
+        .cta-button {
+            width: 100%;
+            padding: 1.2rem 2rem;
+            border-radius: 50px;
+            background: var(--gradient-glow);
+            color: var(--primary-black);
+            font-weight: 700;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+        }
+        
+        .cta-button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .hero-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .author-image-container {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .author-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid var(--glow-primary);
+            box-shadow: var(--shadow-glow);
+            transition: var(--transition-smooth);
+        }
+        
+        .author-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.4);
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .brainsait-logo {
+            width: 200px;
+            height: 80px;
+            opacity: 0.8;
+            transition: var(--transition-smooth);
+        }
+        
+        .brainsait-logo:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        .brainsait-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 5rem 2rem;
+            background: var(--glass-secondary);
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--sepia-white);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--glass-primary);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--glass-accent);
+            transition: var(--transition-smooth);
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-glass);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--glow-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--sepia-white);
+        }
+        
+        .feature-description {
+            color: var(--sepia-light);
+            line-height: 1.6;
+        }
+        
+        /* About Author Section */
+        .author-section {
+            padding: 5rem 2rem;
+            background: var(--primary-black);
+        }
+        
+        .author-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .author-bio {
+            background: var(--glass-primary);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid var(--glass-accent);
+        }
+        
+        .author-name {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--glow-primary);
+        }
+        
+        .author-title {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--sepia-light);
+        }
+        
+        .author-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--sepia-white);
+            margin-bottom: 2rem;
+        }
+        
+        /* Payment Modal */
+        .payment-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .payment-modal.active {
+            display: flex;
+        }
+        
+        .payment-content {
+            background: var(--secondary-black);
+            border-radius: 20px;
+            padding: 3rem;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid var(--glass-accent);
+            position: relative;
+        }
+        
+        .payment-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--sepia-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        
+        .payment-close:hover {
+            color: var(--glow-primary);
+        }
+        
+        .payment-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--sepia-white);
+        }
+        
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .payment-method {
+            background: var(--glass-primary);
+            border: 1px solid var(--glass-accent);
+            border-radius: 10px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .payment-method:hover,
+        .payment-method.selected {
+            background: var(--glass-accent);
+            border-color: var(--glow-primary);
+        }
+        
+        .payment-icon {
+            font-size: 1.5rem;
+            color: var(--glow-primary);
+        }
+        
+        .payment-info {
+            flex: 1;
+        }
+        
+        .payment-name {
+            font-weight: 600;
+            color: var(--sepia-white);
+        }
+        
+        .payment-description {
+            font-size: 0.9rem;
+            color: var(--sepia-light);
+        }
+        
+        /* Success/Error Messages */
+        .message {
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            display: none;
+        }
+        
+        .message.success {
+            background: rgba(39, 174, 96, 0.2);
+            border: 1px solid var(--success-color);
+            color: var(--success-color);
+        }
+        
+        .message.error {
+            background: rgba(231, 76, 60, 0.2);
+            border: 1px solid var(--error-color);
+            color: var(--error-color);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--secondary-black);
+            padding: 3rem 2rem 1rem;
+            border-top: 1px solid var(--glass-accent);
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--sepia-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .footer-links a:hover {
+            color: var(--glow-primary);
+        }
+        
+        .copyright {
+            color: var(--sepia-dark);
+            font-size: 0.9rem;
+        }
+        
+        .brand {
+            color: var(--glow-primary);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-nav {
+                padding: 0.8rem 1rem;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .hero-content {
+                text-align: center;
+            }
+            
+            .author-image {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .pricing-container {
+                padding: 1.5rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-content {
+                padding: 2rem;
+                margin: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .author-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .brainsait-logo {
+                width: 150px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body class="arabic">
+    <!-- Header Navigation -->
+    <header class="header-nav">
+        <div class="nav-container">
+            <div class="brand-container">
+                <div class="brand-logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjI1IiBjeT0iNTAiIHI9IjIwIiBzdHJva2U9IiM3YzNhZWQiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPgo8Y2lyY2xlIGN4PSI3NSIgY3k9IjUwIiByPSIyMCIgc3Ryb2tlPSIjMDBkNGZmIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiLz4KPHN2ZyB4PSIxNSIgeT0iNDAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjQiIGN5PSI0IiByPSIyIiBmaWxsPSIjN2MzYWVkIi8+CjxjaXJjbGUgY3g9IjE2IiBjeT0iNCIgcj0iMiIgZmlsbD0iIzdjM2FlZCIvPgo8Y2lyY2xlIGN4PSI0IiBjeT0iMTYiIHI9IjIiIGZpbGw9IiM3YzNhZWQiLz4KPGF0aWNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMiIgZmlsbD0iIzdjM2FlZCIvPgo8L3N2Zz4KPHN2ZyB4PSI2NSIgeT0iNDAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxwYXRoIGQ9Ik0yIDJMMTggMTgiIHN0cm9rZT0iIzAwZDRmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yIDE4TDE4IDIiIHN0cm9rZT0iIzAwZDRmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjMiIGZpbGw9IiMwMGQ0ZmYiLz4KPC9zdmc+Cjwvc3ZnPg==" alt="BrainSAIT Logo">
+                </div>
+                <div class="brand-title">
+                    <span class="arabic-text">BrainSAIT</span>
+                    <span class="english-text">BrainSAIT</span>
+                </div>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="language-toggle" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span class="arabic-text">English</span>
+                    <span class="english-text">العربية</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="arabic-text">الذكاء الأصلي مقابل الذكاء الاصطناعي</span>
+                    <span class="english-text">Original Intelligence vs Artificial Intelligence</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    <span class="arabic-text">استكشاف رائد للعلاقة بين العقل البشري والعقل الآلي</span>
+                    <span class="english-text">A pioneering exploration of the relationship between human and machine intelligence</span>
+                </p>
+                
+                <p class="hero-description">
+                    <span class="arabic-text">في عصر تهيمن عليه التقنيات الذكية، يأخذنا د. محمد الفاضل في رحلة عميقة لفهم الفرق بين الذكاء الأصلي والذكاء الاصطناعي. كتاب ثنائي اللغة يجمع بين العلم والفلسفة والتكنولوجيا.</span>
+                    <span class="english-text">In an era dominated by intelligent technologies, Dr. Mohammed Al-Fadil takes us on a deep journey to understand the difference between Original Intelligence and Artificial Intelligence. A bilingual book that combines science, philosophy, and technology.</span>
+                </p>
+                
+                <div class="pricing-container">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">
+                            <span class="arabic-text">عرض خاص - وقت محدود</span>
+                            <span class="english-text">Special Offer - Limited Time</span>
+                        </h3>
+                        
+                        <div class="currency-toggle">
+                            <button class="currency-btn active" data-currency="SAR">SAR</button>
+                            <button class="currency-btn" data-currency="USD">USD</button>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-offer">
+                        <span class="original-price">
+                            <span class="sar-price">230 ر.س</span>
+                            <span class="usd-price" style="display: none;">$61</span>
+                        </span>
+                        <span class="current-price">
+                            <span class="sar-price">130 ر.س</span>
+                            <span class="usd-price" style="display: none;">$35</span>
+                        </span>
+                    </div>
+                    
+                    <div class="savings-badge">
+                        <span class="arabic-text">وفر 100 ر.س (43%)</span>
+                        <span class="english-text">Save $26 (43%)</span>
+                    </div>
+                    
+                    <button class="cta-button" onclick="openPaymentModal()">
+                        <i class="fas fa-book-open"></i>
+                        <span class="arabic-text">احصل على الكتاب الآن</span>
+                        <span class="english-text">Get the Book Now</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="author-image-container">
+                    <div class="author-image">
+                        <img src="/Users/fadil369/AGENTS/me-iOS-Dark-1024x1024@2x.png" alt="Dr. Mohammed Al-Fadil" id="author-photo">
+                    </div>
+                </div>
+                
+                <div class="brainsait-logo">
+                    <img src="/Users/fadil369/AGENTS/brainsait-macOS-Dark-1024x1024@2x.png" alt="BrainSAIT Logo" id="brainsait-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-container">
+            <h2 class="section-title">
+                <span class="arabic-text">مميزات الكتاب</span>
+                <span class="english-text">Book Features</span>
+            </h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="feature-title">
+                        <span class="arabic-text">ثنائي اللغة</span>
+                        <span class="english-text">Bilingual</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="arabic-text">متوفر باللغتين العربية والإنجليزية مع إمكانية التبديل الفوري بين اللغات</span>
+                        <span class="english-text">Available in both Arabic and English with instant language switching</span>
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">
+                        <span class="arabic-text">محمي ومؤمن</span>
+                        <span class="english-text">Secure & Protected</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="arabic-text">وصول حصري عبر الويب فقط، بدون إمكانية التحميل أو الطباعة</span>
+                        <span class="english-text">Exclusive web-only access, no download or print capabilities</span>
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">
+                        <span class="arabic-text">متوافق مع الجوال</span>
+                        <span class="english-text">Mobile Optimized</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="arabic-text">تجربة قراءة مثالية على جميع الأجهزة الذكية والتابلت</span>
+                        <span class="english-text">Perfect reading experience on all smartphones and tablets</span>
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <h3 class="feature-title">
+                        <span class="arabic-text">حفظ الموضع</span>
+                        <span class="english-text">Progress Tracking</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="arabic-text">يحفظ موضع القراءة تلقائياً ويمكنك متابعة من حيث توقفت</span>
+                        <span class="english-text">Automatically saves reading position so you can continue where you left off</span>
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title">
+                        <span class="arabic-text">محتوى تفاعلي</span>
+                        <span class="english-text">Interactive Content</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="arabic-text">مفاهيم تفاعلية ومخططات بصرية وأسئلة تأملية</span>
+                        <span class="english-text">Interactive concepts, visual diagrams, and reflective questions</span>
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">
+                        <span class="arabic-text">وصول مدى الحياة</span>
+                        <span class="english-text">Lifetime Access</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="arabic-text">اشترِ مرة واحدة واحصل على وصول دائم للكتاب والتحديثات</span>
+                        <span class="english-text">Buy once and get permanent access to the book and updates</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Author Section -->
+    <section class="author-section">
+        <div class="author-container">
+            <h2 class="section-title">
+                <span class="arabic-text">عن المؤلف</span>
+                <span class="english-text">About the Author</span>
+            </h2>
+            
+            <div class="author-bio">
+                <h3 class="author-name">
+                    <span class="arabic-text">د. محمد الفاضل</span>
+                    <span class="english-text">Dr. Mohammed Al-Fadil</span>
+                </h3>
+                
+                <p class="author-title">
+                    <span class="arabic-text">طبيب، رائد أعمال، ومؤسس BrainSAIT</span>
+                    <span class="english-text">Physician, Entrepreneur, and Founder of BrainSAIT</span>
+                </p>
+                
+                <p class="author-description">
+                    <span class="arabic-text">
+                        طبيب متخصص في الطب الباطني مع خبرة واسعة في مجال التكنولوجيا الطبية والذكاء الاصطناعي. 
+                        مؤسس منصة BrainSAIT الرائدة في مجال الحلول الذكية للرعاية الصحية. 
+                        له اهتمام عميق بدراسة العلاقة بين الذكاء البشري والذكاء الاصطناعي وتأثيرها على المستقبل.
+                        
+                        يجمع د. الفاضل بين الخبرة الطبية العملية والرؤية التقنية المستقبلية، مما يجعله في موقع فريد 
+                        لتقديم نظرة شاملة ومتوازنة حول تطور الذكاء في عصرنا الحديث.
+                    </span>
+                    <span class="english-text">
+                        A physician specializing in internal medicine with extensive experience in medical technology and artificial intelligence. 
+                        Founder of BrainSAIT, a leading platform for intelligent healthcare solutions. 
+                        He has a deep interest in studying the relationship between human intelligence and artificial intelligence and its impact on the future.
+                        
+                        Dr. Al-Fadil combines practical medical expertise with futuristic technical vision, positioning him uniquely 
+                        to provide a comprehensive and balanced perspective on the evolution of intelligence in our modern era.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div class="payment-modal" id="payment-modal">
+        <div class="payment-content">
+            <button class="payment-close" onclick="closePaymentModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h3 class="payment-title">
+                <span class="arabic-text">اختر طريقة الدفع</span>
+                <span class="english-text">Choose Payment Method</span>
+            </h3>
+            
+            <div class="payment-methods">
+                <div class="payment-method" data-method="credit_card" onclick="selectPaymentMethod('credit_card')">
+                    <div class="payment-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="payment-info">
+                        <div class="payment-name">
+                            <span class="arabic-text">بطاقة ائتمانية</span>
+                            <span class="english-text">Credit Card</span>
+                        </div>
+                        <div class="payment-description">
+                            <span class="arabic-text">Visa, MasterCard, Amex</span>
+                            <span class="english-text">Visa, MasterCard, Amex</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="payment-method" data-method="apple_pay" onclick="selectPaymentMethod('apple_pay')">
+                    <div class="payment-icon">
+                        <i class="fab fa-apple-pay"></i>
+                    </div>
+                    <div class="payment-info">
+                        <div class="payment-name">Apple Pay</div>
+                        <div class="payment-description">
+                            <span class="arabic-text">دفع سريع وآمن</span>
+                            <span class="english-text">Fast and secure payment</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="payment-method" data-method="paypal" onclick="selectPaymentMethod('paypal')">
+                    <div class="payment-icon">
+                        <i class="fab fa-paypal"></i>
+                    </div>
+                    <div class="payment-info">
+                        <div class="payment-name">PayPal</div>
+                        <div class="payment-description">
+                            <span class="arabic-text">دفع عبر PayPal</span>
+                            <span class="english-text">Pay with PayPal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message success" id="success-message">
+                <i class="fas fa-check-circle"></i>
+                <span class="arabic-text">تم الدفع بنجاح! سيتم توجيهك للكتاب...</span>
+                <span class="english-text">Payment successful! Redirecting to the book...</span>
+            </div>
+            
+            <div class="message error" id="error-message">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="error-text"></span>
+            </div>
+            
+            <button class="cta-button" id="process-payment-btn" onclick="processPayment()" disabled>
+                <i class="fas fa-lock"></i>
+                <span class="arabic-text">ادفع بأمان</span>
+                <span class="english-text">Pay Securely</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#" onclick="showPrivacyPolicy()">
+                    <span class="arabic-text">سياسة الخصوصية</span>
+                    <span class="english-text">Privacy Policy</span>
+                </a>
+                <a href="#" onclick="showTermsOfService()">
+                    <span class="arabic-text">شروط الاستخدام</span>
+                    <span class="english-text">Terms of Service</span>
+                </a>
+                <a href="https://brainsait.com/contact" target="_blank">
+                    <span class="arabic-text">اتصل بنا</span>
+                    <span class="english-text">Contact Us</span>
+                </a>
+                <a href="https://brainsait.com" target="_blank">
+                    <span class="arabic-text">عن BrainSAIT</span>
+                    <span class="english-text">About BrainSAIT</span>
+                </a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 <span class="brand">BrainSAIT</span>. 
+                <span class="arabic-text">جميع الحقوق محفوظة.</span>
+                <span class="english-text">All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global State
+        let currentLanguage = 'ar';
+        let currentCurrency = 'SAR';
+        let selectedPaymentMethod = null;
+        
+        const prices = {
+            SAR: { original: 230, current: 130 },
+            USD: { original: 61, current: 35 }
+        };
+        
+        // Language Toggle
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+            
+            if (currentLanguage === 'en') {
+                document.body.classList.remove('arabic');
+                document.body.classList.add('english');
+                document.documentElement.lang = 'en';
+                document.documentElement.dir = 'ltr';
+            } else {
+                document.body.classList.remove('english');
+                document.body.classList.add('arabic');
+                document.documentElement.lang = 'ar';
+                document.documentElement.dir = 'rtl';
+            }
+        }
+        
+        // Currency Toggle
+        function setupCurrencyToggle() {
+            document.querySelectorAll('.currency-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const currency = btn.dataset.currency;
+                    
+                    // Update active state
+                    document.querySelectorAll('.currency-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Update prices
+                    currentCurrency = currency;
+                    updatePrices();
+                });
+            });
+        }
+        
+        function updatePrices() {
+            const priceData = prices[currentCurrency];
+            
+            if (currentCurrency === 'SAR') {
+                document.querySelectorAll('.sar-price').forEach(el => el.style.display = 'inline');
+                document.querySelectorAll('.usd-price').forEach(el => el.style.display = 'none');
+            } else {
+                document.querySelectorAll('.sar-price').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.usd-price').forEach(el => el.style.display = 'inline');
+            }
+        }
+        
+        // Payment Modal
+        function openPaymentModal() {
+            document.getElementById('payment-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closePaymentModal() {
+            document.getElementById('payment-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            resetPaymentForm();
+        }
+        
+        function selectPaymentMethod(method) {
+            selectedPaymentMethod = method;
+            
+            // Update UI
+            document.querySelectorAll('.payment-method').forEach(el => {
+                el.classList.remove('selected');
+            });
+            document.querySelector(`[data-method="${method}"]`).classList.add('selected');
+            
+            // Enable payment button
+            document.getElementById('process-payment-btn').disabled = false;
+        }
+        
+        function processPayment() {
+            if (!selectedPaymentMethod) {
+                showError(currentLanguage === 'ar' ? 'الرجاء اختيار طريقة الدفع' : 'Please select a payment method');
+                return;
+            }
+            
+            const btn = document.getElementById('process-payment-btn');
+            btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${currentLanguage === 'ar' ? 'جاري المعالجة...' : 'Processing...'}`;
+            btn.disabled = true;
+            
+            // Simulate payment processing
+            setTimeout(() => {
+                // Generate access token
+                const accessToken = generateAccessToken({
+                    method: selectedPaymentMethod,
+                    transactionId: 'sim_' + Date.now(),
+                    amount: prices[currentCurrency].current,
+                    currency: currentCurrency,
+                    timestamp: Date.now(),
+                    language: currentLanguage
+                });
+                
+                // Store access token
+                sessionStorage.setItem('bookAccess', accessToken);
+                localStorage.setItem('bookAccessToken', accessToken);
+                
+                // Show success
+                showSuccess();
+                
+                // Redirect to book
+                setTimeout(() => {
+                    window.location.href = 'unified-bilingual-book.html';
+                }, 2000);
+            }, 2000);
+        }
+        
+        function generateAccessToken(paymentData) {
+            const tokenData = {
+                ...paymentData,
+                expiry: Date.now() + (30 * 24 * 60 * 60 * 1000) // 30 days
+            };
+            return btoa(JSON.stringify(tokenData));
+        }
+        
+        function showSuccess() {
+            document.getElementById('success-message').style.display = 'block';
+            document.getElementById('error-message').style.display = 'none';
+        }
+        
+        function showError(message) {
+            document.getElementById('error-text').textContent = message;
+            document.getElementById('error-message').style.display = 'block';
+            document.getElementById('success-message').style.display = 'none';
+        }
+        
+        function resetPaymentForm() {
+            selectedPaymentMethod = null;
+            document.querySelectorAll('.payment-method').forEach(el => el.classList.remove('selected'));
+            document.getElementById('process-payment-btn').disabled = true;
+            document.getElementById('process-payment-btn').innerHTML = `<i class="fas fa-lock"></i> ${currentLanguage === 'ar' ? 'ادفع بأمان' : 'Pay Securely'}`;
+            document.getElementById('success-message').style.display = 'none';
+            document.getElementById('error-message').style.display = 'none';
+        }
+        
+        // Placeholder functions
+        function showPrivacyPolicy() {
+            alert(currentLanguage === 'ar' ? 'سياسة الخصوصية قيد التطوير' : 'Privacy policy under development');
+        }
+        
+        function showTermsOfService() {
+            alert(currentLanguage === 'ar' ? 'شروط الاستخدام قيد التطوير' : 'Terms of service under development');
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            setupCurrencyToggle();
+            updatePrices();
+            
+            // Close modal on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closePaymentModal();
+                }
+            });
+            
+            // Close modal on backdrop click
+            document.getElementById('payment-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closePaymentModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

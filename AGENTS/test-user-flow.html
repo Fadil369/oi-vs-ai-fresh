@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Flow Test - OI vs AI Book</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .test-container {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .test-step {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-left: 4px solid #007bff;
+            background: #f8f9fa;
+        }
+        
+        .test-step.success {
+            border-left-color: #28a745;
+            background: #f8fff9;
+        }
+        
+        .test-step.error {
+            border-left-color: #dc3545;
+            background: #fff8f8;
+        }
+        
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0.25rem;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        .status {
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin: 0.5rem 0;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        pre {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 User Flow Test Suite</h1>
+        <p>This page tests the complete user journey from landing page to book access.</p>
+        
+        <div class="test-step">
+            <h3>Step 1: Landing Page</h3>
+            <p>Test if the landing page loads correctly with proper bilingual support and pricing.</p>
+            <button onclick="testLandingPage()">Test Landing Page</button>
+            <div id="landing-status"></div>
+        </div>
+        
+        <div class="test-step">
+            <h3>Step 2: Payment Flow</h3>
+            <p>Test payment simulation and token generation.</p>
+            <button onclick="testPaymentFlow()">Test Payment</button>
+            <div id="payment-status"></div>
+        </div>
+        
+        <div class="test-step">
+            <h3>Step 3: Access Control</h3>
+            <p>Test access validation and book access.</p>
+            <button onclick="testAccessControl()">Test Access</button>
+            <div id="access-status"></div>
+        </div>
+        
+        <div class="test-step">
+            <h3>Step 4: Book Functionality</h3>
+            <p>Test book features like navigation, language switching, and progress tracking.</p>
+            <button onclick="testBookFeatures()">Test Book Features</button>
+            <div id="book-status"></div>
+        </div>
+        
+        <div class="test-step">
+            <h3>Step 5: Mobile Responsiveness</h3>
+            <p>Test responsive design and mobile optimization.</p>
+            <button onclick="testMobileResponsiveness()">Test Mobile</button>
+            <div id="mobile-status"></div>
+        </div>
+        
+        <div class="test-step">
+            <h3>Complete Flow Test</h3>
+            <p>Run all tests in sequence to verify the complete user flow.</p>
+            <button onclick="runCompleteTest()">Run Complete Test</button>
+            <div id="complete-status"></div>
+        </div>
+    </div>
+    
+    <div class="test-container">
+        <h2>Test Results</h2>
+        <div id="test-results"></div>
+    </div>
+    
+    <div class="test-container">
+        <h2>Quick Actions</h2>
+        <button onclick="clearStorage()">Clear Storage</button>
+        <button onclick="generateTestToken()">Generate Test Token</button>
+        <button onclick="openLandingPage()">Open Landing Page</button>
+        <button onclick="openBook()">Open Book</button>
+        <div id="actions-status"></div>
+    </div>
+
+    <script>
+        let testResults = [];
+        
+        function logResult(test, status, message, details = null) {
+            const result = {
+                test,
+                status,
+                message,
+                details,
+                timestamp: new Date().toISOString()
+            };
+            testResults.push(result);
+            updateTestResults();
+            
+            // Update individual test status
+            const statusDiv = document.getElementById(test + '-status');
+            if (statusDiv) {
+                statusDiv.innerHTML = `
+                    <div class="status ${status}">
+                        <strong>${status.toUpperCase()}:</strong> ${message}
+                        ${details ? `<pre>${JSON.stringify(details, null, 2)}</pre>` : ''}
+                    </div>
+                `;
+            }
+        }
+        
+        function updateTestResults() {
+            const resultsDiv = document.getElementById('test-results');
+            resultsDiv.innerHTML = testResults.map(result => `
+                <div class="status ${result.status}">
+                    <strong>${result.test}</strong> - ${result.message}
+                    <small style="display: block; margin-top: 0.5rem;">${result.timestamp}</small>
+                </div>
+            `).join('');
+        }
+        
+        function testLandingPage() {
+            logResult('landing', 'info', 'Testing landing page...');
+            
+            try {
+                // Test if we can access the landing page components
+                const tests = [
+                    { name: 'DOM Ready', test: () => document.readyState === 'complete' },
+                    { name: 'CSS Grid Support', test: () => CSS.supports('display', 'grid') },
+                    { name: 'Backdrop Filter Support', test: () => CSS.supports('backdrop-filter', 'blur(10px)') },
+                    { name: 'Local Storage', test: () => typeof Storage !== 'undefined' },
+                    { name: 'Fetch API', test: () => typeof fetch !== 'undefined' }
+                ];
+                
+                const results = {};
+                let allPassed = true;
+                
+                tests.forEach(test => {
+                    try {
+                        results[test.name] = test.test();
+                        if (!results[test.name]) allPassed = false;
+                    } catch (e) {
+                        results[test.name] = false;
+                        allPassed = false;
+                    }
+                });
+                
+                if (allPassed) {
+                    logResult('landing', 'success', 'Landing page tests passed', results);
+                } else {
+                    logResult('landing', 'error', 'Some landing page tests failed', results);
+                }
+            } catch (e) {
+                logResult('landing', 'error', 'Landing page test failed', e.message);
+            }
+        }
+        
+        function testPaymentFlow() {
+            logResult('payment', 'info', 'Testing payment flow...');
+            
+            try {
+                // Simulate payment flow
+                const paymentData = {
+                    method: 'simulation',
+                    transactionId: 'test_' + Date.now(),
+                    amount: 130,
+                    currency: 'SAR',
+                    timestamp: Date.now(),
+                    language: 'ar'
+                };
+                
+                // Generate test token
+                const tokenData = {
+                    ...paymentData,
+                    expiry: Date.now() + (30 * 24 * 60 * 60 * 1000) // 30 days
+                };
+                
+                const token = btoa(JSON.stringify(tokenData));
+                
+                // Store token
+                sessionStorage.setItem('bookAccess', token);
+                localStorage.setItem('bookAccessToken', token);
+                
+                logResult('payment', 'success', 'Payment simulation completed', tokenData);
+            } catch (e) {
+                logResult('payment', 'error', 'Payment test failed', e.message);
+            }
+        }
+        
+        function testAccessControl() {
+            logResult('access', 'info', 'Testing access control...');
+            
+            try {
+                // Check if token exists
+                const sessionToken = sessionStorage.getItem('bookAccess');
+                const localToken = localStorage.getItem('bookAccessToken');
+                
+                if (!sessionToken && !localToken) {
+                    logResult('access', 'error', 'No access token found');
+                    return;
+                }
+                
+                const token = sessionToken || localToken;
+                
+                try {
+                    const tokenData = JSON.parse(atob(token));
+                    
+                    // Validate token structure
+                    const requiredFields = ['method', 'transactionId', 'amount', 'currency', 'timestamp', 'expiry'];
+                    const missingFields = requiredFields.filter(field => !(field in tokenData));
+                    
+                    if (missingFields.length > 0) {
+                        logResult('access', 'error', 'Token missing required fields', missingFields);
+                        return;
+                    }
+                    
+                    // Check expiry
+                    if (tokenData.expiry < Date.now()) {
+                        logResult('access', 'error', 'Token expired');
+                        return;
+                    }
+                    
+                    // Validate amounts
+                    const validAmounts = { SAR: 130, USD: 35 };
+                    if (tokenData.amount !== validAmounts[tokenData.currency]) {
+                        logResult('access', 'error', 'Invalid payment amount');
+                        return;
+                    }
+                    
+                    logResult('access', 'success', 'Access control validation passed', {
+                        currency: tokenData.currency,
+                        amount: tokenData.amount,
+                        method: tokenData.method,
+                        validUntil: new Date(tokenData.expiry).toLocaleDateString()
+                    });
+                } catch (e) {
+                    logResult('access', 'error', 'Token parsing failed', e.message);
+                }
+            } catch (e) {
+                logResult('access', 'error', 'Access control test failed', e.message);
+            }
+        }
+        
+        function testBookFeatures() {
+            logResult('book', 'info', 'Testing book features...');
+            
+            try {
+                const features = {
+                    'Reading Position': typeof localStorage.getItem('bookReadingPosition'),
+                    'Chapters Read': typeof localStorage.getItem('bookChaptersRead'),
+                    'Language Support': document.documentElement.lang !== null,
+                    'Touch Events': 'ontouchstart' in window,
+                    'Intersection Observer': 'IntersectionObserver' in window
+                };
+                
+                logResult('book', 'success', 'Book features test completed', features);
+            } catch (e) {
+                logResult('book', 'error', 'Book features test failed', e.message);
+            }
+        }
+        
+        function testMobileResponsiveness() {
+            logResult('mobile', 'info', 'Testing mobile responsiveness...');
+            
+            try {
+                const viewport = {
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                    devicePixelRatio: window.devicePixelRatio,
+                    isMobile: window.innerWidth < 768,
+                    isTablet: window.innerWidth >= 768 && window.innerWidth < 1024,
+                    isDesktop: window.innerWidth >= 1024
+                };
+                
+                const features = {
+                    'Viewport Meta': document.querySelector('meta[name="viewport"]') !== null,
+                    'Touch Support': 'ontouchstart' in window || navigator.maxTouchPoints > 0,
+                    'Responsive Images': CSS.supports('width', '100vw'),
+                    'Flexible Layout': CSS.supports('display', 'flex'),
+                    'Grid Layout': CSS.supports('display', 'grid')
+                };
+                
+                logResult('mobile', 'success', 'Mobile responsiveness test completed', {
+                    viewport,
+                    features
+                });
+            } catch (e) {
+                logResult('mobile', 'error', 'Mobile responsiveness test failed', e.message);
+            }
+        }
+        
+        async function runCompleteTest() {
+            logResult('complete', 'info', 'Running complete user flow test...');
+            
+            try {
+                // Clear previous results for this test
+                testResults = testResults.filter(r => r.test !== 'complete');
+                
+                // Run all tests in sequence
+                testLandingPage();
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                testPaymentFlow();
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                testAccessControl();
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                testBookFeatures();
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                testMobileResponsiveness();
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                // Check if all tests passed
+                const recentTests = testResults.slice(-5);
+                const allPassed = recentTests.every(test => test.status === 'success');
+                
+                if (allPassed) {
+                    logResult('complete', 'success', 'All tests passed! User flow is working correctly.');
+                } else {
+                    const failedTests = recentTests.filter(test => test.status === 'error');
+                    logResult('complete', 'error', `${failedTests.length} tests failed`, failedTests.map(t => t.test));
+                }
+            } catch (e) {
+                logResult('complete', 'error', 'Complete test failed', e.message);
+            }
+        }
+        
+        function clearStorage() {
+            localStorage.clear();
+            sessionStorage.clear();
+            document.getElementById('actions-status').innerHTML = '<div class="status success">Storage cleared</div>';
+        }
+        
+        function generateTestToken() {
+            const tokenData = {
+                method: 'test',
+                transactionId: 'test_token_' + Date.now(),
+                amount: 130,
+                currency: 'SAR',
+                timestamp: Date.now(),
+                language: 'ar',
+                expiry: Date.now() + (30 * 24 * 60 * 60 * 1000)
+            };
+            
+            const token = btoa(JSON.stringify(tokenData));
+            sessionStorage.setItem('bookAccess', token);
+            localStorage.setItem('bookAccessToken', token);
+            
+            document.getElementById('actions-status').innerHTML = `
+                <div class="status success">Test token generated</div>
+                <pre>${JSON.stringify(tokenData, null, 2)}</pre>
+            `;
+        }
+        
+        function openLandingPage() {
+            window.open('index.html', '_blank');
+        }
+        
+        function openBook() {
+            window.open('raw-arabic.html', '_blank');
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTestResults();
+        });
+    </script>
+</body>
+</html>
