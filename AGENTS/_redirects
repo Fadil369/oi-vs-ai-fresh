@@ -4,9 +4,9 @@
 /english.html /raw-english.html 301
 /payment.html /index.html 301
 
-# Fallback for missing files
-/* /index.html 200
-
 # Force HTTPS
 http://oi.thefadil.site/* https://oi.thefadil.site/:splat 301!
 http://www.oi.thefadil.site/* https://oi.thefadil.site/:splat 301!
+
+# Fallback for missing files (must be last)
+/* /index.html 200
