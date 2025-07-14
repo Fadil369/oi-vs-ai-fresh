@@ -1,4 +1,21 @@
-# Cloudflare Pages redirects
-/book /unified-bilingual-book.html 200
-/arabic /raw-arabic.html 200  
-/english /raw-english.html 200
+# Cloudflare Pages redirects for oi.thefadil.site
+
+# Main routes
+/ /oi-vs-ai-production.html 200
+/index.html / 301
+
+# Book viewer routes
+/book /oi-vs-ai-production.html 200
+/reader /oi-vs-ai-production.html 200
+
+# Direct content access (for the app to fetch)
+/raw-arabic.html /raw-arabic.html 200
+/raw-english.html /raw-english.html 200
+
+# API routes (if using Cloudflare Workers)
+/api/* https://api.oi.thefadil.site/:splat 200
+
+# Legacy redirects
+/unified-bilingual-book.html /book 301
+/enhanced_bilingual_ebook.html /book 301
+/index.html / 301
