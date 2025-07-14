@@ -1,8 +1,8 @@
 # Cloudflare Pages redirects for oi.thefadil.site
 
-# Main routes
+# Main routes - Force cache bypass
 / /oi-vs-ai-production.html 200
-/index.html / 301
+/index.html /oi-vs-ai-production.html 200
 
 # Book viewer routes
 /book /oi-vs-ai-production.html 200
