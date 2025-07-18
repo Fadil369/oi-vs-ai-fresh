@@ -21,20 +21,28 @@
     <meta property="og:description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي">
     <meta property="og:image" content="https://read.thefadil.site/assets/og-image.jpg">
     
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://read.thefadil.site/">
+    <meta property="twitter:title" content="الذكاء الأصلي مقابل الذكاء الاصطناعي">
+    <meta property="twitter:description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي">
+    <meta property="twitter:image" content="https://read.thefadil.site/assets/og-image.jpg">
+    
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
     <link rel="canonical" href="https://read.thefadil.site">
     
-    <!-- Modern Font Stack -->
+    <!-- Enhanced Font Stack -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Stripe Payment -->
+    <!-- Payment SDKs -->
     <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_1234567890&currency=SAR"></script>
     
     <style>
         * {
@@ -44,12 +52,20 @@
         }
         
         :root {
-            /* Ultrathink Color Palette */
+            /* Enhanced Ultrathink Color Palette */
             --pure-black: #000000;
             --deep-navy: #0a192f;
             --navy-light: #112240;
             --navy-medium: #1a2947;
             --navy-glass: rgba(17, 34, 64, 0.3);
+            
+            /* Production Theme Colors */
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-black: #2a2a2a;
+            --sepia-white: #f5f3f0;
+            --sepia-light: #e8e4df;
+            --sepia-dark: #d4cfc7;
             
             /* Glass White Variants */
             --glass-white-5: rgba(255, 255, 255, 0.05);
@@ -57,113 +73,93 @@
             --glass-white-15: rgba(255, 255, 255, 0.15);
             --glass-white-20: rgba(255, 255, 255, 0.2);
             --glass-white-80: rgba(255, 255, 255, 0.8);
+            --glass-primary: rgba(255, 255, 255, 0.1);
+            --glass-secondary: rgba(255, 255, 255, 0.05);
+            --glass-accent: rgba(255, 255, 255, 0.15);
             
-            /* Glow Colors */
+            /* Enhanced Glow Colors */
             --glow-cyan: #00d9ff;
             --glow-purple: #7928ca;
             --glow-pink: #ff0080;
             --glow-blue: #0070f3;
+            --glow-primary: #00d4ff;
+            --glow-secondary: #7c3aed;
+            --glow-accent: #fbbf24;
+            
+            /* Status Colors */
+            --success-color: #27ae60;
+            --error-color: #e74c3c;
+            --warning-color: #f39c12;
             
             /* Text Colors */
             --text-primary: rgba(255, 255, 255, 0.95);
             --text-secondary: rgba(255, 255, 255, 0.7);
             --text-tertiary: rgba(255, 255, 255, 0.5);
             
-            /* Gradients */
+            /* Enhanced Gradients */
             --gradient-glow: linear-gradient(135deg, var(--glow-cyan), var(--glow-purple));
             --gradient-subtle: linear-gradient(180deg, var(--glass-white-10), var(--glass-white-5));
             --gradient-navy: linear-gradient(180deg, var(--deep-navy), var(--navy-light));
+            --gradient-glass: linear-gradient(135deg, var(--glass-primary), var(--glass-secondary));
             
-            /* Effects */
+            /* Advanced Effects */
             --blur-glass: blur(12px);
             --blur-heavy: blur(24px);
             --shadow-glow: 0 0 40px rgba(0, 217, 255, 0.3);
             --shadow-subtle: 0 4px 24px rgba(0, 0, 0, 0.5);
             --shadow-elevation: 0 12px 48px rgba(0, 0, 0, 0.3);
+            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
             
-            /* Transitions */
+            /* Enhanced Transitions */
             --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
             
-            /* Spacing Scale */
+            /* Responsive Spacing */
             --space-xs: clamp(0.5rem, 1vw, 0.75rem);
             --space-sm: clamp(1rem, 2vw, 1.5rem);
             --space-md: clamp(1.5rem, 3vw, 2.5rem);
             --space-lg: clamp(2rem, 4vw, 4rem);
             --space-xl: clamp(3rem, 6vw, 6rem);
             --space-2xl: clamp(4rem, 8vw, 8rem);
+            
+            /* Token Validity */
+            --token-validity: 2592000000; /* 30 days */
         }
         
-        /* Base Styles */
+        /* Enhanced Base Styles */
         html {
             scroll-behavior: smooth;
-            font-size: 16px;
+            font-size: clamp(14px, 2.5vw, 18px);
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Amiri', serif;
             background: var(--pure-black);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.8;
             overflow-x: hidden;
             min-height: 100vh;
             position: relative;
         }
         
-        /* Arabic Typography */
-        body.arabic {
-            font-family: 'Noto Kufi Arabic', 'Tajawal', sans-serif;
-            direction: rtl;
-        }
-        
+        /* Enhanced Language Support */
         body.english {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
             direction: ltr;
         }
         
         body.arabic .english-text { display: none; }
         body.english .arabic-text { display: none; }
         
-        /* Background Effects */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, var(--glow-cyan) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, var(--glow-purple) 0%, transparent 50%),
-                radial-gradient(circle at 50% 100%, var(--deep-navy) 0%, transparent 100%);
-            opacity: 0.1;
-            pointer-events: none;
-            z-index: 0;
+        /* App Container */
+        #app {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: var(--pure-black);
         }
         
-        /* Glass Container Mixin */
-        .glass {
-            background: var(--glass-white-10);
-            backdrop-filter: var(--blur-glass);
-            -webkit-backdrop-filter: var(--blur-glass);
-            border: 1px solid var(--glass-white-20);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .glass::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--gradient-subtle);
-            opacity: 0.3;
-            pointer-events: none;
-        }
-        
-        /* Loading Screen */
+        /* Enhanced Loading Screen */
         .loading-screen {
             position: fixed;
             top: 0;
@@ -183,30 +179,13 @@
         }
         
         .loading-spinner {
-            width: 80px;
-            height: 80px;
-            position: relative;
-            margin: 0 auto var(--space-md);
-        }
-        
-        .loading-spinner::before,
-        .loading-spinner::after {
-            content: '';
-            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--glass-primary);
+            border-top: 4px solid var(--glow-primary);
             border-radius: 50%;
-            border: 3px solid transparent;
-            border-top-color: var(--glow-cyan);
-            animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-        }
-        
-        .loading-spinner::before {
-            inset: 0;
-        }
-        
-        .loading-spinner::after {
-            inset: 10px;
-            border-top-color: var(--glow-purple);
-            animation-delay: 0.2s;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 2rem;
         }
         
         @keyframes spin {
@@ -214,81 +193,65 @@
             100% { transform: rotate(360deg); }
         }
         
-        /* Navigation Header */
+        /* Enhanced Navigation */
         .nav-header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             height: 80px;
+            background: var(--glass-secondary);
+            backdrop-filter: var(--blur-glass);
+            border-bottom: 1px solid var(--glass-primary);
             z-index: 1000;
             transition: var(--transition-smooth);
         }
         
         .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
             height: 100%;
             padding: 0 var(--space-md);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .nav-header.scrolled {
-            background: var(--glass-white-5);
-            backdrop-filter: var(--blur-heavy);
-            -webkit-backdrop-filter: var(--blur-heavy);
-            border-bottom: 1px solid var(--glass-white-10);
         }
         
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            font-family: 'Space Grotesk', sans-serif;
-            letter-spacing: -0.02em;
+            font-size: 1.8rem;
+            font-weight: 900;
             background: var(--gradient-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            cursor: pointer;
-            transition: var(--transition-smooth);
+            gap: var(--space-xs);
         }
         
-        .logo:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.2);
-        }
-        
-        .logo-icon {
-            font-size: 1.75rem;
-            filter: drop-shadow(0 0 20px var(--glow-cyan));
-        }
-        
-        /* Language Switcher */
-        .language-switcher {
-            position: relative;
+        .nav-controls {
             display: flex;
-            background: var(--glass-white-10);
-            backdrop-filter: var(--blur-glass);
-            border: 1px solid var(--glass-white-20);
-            border-radius: 100px;
-            padding: 4px;
-            gap: 4px;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        /* Enhanced Language Switcher */
+        .language-switcher {
+            background: var(--glass-primary);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
         }
         
         .language-switcher button {
-            padding: 0.5rem 1.25rem;
+            padding: var(--space-xs) var(--space-sm);
             background: transparent;
             border: none;
-            color: var(--text-secondary);
+            color: var(--text-primary);
             font-family: inherit;
-            font-size: 0.875rem;
-            font-weight: 500;
+            font-size: 0.9rem;
             cursor: pointer;
-            border-radius: 100px;
             transition: var(--transition-smooth);
             position: relative;
             z-index: 2;
@@ -298,57 +261,36 @@
             color: var(--pure-black);
         }
         
-        .language-indicator {
+        .language-switcher .indicator {
             position: absolute;
-            top: 4px;
-            bottom: 4px;
-            width: calc(50% - 4px);
+            top: 0;
+            height: 100%;
             background: var(--gradient-glow);
-            border-radius: 100px;
+            border-radius: 50px;
             transition: var(--transition-spring);
-            box-shadow: var(--shadow-glow);
+            z-index: 1;
         }
         
-        body.arabic .language-indicator {
-            right: 4px;
+        body.arabic .language-switcher .indicator {
+            right: 0;
+            width: 50%;
         }
         
-        body.english .language-indicator {
-            left: 4px;
+        body.english .language-switcher .indicator {
+            left: 0;
+            width: 50%;
         }
         
-        /* Hero Section */
+        /* Enhanced Hero Section */
         .hero-section {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: calc(80px + var(--space-lg)) var(--space-md) var(--space-lg);
+            padding: 120px var(--space-md) var(--space-xl);
+            background: radial-gradient(ellipse at top, var(--glass-secondary), transparent 70%);
             position: relative;
             overflow: hidden;
-        }
-        
-        .hero-background {
-            position: absolute;
-            inset: 0;
-            overflow: hidden;
-        }
-        
-        .hero-gradient {
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
-            background: 
-                radial-gradient(circle at 30% 50%, var(--navy-glass) 0%, transparent 40%),
-                radial-gradient(circle at 70% 50%, var(--navy-glass) 0%, transparent 40%);
-            animation: float 20s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(-10%, -10%) rotate(0deg); }
-            50% { transform: translate(10%, 10%) rotate(180deg); }
         }
         
         .hero-content {
@@ -359,625 +301,434 @@
             z-index: 2;
         }
         
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1.5rem;
-            background: var(--glass-white-10);
-            backdrop-filter: var(--blur-glass);
-            border: 1px solid var(--glass-white-20);
-            border-radius: 100px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-md);
-            animation: fadeInUp 0.8s ease backwards;
-        }
-        
         .hero-title {
-            font-size: clamp(2.5rem, 8vw, 6rem);
-            font-weight: 800;
-            font-family: 'Space Grotesk', sans-serif;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-            margin-bottom: var(--space-sm);
-            animation: fadeInUp 0.8s ease 0.1s backwards;
-        }
-        
-        .hero-title span {
-            display: block;
-        }
-        
-        .title-gradient {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            margin-bottom: var(--space-md);
             background: var(--gradient-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 40px var(--glow-cyan));
+            line-height: 1.1;
+            letter-spacing: -0.02em;
         }
         
         .hero-subtitle {
-            font-size: clamp(1.125rem, 3vw, 1.5rem);
+            font-size: clamp(1.2rem, 3vw, 2rem);
             color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            font-weight: 400;
             max-width: 800px;
-            margin: 0 auto var(--space-lg);
-            line-height: 1.8;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        /* CTA Button */
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1.25rem 2.5rem;
-            background: var(--gradient-glow);
-            border: none;
-            border-radius: 100px;
-            color: var(--pure-black);
-            font-size: 1.125rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition-spring);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease 0.3s backwards;
-        }
-        
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateX(-100%);
-            transition: transform 0.5s ease;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.4);
-        }
-        
-        .cta-button:hover::before {
-            transform: translateX(100%);
-        }
-        
-        /* Author Section */
+        /* Enhanced Author Section */
         .author-section {
-            padding: var(--space-xl) var(--space-md);
-            background: linear-gradient(180deg, transparent, var(--deep-navy) 50%, transparent);
-            position: relative;
-        }
-        
-        .author-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: var(--space-lg);
-            align-items: center;
-        }
-        
-        body.english .author-content {
-            grid-template-columns: 2fr 1fr;
-        }
-        
-        .author-image-container {
-            position: relative;
+            background: var(--glass-primary);
+            backdrop-filter: var(--blur-glass);
+            border: 1px solid var(--glass-accent);
+            border-radius: 24px;
+            padding: var(--space-xl);
+            margin: var(--space-xl) auto;
+            max-width: 900px;
+            text-align: center;
+            box-shadow: var(--shadow-glass);
         }
         
         .author-image {
-            width: 300px;
-            height: 300px;
-            position: relative;
-            margin: 0 auto;
-        }
-        
-        .author-image-glow {
-            position: absolute;
-            inset: -20px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
             background: var(--gradient-glow);
-            border-radius: 50%;
-            opacity: 0.3;
-            filter: blur(40px);
-            animation: pulse 4s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.3; }
-            50% { transform: scale(1.1); opacity: 0.5; }
-        }
-        
-        .author-image-inner {
+            padding: 6px;
+            margin: 0 auto var(--space-md);
             position: relative;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid var(--glass-white-20);
-            background: var(--navy-light);
         }
         
         .author-image img {
             width: 100%;
             height: 100%;
+            border-radius: 50%;
             object-fit: cover;
         }
         
-        .author-info {
-            position: relative;
-        }
-        
         .author-name {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 700;
-            font-family: 'Space Grotesk', sans-serif;
-            margin-bottom: 0.5rem;
-            background: var(--gradient-glow);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: var(--space-xs);
+            color: var(--text-primary);
         }
         
         .author-title {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-sm);
+            font-size: 1.4rem;
+            color: var(--glow-primary);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
         }
         
         .author-bio {
-            font-size: 1.125rem;
+            font-size: 1.2rem;
             line-height: 1.8;
             color: var(--text-secondary);
-        }
-        
-        /* Features Section */
-        .features-section {
-            padding: var(--space-xl) var(--space-md);
-            position: relative;
-        }
-        
-        .features-grid {
-            max-width: 1200px;
+            max-width: 700px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-md);
         }
         
-        .feature-card {
-            padding: var(--space-md);
-            background: var(--glass-white-5);
-            backdrop-filter: var(--blur-glass);
-            border: 1px solid var(--glass-white-10);
-            border-radius: 24px;
-            transition: var(--transition-smooth);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gradient-glow);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            background: var(--glass-white-10);
-            border-color: var(--glass-white-20);
-            box-shadow: var(--shadow-elevation);
-        }
-        
-        .feature-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-glow);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: var(--space-sm);
-            color: var(--pure-black);
-        }
-        
-        .feature-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .feature-description {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-        
-        /* Pricing Section */
+        /* Enhanced Pricing Section */
         .pricing-section {
-            padding: var(--space-xl) var(--space-md);
-            position: relative;
+            padding: var(--space-2xl) var(--space-md);
+            background: var(--secondary-black);
         }
         
         .pricing-container {
-            max-width: 600px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
         .section-title {
             text-align: center;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 700;
-            font-family: 'Space Grotesk', sans-serif;
-            margin-bottom: var(--space-lg);
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--space-xl);
             background: var(--gradient-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
         .pricing-card {
-            background: var(--glass-white-5);
+            background: var(--glass-primary);
             backdrop-filter: var(--blur-glass);
-            border: 2px solid var(--glass-white-20);
-            border-radius: 32px;
-            padding: var(--space-lg);
+            border: 1px solid var(--glass-accent);
+            border-radius: 24px;
+            padding: var(--space-xl);
+            text-align: center;
             position: relative;
             overflow: hidden;
-        }
-        
-        .pricing-card::before {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            background: var(--gradient-glow);
-            border-radius: 32px;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: -1;
-        }
-        
-        .pricing-card:hover::before {
-            opacity: 0.3;
+            box-shadow: var(--shadow-glass);
         }
         
         .price-badge {
             position: absolute;
-            top: 2rem;
-            right: 2rem;
-            background: var(--gradient-glow);
-            color: var(--pure-black);
-            padding: 0.5rem 1.5rem;
-            border-radius: 100px;
-            font-size: 0.875rem;
+            top: 24px;
+            right: 24px;
+            background: var(--error-color);
+            color: white;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: 50px;
+            font-size: 0.9rem;
             font-weight: 700;
-            box-shadow: var(--shadow-glow);
+            box-shadow: var(--shadow-subtle);
         }
         
         body.english .price-badge {
-            left: 2rem;
+            left: 24px;
             right: auto;
         }
         
-        .currency-selector {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: var(--space-md);
-        }
-        
-        .currency-btn {
-            padding: 0.75rem 1.5rem;
-            background: var(--glass-white-10);
-            border: 1px solid var(--glass-white-20);
-            border-radius: 100px;
-            color: var(--text-secondary);
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-        }
-        
-        .currency-btn.active {
-            background: var(--gradient-glow);
-            color: var(--pure-black);
-            border-color: transparent;
-            transform: scale(1.05);
-        }
-        
         .price-display {
-            text-align: center;
-            margin: var(--space-md) 0;
+            margin: var(--space-lg) 0;
         }
         
-        .price-original {
-            font-size: 1.5rem;
+        .original-price {
+            font-size: 1.8rem;
             color: var(--text-tertiary);
             text-decoration: line-through;
             opacity: 0.7;
         }
         
-        .price-current {
+        .current-price {
             font-size: 4rem;
             font-weight: 800;
-            font-family: 'JetBrains Mono', monospace;
             background: var(--gradient-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1;
-            margin-top: 0.5rem;
+            margin-top: var(--space-xs);
         }
         
-        .price-note {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            text-align: center;
-            line-height: 1.6;
-            margin-bottom: var(--space-md);
+        .currency-toggle {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin: var(--space-lg) 0;
         }
         
-        /* Payment Options */
+        .currency-option {
+            padding: var(--space-xs) var(--space-md);
+            background: var(--glass-secondary);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50px;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-weight: 600;
+        }
+        
+        .currency-option.active {
+            background: var(--gradient-glow);
+            color: var(--pure-black);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        /* Enhanced Payment Section */
         .payment-section {
-            padding: var(--space-lg) var(--space-md);
-            background: linear-gradient(180deg, transparent, var(--navy-light) 20%, var(--navy-light) 80%, transparent);
+            padding: var(--space-xl) var(--space-md);
+            background: var(--pure-black);
         }
         
         .payment-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: var(--space-md);
         }
         
         .payment-options {
             display: grid;
-            gap: 1rem;
-            margin-bottom: var(--space-md);
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
         }
         
         .payment-option {
-            background: var(--glass-white-5);
-            backdrop-filter: var(--blur-glass);
-            border: 2px solid var(--glass-white-10);
-            border-radius: 20px;
-            padding: 1.5rem;
+            background: var(--glass-primary);
+            border: 2px solid var(--glass-accent);
+            border-radius: 16px;
+            padding: var(--space-md);
             cursor: pointer;
             transition: var(--transition-smooth);
             display: flex;
             align-items: center;
-            gap: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .payment-option::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--gradient-glow);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            gap: var(--space-sm);
         }
         
         .payment-option:hover {
-            border-color: var(--glass-white-20);
+            border-color: var(--glow-primary);
+            box-shadow: var(--shadow-glow);
             transform: translateY(-2px);
         }
         
         .payment-option.selected {
-            border-color: var(--glow-cyan);
-            background: var(--glass-white-10);
-        }
-        
-        .payment-option.selected::before {
-            opacity: 0.1;
+            background: var(--glass-accent);
+            border-color: var(--glow-primary);
+            box-shadow: var(--shadow-glow);
         }
         
         .payment-icon {
-            font-size: 2rem;
-            color: var(--glow-cyan);
-            width: 60px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
+            font-size: 2.5rem;
+            color: var(--glow-primary);
         }
         
         .payment-label {
             flex: 1;
-            font-size: 1.125rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            position: relative;
-            z-index: 1;
         }
         
-        .payment-check {
-            font-size: 1.5rem;
-            color: var(--glow-cyan);
-            opacity: 0;
-            transform: scale(0);
-            transition: var(--transition-spring);
-        }
-        
-        .payment-option.selected .payment-check {
-            opacity: 1;
-            transform: scale(1);
-        }
-        
-        /* Checkout Button */
+        /* Enhanced Checkout Button */
         .checkout-button {
             width: 100%;
-            padding: 1.5rem;
+            padding: var(--space-md);
             background: var(--gradient-glow);
             border: none;
-            border-radius: 100px;
+            border-radius: 16px;
             color: var(--pure-black);
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-size: 1.3rem;
+            font-weight: 800;
             cursor: pointer;
-            transition: var(--transition-spring);
+            transition: var(--transition-smooth);
             position: relative;
             overflow: hidden;
+            box-shadow: var(--shadow-glow);
         }
         
-        .checkout-button::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateX(-100%);
-            transition: transform 0.5s ease;
-        }
-        
-        .checkout-button:hover:not(:disabled) {
+        .checkout-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.4);
-        }
-        
-        .checkout-button:hover:not(:disabled)::before {
-            transform: translateX(100%);
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.4);
         }
         
         .checkout-button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
-            filter: grayscale(0.5);
+            transform: none;
         }
         
-        /* Footer */
+        /* Enhanced Book Viewer */
+        .book-viewer {
+            display: none;
+            padding-top: 80px;
+            min-height: 100vh;
+            background: var(--pure-black);
+        }
+        
+        .book-viewer.active {
+            display: block;
+        }
+        
+        .book-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: var(--space-lg);
+        }
+        
+        .book-controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass-primary);
+            backdrop-filter: var(--blur-glass);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50px;
+            padding: var(--space-sm) var(--space-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            z-index: 100;
+            box-shadow: var(--shadow-glass);
+        }
+        
+        .control-btn {
+            background: var(--glass-secondary);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        
+        .control-btn:hover {
+            background: var(--glass-accent);
+            border-color: var(--glow-primary);
+            transform: scale(1.1);
+        }
+        
+        .chapter-info {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            min-width: 180px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        /* Enhanced Chapter Styles */
+        .chapter {
+            background: var(--glass-secondary);
+            border-radius: 24px;
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+            border: 1px solid var(--glass-primary);
+            box-shadow: var(--shadow-glass);
+        }
+        
+        .chapter-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .chapter-content {
+            font-size: 1.3rem;
+            line-height: 2;
+            color: var(--text-primary);
+        }
+        
+        .chapter-content p {
+            margin-bottom: var(--space-md);
+            text-align: justify;
+        }
+        
+        /* Enhanced Footer */
         .footer {
-            padding: var(--space-lg) var(--space-md);
-            background: var(--navy-light);
-            border-top: 1px solid var(--glass-white-10);
-            margin-top: var(--space-2xl);
+            background: var(--secondary-black);
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            border-top: 1px solid var(--glass-primary);
         }
         
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
         
         .footer-links {
             display: flex;
             justify-content: center;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
             flex-wrap: wrap;
-            gap: var(--space-md);
-            margin-bottom: var(--space-md);
         }
         
         .footer-link {
             color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 500;
             transition: var(--transition-smooth);
-            position: relative;
-        }
-        
-        .footer-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--gradient-glow);
-            transform: scaleX(0);
-            transform-origin: center;
-            transition: transform 0.3s ease;
+            font-weight: 600;
         }
         
         .footer-link:hover {
-            color: var(--text-primary);
-        }
-        
-        .footer-link:hover::after {
-            transform: scaleX(1);
+            color: var(--glow-primary);
         }
         
         .copyright {
             color: var(--text-tertiary);
-            font-size: 0.875rem;
+            font-size: 1rem;
         }
         
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Mobile Optimizations */
+        /* Enhanced Responsive Design */
         @media (max-width: 768px) {
-            .nav-header {
-                height: 70px;
+            .nav-container {
+                padding: 0 var(--space-sm);
             }
             
-            .hero-title {
-                font-size: clamp(2rem, 10vw, 3.5rem);
+            .hero-section {
+                padding: 100px var(--space-sm) var(--space-lg);
             }
             
-            .author-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: var(--space-md);
-            }
-            
-            body.english .author-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .author-image {
-                width: 200px;
-                height: 200px;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
+            .author-section {
+                padding: var(--space-lg) var(--space-md);
             }
             
             .pricing-card {
-                padding: var(--space-md);
+                padding: var(--space-lg) var(--space-md);
             }
             
-            .price-badge {
-                position: static;
-                display: inline-block;
-                margin-bottom: var(--space-sm);
+            .book-controls {
+                bottom: 20px;
+                padding: var(--space-sm);
+                gap: var(--space-sm);
             }
             
-            .price-current {
-                font-size: 3rem;
+            .control-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
             }
             
-            .payment-option {
-                padding: 1rem;
-            }
-            
-            .payment-icon {
-                width: 40px;
-                font-size: 1.5rem;
+            .chapter {
+                padding: var(--space-lg) var(--space-md);
             }
         }
         
-        /* Accessibility */
+        /* Enhanced Content Protection */
+        .no-select {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media print {
+            body {
+                display: none !important;
+            }
+        }
+        
+        /* Enhanced Accessibility */
         .sr-only {
             position: absolute;
             width: 1px;
@@ -990,265 +741,227 @@
             border: 0;
         }
         
-        /* Print Protection */
-        @media print {
-            body {
-                display: none !important;
-            }
+        /* Enhanced Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        .slide-up {
+            animation: slideUp 0.6s ease forwards;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
         }
     </style>
 </head>
 <body class="arabic">
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-content">
-            <div class="loading-spinner"></div>
-            <h2 class="loading-text">
-                <span class="arabic-text">جاري التحميل...</span>
-                <span class="english-text">Loading...</span>
-            </h2>
-        </div>
-    </div>
-    
-    <!-- Navigation Header -->
-    <header class="nav-header" id="navHeader">
-        <nav class="nav-container">
-            <div class="logo" onclick="scrollToTop()">
-                <i class="fas fa-brain logo-icon"></i>
-                <span class="arabic-text">الذكاء الأصلي</span>
-                <span class="english-text">Original Intelligence</span>
+    <div id="app">
+        <!-- Enhanced Loading Screen -->
+        <div class="loading-screen" id="loadingScreen">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <h2 class="loading-text">
+                    <span class="arabic-text">جاري التحميل...</span>
+                    <span class="english-text">Loading...</span>
+                </h2>
             </div>
-            
-            <div class="language-switcher">
-                <button class="lang-ar active" onclick="switchLanguage('ar')">عربي</button>
-                <button class="lang-en" onclick="switchLanguage('en')">English</button>
-                <div class="language-indicator"></div>
-            </div>
-        </nav>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-background">
-            <div class="hero-gradient"></div>
         </div>
         
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-sparkles"></i>
-                <span class="arabic-text">حصري على الإنترنت</span>
-                <span class="english-text">Exclusive Online Edition</span>
-            </div>
-            
-            <h1 class="hero-title">
-                <span class="arabic-text">
-                    <span>الذكاء الأصلي</span>
-                    <span class="title-gradient">مقابل</span>
-                    <span>الذكاء الاصطناعي</span>
-                </span>
-                <span class="english-text">
-                    <span>Original Intelligence</span>
-                    <span class="title-gradient">versus</span>
-                    <span>Artificial Intelligence</span>
-                </span>
-            </h1>
-            
-            <p class="hero-subtitle">
-                <span class="arabic-text">رحلة استكشافية عميقة في جوهر الوعي البشري وعصر الآلة الذكية، تكشف الحدود بين الإبداع الأصيل والذكاء المُصنَّع</span>
-                <span class="english-text">A profound exploration into the essence of human consciousness and the age of intelligent machines, revealing the boundaries between authentic creativity and manufactured intelligence</span>
-            </p>
-            
-            <button class="cta-button" onclick="scrollToPrice()">
-                <span class="arabic-text">احصل على نسختك الآن</span>
-                <span class="english-text">Get Your Copy Now</span>
-                <i class="fas fa-arrow-down"></i>
-            </button>
-        </div>
-    </section>
-    
-    <!-- Author Section -->
-    <section class="author-section">
-        <div class="author-content">
-            <div class="author-image-container">
-                <div class="author-image">
-                    <div class="author-image-glow"></div>
-                    <div class="author-image-inner">
-                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect width='400' height='400' fill='%230a192f'/><text x='200' y='220' text-anchor='middle' font-size='120' fill='%2300d9ff'>👨‍⚕️</text></svg>" alt="Dr. Mohammed Al-Fadil">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="author-info">
-                <h2 class="author-name">
-                    <span class="arabic-text">د. محمد الفاضل</span>
-                    <span class="english-text">Dr. Mohammed Al-Fadil</span>
-                </h2>
-                <p class="author-title">
-                    <span class="arabic-text">مؤسس BrainSAIT • رائد الذكاء الاصطناعي الطبي</span>
-                    <span class="english-text">Founder of BrainSAIT • Medical AI Pioneer</span>
-                </p>
-                <p class="author-bio">
-                    <span class="arabic-text">طبيب ومبتكر يجمع بين الخبرة الطبية العميقة والرؤية التقنية المتقدمة. يعمل على بناء جسور بين الذكاء البشري والاصطناعي لخلق مستقبل أفضل للرعاية الصحية.</span>
-                    <span class="english-text">A physician and innovator bridging deep medical expertise with advanced technological vision. Working to build bridges between human and artificial intelligence to create a better future for healthcare.</span>
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-language"></i>
-                </div>
-                <h3 class="feature-title">
-                    <span class="arabic-text">ثنائي اللغة</span>
-                    <span class="english-text">Bilingual Edition</span>
-                </h3>
-                <p class="feature-description">
-                    <span class="arabic-text">محتوى كامل باللغتين العربية والإنجليزية مع تبديل سلس</span>
-                    <span class="english-text">Complete content in both Arabic and English with seamless switching</span>
-                </p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3 class="feature-title">
-                    <span class="arabic-text">آمن ومحمي</span>
-                    <span class="english-text">Secure & Protected</span>
-                </h3>
-                <p class="feature-description">
-                    <span class="arabic-text">حماية متقدمة للمحتوى مع وصول آمن عبر الإنترنت</span>
-                    <span class="english-text">Advanced content protection with secure online access</span>
-                </p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-infinity"></i>
-                </div>
-                <h3 class="feature-title">
-                    <span class="arabic-text">وصول دائم</span>
-                    <span class="english-text">Lifetime Access</span>
-                </h3>
-                <p class="feature-description">
-                    <span class="arabic-text">اقرأ كتابك في أي وقت ومن أي جهاز مع التحديثات المستمرة</span>
-                    <span class="english-text">Read your book anytime, from any device with continuous updates</span>
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Pricing Section -->
-    <section class="pricing-section" id="pricingSection">
-        <div class="pricing-container">
-            <h2 class="section-title">
-                <span class="arabic-text">احصل على نسختك الآن</span>
-                <span class="english-text">Get Your Copy Now</span>
-            </h2>
-            
-            <div class="pricing-card glass">
-                <div class="price-badge">
-                    <span class="arabic-text">خصم 43%</span>
-                    <span class="english-text">43% OFF</span>
+        <!-- Enhanced Navigation Header -->
+        <header class="nav-header">
+            <nav class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span class="arabic-text">الذكاء الأصلي</span>
+                    <span class="english-text">Original Intelligence</span>
                 </div>
                 
-                <div class="currency-selector">
-                    <button class="currency-btn active" onclick="setCurrency('SAR')">
-                        <span>SAR 🇸🇦</span>
-                    </button>
-                    <button class="currency-btn" onclick="setCurrency('USD')">
-                        <span>USD 🇺🇸</span>
+                <div class="nav-controls">
+                    <div class="language-switcher">
+                        <button class="lang-ar active" onclick="switchLanguage('ar')">عربي</button>
+                        <button class="lang-en" onclick="switchLanguage('en')">English</button>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <!-- Main Content -->
+        <main id="mainContent">
+            <!-- Enhanced Hero Section -->
+            <section class="hero-section fade-in">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="arabic-text">الذكاء الأصلي<br>مقابل<br>الذكاء الاصطناعي</span>
+                        <span class="english-text">Original Intelligence<br>vs<br>Artificial Intelligence</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        <span class="arabic-text">رحلة استكشافية في عمق الوعي البشري وعصر الآلة الذكية</span>
+                        <span class="english-text">An Exploratory Journey into Human Consciousness and the Age of Intelligent Machines</span>
+                    </p>
+                    
+                    <!-- Enhanced Author Section -->
+                    <div class="author-section slide-up">
+                        <div class="author-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='100' fill='%232a2a2a'/><text x='100' y='120' text-anchor='middle' font-size='80' fill='%23f5f3f0'>👨‍⚕️</text></svg>" alt="Dr. Mohammed Al-Fadil">
+                        </div>
+                        <h2 class="author-name">
+                            <span class="arabic-text">د. محمد الفاضل</span>
+                            <span class="english-text">Dr. Mohammed Al-Fadil</span>
+                        </h2>
+                        <p class="author-title">
+                            <span class="arabic-text">مؤسس BrainSAIT</span>
+                            <span class="english-text">Founder of BrainSAIT</span>
+                        </p>
+                        <p class="author-bio">
+                            <span class="arabic-text">رائد في مجال الذكاء الاصطناعي الطبي، يجمع بين الخبرة الطبية العميقة والابتكار التقني لبناء مستقبل الرعاية الصحية الذكية.</span>
+                            <span class="english-text">A pioneer in medical artificial intelligence, combining deep medical expertise with technological innovation to build the future of intelligent healthcare.</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Enhanced Pricing Section -->
+            <section class="pricing-section">
+                <div class="pricing-container">
+                    <h2 class="section-title">
+                        <span class="arabic-text">احصل على نسختك الآن</span>
+                        <span class="english-text">Get Your Copy Now</span>
+                    </h2>
+                    
+                    <div class="pricing-card slide-up">
+                        <div class="price-badge">
+                            <span class="arabic-text">خصم 43%</span>
+                            <span class="english-text">43% OFF</span>
+                        </div>
+                        
+                        <div class="currency-toggle">
+                            <div class="currency-option active" onclick="setCurrency('SAR')">SAR 🇸🇦</div>
+                            <div class="currency-option" onclick="setCurrency('USD')">USD 🇺🇸</div>
+                        </div>
+                        
+                        <div class="price-display" id="priceDisplay">
+                            <div class="original-price">
+                                <span class="price-sar">230 ر.س</span>
+                                <span class="price-usd" style="display:none">$61</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price-sar">130 ر.س</span>
+                                <span class="price-usd" style="display:none">$35</span>
+                            </div>
+                        </div>
+                        
+                        <p class="pricing-note">
+                            <span class="arabic-text">نسخة رقمية كاملة ثنائية اللغة - متاحة فورًا عبر الإنترنت</span>
+                            <span class="english-text">Complete bilingual digital edition - instantly available online</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Enhanced Payment Section -->
+            <section class="payment-section">
+                <div class="payment-container">
+                    <h3 class="section-title">
+                        <span class="arabic-text">اختر طريقة الدفع</span>
+                        <span class="english-text">Choose Payment Method</span>
+                    </h3>
+                    
+                    <div class="payment-options">
+                        <div class="payment-option" data-method="card" onclick="selectPayment('card')">
+                            <i class="payment-icon fas fa-credit-card"></i>
+                            <span class="payment-label">
+                                <span class="arabic-text">بطاقة ائتمان</span>
+                                <span class="english-text">Credit Card</span>
+                            </span>
+                            <i class="fas fa-check-circle" style="display:none"></i>
+                        </div>
+                        
+                        <div class="payment-option" data-method="apple" onclick="selectPayment('apple')">
+                            <i class="payment-icon fab fa-apple"></i>
+                            <span class="payment-label">Apple Pay</span>
+                            <i class="fas fa-check-circle" style="display:none"></i>
+                        </div>
+                        
+                        <div class="payment-option" data-method="paypal" onclick="selectPayment('paypal')">
+                            <i class="payment-icon fab fa-paypal"></i>
+                            <span class="payment-label">PayPal</span>
+                            <i class="fas fa-check-circle" style="display:none"></i>
+                        </div>
+                    </div>
+                    
+                    <button class="checkout-button pulse" id="checkoutButton" onclick="processPayment()" disabled>
+                        <span class="arabic-text">إتمام الشراء</span>
+                        <span class="english-text">Complete Purchase</span>
                     </button>
                 </div>
-                
-                <div class="price-display" id="priceDisplay">
-                    <div class="price-original">
-                        <span class="price-sar">230 ر.س</span>
-                        <span class="price-usd" style="display:none">$61</span>
-                    </div>
-                    <div class="price-current">
-                        <span class="price-sar">130</span>
-                        <span class="price-usd" style="display:none">35</span>
-                    </div>
+            </section>
+        </main>
+        
+        <!-- Enhanced Book Viewer (Hidden until purchase) -->
+        <div class="book-viewer" id="bookViewer">
+            <div class="book-container" id="bookContent">
+                <!-- Book content will be loaded here -->
+            </div>
+            
+            <div class="book-controls">
+                <button class="control-btn" onclick="previousChapter()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <span class="chapter-info" id="chapterInfo">
+                    <span class="arabic-text">الفصل 1 من 20</span>
+                    <span class="english-text">Chapter 1 of 20</span>
+                </span>
+                <button class="control-btn" onclick="nextChapter()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Enhanced Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#privacy" class="footer-link">
+                        <span class="arabic-text">سياسة الخصوصية</span>
+                        <span class="english-text">Privacy Policy</span>
+                    </a>
+                    <a href="#terms" class="footer-link">
+                        <span class="arabic-text">الشروط والأحكام</span>
+                        <span class="english-text">Terms & Conditions</span>
+                    </a>
+                    <a href="#contact" class="footer-link">
+                        <span class="arabic-text">اتصل بنا</span>
+                        <span class="english-text">Contact Us</span>
+                    </a>
                 </div>
-                
-                <p class="price-note">
-                    <span class="arabic-text">نسخة رقمية كاملة ثنائية اللغة • وصول فوري عبر الإنترنت • تحديثات مدى الحياة</span>
-                    <span class="english-text">Complete bilingual digital edition • Instant online access • Lifetime updates</span>
+                <p class="copyright">
+                    <span class="arabic-text">© 2025 د. محمد الفاضل - جميع الحقوق محفوظة</span>
+                    <span class="english-text">© 2025 Dr. Mohammed Al-Fadil - All Rights Reserved</span>
                 </p>
             </div>
-        </div>
-    </section>
+        </footer>
+    </div>
     
-    <!-- Payment Section -->
-    <section class="payment-section">
-        <div class="payment-container">
-            <h3 class="section-subtitle">
-                <span class="arabic-text">اختر طريقة الدفع</span>
-                <span class="english-text">Choose Payment Method</span>
-            </h3>
-            
-            <div class="payment-options">
-                <div class="payment-option" data-method="card" onclick="selectPayment('card')">
-                    <i class="payment-icon fas fa-credit-card"></i>
-                    <span class="payment-label">
-                        <span class="arabic-text">بطاقة ائتمان</span>
-                        <span class="english-text">Credit Card</span>
-                    </span>
-                    <i class="fas fa-check-circle payment-check"></i>
-                </div>
-                
-                <div class="payment-option" data-method="apple" onclick="selectPayment('apple')">
-                    <i class="payment-icon fab fa-apple"></i>
-                    <span class="payment-label">Apple Pay</span>
-                    <i class="fas fa-check-circle payment-check"></i>
-                </div>
-                
-                <div class="payment-option" data-method="paypal" onclick="selectPayment('paypal')">
-                    <i class="payment-icon fab fa-paypal"></i>
-                    <span class="payment-label">PayPal</span>
-                    <i class="fas fa-check-circle payment-check"></i>
-                </div>
-            </div>
-            
-            <button class="checkout-button" id="checkoutButton" onclick="processPayment()" disabled>
-                <span class="arabic-text">إتمام الشراء</span>
-                <span class="english-text">Complete Purchase</span>
-            </button>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="/privacy" class="footer-link">
-                    <span class="arabic-text">سياسة الخصوصية</span>
-                    <span class="english-text">Privacy Policy</span>
-                </a>
-                <a href="/terms" class="footer-link">
-                    <span class="arabic-text">الشروط والأحكام</span>
-                    <span class="english-text">Terms & Conditions</span>
-                </a>
-                <a href="/contact" class="footer-link">
-                    <span class="arabic-text">اتصل بنا</span>
-                    <span class="english-text">Contact Us</span>
-                </a>
-            </div>
-            <p class="copyright">
-                <span class="arabic-text">© 2025 د. محمد الفاضل - جميع الحقوق محفوظة</span>
-                <span class="english-text">© 2025 Dr. Mohammed Al-Fadil - All Rights Reserved</span>
-            </p>
-        </div>
-    </footer>
-    
-    <!-- JavaScript -->
+    <!-- Enhanced JavaScript -->
     <script>
-        // Configuration
+        // Enhanced Configuration
         const config = {
             stripe: {
                 publicKey: 'pk_test_51O4QW5L0dRYGmvgkIXfp7vZR6rKNMjP2Xt5xQZQm1234567890',
@@ -1257,6 +970,10 @@
                     book_usd: 'price_1O4QW5L0dRYGmvgk1234USD'
                 }
             },
+            paypal: {
+                clientId: 'AZDxjDScFpQtjWTOUtWKbyN_1234567890',
+                currency: 'SAR'
+            },
             prices: {
                 SAR: { original: 230, current: 130, currency: 'SAR' },
                 USD: { original: 61, current: 35, currency: 'USD' }
@@ -1264,30 +981,38 @@
             tokenValidity: 30 * 24 * 60 * 60 * 1000 // 30 days
         };
         
-        // Global State
+        // Enhanced Global State
         let state = {
             language: 'ar',
             currency: 'SAR',
-            paymentMethod: null
+            paymentMethod: null,
+            accessToken: null,
+            currentChapter: 1,
+            totalChapters: 20,
+            bookContent: {
+                ar: [],
+                en: []
+            },
+            isBookViewerActive: false
         };
         
-        // Initialize App
+        // Enhanced App Initialization
         document.addEventListener('DOMContentLoaded', function() {
             initializeApp();
+            checkExistingAccess();
             setupEventListeners();
             hideLoading();
         });
         
-        // App Initialization
         function initializeApp() {
-            // Check for saved preferences
+            // Load saved preferences
             const savedLang = localStorage.getItem('oi_language') || 'ar';
             const savedCurrency = localStorage.getItem('oi_currency') || 'SAR';
             
             state.language = savedLang;
             state.currency = savedCurrency;
             
-            // Apply saved preferences
+            // Apply preferences
             switchLanguage(savedLang, false);
             setCurrency(savedCurrency);
             
@@ -1296,33 +1021,66 @@
                 window.stripe = Stripe(config.stripe.publicKey);
             }
             
-            // Remove any existing access tokens (force landing page)
-            sessionStorage.removeItem('bookAccess');
-            localStorage.removeItem('bookAccessToken');
+            console.log('App initialized with enhanced features');
         }
         
-        // Setup Event Listeners
-        function setupEventListeners() {
-            // Scroll handler for nav
-            let lastScroll = 0;
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
-                const nav = document.getElementById('navHeader');
-                
-                if (currentScroll > 50) {
-                    nav.classList.add('scrolled');
+        function checkExistingAccess() {
+            const token = localStorage.getItem('oi_access_token');
+            const tokenExpiry = localStorage.getItem('oi_token_expiry');
+            
+            if (token && tokenExpiry) {
+                const now = new Date().getTime();
+                if (now < parseInt(tokenExpiry)) {
+                    state.accessToken = token;
+                    showBookViewer();
+                    loadBookContent();
                 } else {
-                    nav.classList.remove('scrolled');
+                    // Token expired, remove it
+                    localStorage.removeItem('oi_access_token');
+                    localStorage.removeItem('oi_token_expiry');
                 }
-                
-                lastScroll = currentScroll;
+            }
+        }
+        
+        function setupEventListeners() {
+            // Enhanced content protection
+            document.addEventListener('contextmenu', (e) => e.preventDefault());
+            
+            // Prevent text selection in book content
+            document.addEventListener('selectstart', function(e) {
+                if (e.target.closest('.chapter-content')) {
+                    e.preventDefault();
+                }
             });
             
-            // Prevent right-click
-            document.addEventListener('contextmenu', (e) => e.preventDefault());
+            // Enhanced keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (state.isBookViewerActive) {
+                    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        if (state.language === 'ar') {
+                            e.key === 'ArrowLeft' ? nextChapter() : previousChapter();
+                        } else {
+                            e.key === 'ArrowRight' ? nextChapter() : previousChapter();
+                        }
+                    }
+                    if (e.key === 'Escape') {
+                        // Option to return to main content
+                        if (confirm('العودة إلى الصفحة الرئيسية؟ / Return to main page?')) {
+                            showMainContent();
+                        }
+                    }
+                }
+            });
+            
+            // Print prevention
+            window.addEventListener('beforeprint', function(e) {
+                e.preventDefault();
+                alert('Printing is not allowed / الطباعة غير مسموحة');
+            });
         }
         
-        // Language Switching
+        // Enhanced Language Switching
         function switchLanguage(lang, save = true) {
             state.language = lang;
             document.body.className = lang === 'ar' ? 'arabic' : 'english';
@@ -1337,16 +1095,21 @@
             if (save) {
                 localStorage.setItem('oi_language', lang);
             }
+            
+            // Update chapter info if book is open
+            if (state.isBookViewerActive) {
+                updateChapterInfo();
+            }
         }
         
-        // Currency Switching
+        // Enhanced Currency Switching
         function setCurrency(currency) {
             state.currency = currency;
             localStorage.setItem('oi_currency', currency);
             
             // Update UI
-            document.querySelectorAll('.currency-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.textContent.includes(currency));
+            document.querySelectorAll('.currency-option').forEach(opt => {
+                opt.classList.toggle('active', opt.textContent.includes(currency));
             });
             
             // Update price display
@@ -1356,9 +1119,12 @@
             document.querySelectorAll('.price-usd').forEach(el => {
                 el.style.display = currency === 'USD' ? 'inline' : 'none';
             });
+            
+            // Update PayPal currency
+            config.paypal.currency = currency;
         }
         
-        // Payment Selection
+        // Enhanced Payment Selection
         function selectPayment(method) {
             state.paymentMethod = method;
             
@@ -1366,69 +1132,254 @@
             document.querySelectorAll('.payment-option').forEach(opt => {
                 const isSelected = opt.dataset.method === method;
                 opt.classList.toggle('selected', isSelected);
+                opt.querySelector('.fa-check-circle').style.display = isSelected ? 'block' : 'none';
             });
             
             // Enable checkout button
             document.getElementById('checkoutButton').disabled = false;
         }
         
-        // Process Payment
+        // Enhanced Payment Processing
         async function processPayment() {
             if (!state.paymentMethod) {
-                showError('Please select a payment method');
+                showError('Please select a payment method / يرجى اختيار طريقة الدفع');
                 return;
             }
             
             const button = document.getElementById('checkoutButton');
             button.disabled = true;
-            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + 
+                (state.language === 'ar' ? 'جاري المعالجة...' : 'Processing...');
             
             try {
-                // Simulate payment processing
-                await new Promise(resolve => setTimeout(resolve, 2000));
-                
-                // Grant access
-                const tokenData = {
-                    method: state.paymentMethod,
-                    currency: state.currency,
-                    amount: config.prices[state.currency].current,
-                    transactionId: 'txn_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
-                    purchaseDate: new Date().toISOString(),
-                    expiry: new Date().getTime() + config.tokenValidity,
-                    language: state.language
-                };
-                
-                const token = btoa(JSON.stringify(tokenData));
-                
-                // Save tokens
-                sessionStorage.setItem('bookAccess', token);
-                localStorage.setItem('bookAccessToken', token);
-                
-                // Show success
-                button.innerHTML = '<i class="fas fa-check"></i> Payment Successful!';
-                
-                // Redirect to book
-                setTimeout(() => {
-                    window.location.href = '/book.html';
-                }, 1500);
-                
+                switch (state.paymentMethod) {
+                    case 'card':
+                        await processStripePayment();
+                        break;
+                    case 'apple':
+                        await processApplePayment();
+                        break;
+                    case 'paypal':
+                        await processPayPalPayment();
+                        break;
+                }
             } catch (error) {
                 console.error('Payment error:', error);
-                showError('Payment failed. Please try again.');
+                showError('Payment failed. Please try again. / فشل في الدفع، يرجى المحاولة مرة أخرى.');
                 button.disabled = false;
                 button.innerHTML = state.language === 'ar' ? 'إتمام الشراء' : 'Complete Purchase';
             }
         }
         
-        // Utility Functions
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Enhanced Stripe Payment
+        async function processStripePayment() {
+            const priceId = state.currency === 'SAR' ? 
+                config.stripe.products.book_sar : 
+                config.stripe.products.book_usd;
+            
+            const { error } = await stripe.redirectToCheckout({
+                lineItems: [{ price: priceId, quantity: 1 }],
+                mode: 'payment',
+                successUrl: window.location.origin + '?payment=success',
+                cancelUrl: window.location.origin + '?payment=cancelled',
+                locale: state.language === 'ar' ? 'ar' : 'en'
+            });
+            
+            if (error) {
+                throw error;
+            }
         }
         
-        function scrollToPrice() {
-            document.getElementById('pricingSection').scrollIntoView({ behavior: 'smooth' });
+        // Enhanced Apple Pay
+        async function processApplePayment() {
+            if (!window.PaymentRequest) {
+                throw new Error('Apple Pay not supported');
+            }
+            
+            const paymentRequest = new PaymentRequest([{
+                supportedMethods: 'https://apple.com/apple-pay',
+                data: {
+                    version: 3,
+                    merchantIdentifier: 'merchant.com.oi.thefadil',
+                    merchantCapabilities: ['supports3DS'],
+                    supportedNetworks: ['visa', 'masterCard', 'amex'],
+                    countryCode: state.currency === 'SAR' ? 'SA' : 'US',
+                }
+            }], {
+                total: {
+                    label: 'OI vs AI Book',
+                    amount: {
+                        currency: state.currency,
+                        value: config.prices[state.currency].current.toString()
+                    }
+                }
+            });
+            
+            const paymentResponse = await paymentRequest.show();
+            await paymentResponse.complete('success');
+            grantAccess();
         }
         
+        // Enhanced PayPal Payment
+        async function processPayPalPayment() {
+            return new Promise((resolve, reject) => {
+                // Simulate PayPal payment flow
+                setTimeout(() => {
+                    grantAccess();
+                    resolve();
+                }, 2000);
+            });
+        }
+        
+        // Enhanced Access Grant
+        function grantAccess() {
+            // Generate enhanced access token
+            const tokenData = {
+                method: state.paymentMethod,
+                currency: state.currency,
+                amount: config.prices[state.currency].current,
+                transactionId: 'oi_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+                purchaseDate: new Date().toISOString(),
+                expiry: new Date().getTime() + config.tokenValidity,
+                language: state.language
+            };
+            
+            const token = btoa(JSON.stringify(tokenData));
+            const expiry = new Date().getTime() + config.tokenValidity;
+            
+            // Save to localStorage
+            localStorage.setItem('oi_access_token', token);
+            localStorage.setItem('oi_token_expiry', expiry.toString());
+            
+            state.accessToken = token;
+            
+            // Show success message
+            showSuccess('Payment successful! Loading your book... / تم الدفع بنجاح! جاري تحميل كتابك...');
+            
+            // Show book viewer
+            setTimeout(() => {
+                showBookViewer();
+                loadBookContent();
+            }, 1500);
+        }
+        
+        // Enhanced Book Viewer
+        function showBookViewer() {
+            document.getElementById('mainContent').style.display = 'none';
+            document.getElementById('bookViewer').classList.add('active');
+            state.isBookViewerActive = true;
+        }
+        
+        function showMainContent() {
+            document.getElementById('mainContent').style.display = 'block';
+            document.getElementById('bookViewer').classList.remove('active');
+            state.isBookViewerActive = false;
+        }
+        
+        // Enhanced Content Loading
+        async function loadBookContent() {
+            try {
+                // Load Arabic content
+                const arResponse = await fetch('/raw-arabic.html');
+                const arText = await arResponse.text();
+                state.bookContent.ar = parseBookContent(arText, 'ar');
+                
+                // Load English content
+                const enResponse = await fetch('/raw-english.html');
+                const enText = await enResponse.text();
+                state.bookContent.en = parseBookContent(enText, 'en');
+                
+                // Display first chapter
+                displayChapter(1);
+            } catch (error) {
+                console.error('Error loading book content:', error);
+                showError('Failed to load book content / فشل في تحميل محتوى الكتاب');
+            }
+        }
+        
+        // Enhanced Content Parser
+        function parseBookContent(html, lang) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const chapters = [];
+            
+            // Enhanced chapter extraction
+            const chapterElements = doc.querySelectorAll('.chapter, h1, h2, [data-chapter]');
+            
+            chapterElements.forEach((element, index) => {
+                if (element.tagName === 'H1' || element.classList.contains('chapter-title') || element.hasAttribute('data-chapter')) {
+                    const title = element.textContent.trim();
+                    const content = [];
+                    
+                    let nextElement = element.nextElementSibling;
+                    while (nextElement && !nextElement.matches('h1, h2, .chapter-title, [data-chapter]')) {
+                        if (nextElement.textContent.trim()) {
+                            content.push(nextElement.outerHTML);
+                        }
+                        nextElement = nextElement.nextElementSibling;
+                    }
+                    
+                    chapters.push({
+                        number: chapters.length + 1,
+                        title: title,
+                        content: content.join('\n')
+                    });
+                }
+            });
+            
+            return chapters;
+        }
+        
+        // Enhanced Chapter Display
+        function displayChapter(chapterNum) {
+            const bookContent = document.getElementById('bookContent');
+            const lang = state.language;
+            const chapter = state.bookContent[lang][chapterNum - 1];
+            
+            if (!chapter) {
+                bookContent.innerHTML = '<p>Chapter not found / الفصل غير موجود</p>';
+                return;
+            }
+            
+            bookContent.innerHTML = `
+                <div class="chapter fade-in">
+                    <h1 class="chapter-title">${chapter.title}</h1>
+                    <div class="chapter-content no-select">
+                        ${chapter.content}
+                    </div>
+                </div>
+            `;
+            
+            state.currentChapter = chapterNum;
+            updateChapterInfo();
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Enhanced Navigation
+        function previousChapter() {
+            if (state.currentChapter > 1) {
+                displayChapter(state.currentChapter - 1);
+            }
+        }
+        
+        function nextChapter() {
+            if (state.currentChapter < state.totalChapters) {
+                displayChapter(state.currentChapter + 1);
+            }
+        }
+        
+        function updateChapterInfo() {
+            const info = document.getElementById('chapterInfo');
+            if (state.language === 'ar') {
+                info.innerHTML = `<span class="arabic-text">الفصل ${state.currentChapter} من ${state.totalChapters}</span>`;
+            } else {
+                info.innerHTML = `<span class="english-text">Chapter ${state.currentChapter} of ${state.totalChapters}</span>`;
+            }
+        }
+        
+        // Enhanced UI Helpers
         function hideLoading() {
             setTimeout(() => {
                 const loadingScreen = document.getElementById('loadingScreen');
@@ -1440,30 +1391,67 @@
         }
         
         function showError(message) {
-            // Create error notification
+            showNotification(message, 'error');
+        }
+        
+        function showSuccess(message) {
+            showNotification(message, 'success');
+        }
+        
+        function showNotification(message, type = 'info') {
             const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
             notification.style.cssText = `
                 position: fixed;
                 top: 100px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: #e74c3c;
+                background: ${type === 'error' ? 'var(--error-color)' : 
+                           type === 'success' ? 'var(--success-color)' : 
+                           'var(--glass-primary)'};
                 color: white;
-                padding: 1rem 2rem;
-                border-radius: 100px;
+                padding: var(--space-sm) var(--space-lg);
+                border-radius: 12px;
                 z-index: 10000;
-                animation: fadeInUp 0.3s ease;
-                box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+                animation: fadeIn 0.3s ease;
+                max-width: 90%;
+                text-align: center;
+                box-shadow: var(--shadow-glass);
+                backdrop-filter: var(--blur-glass);
+                border: 1px solid ${type === 'error' ? 'var(--error-color)' : 
+                                   type === 'success' ? 'var(--success-color)' : 
+                                   'var(--glass-accent)'};
             `;
-            notification.textContent = message;
             
             document.body.appendChild(notification);
             
             setTimeout(() => {
                 notification.style.opacity = '0';
-                setTimeout(() => notification.remove(), 300);
-            }, 3000);
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 4000);
         }
+        
+        // Enhanced URL Parameter Handling
+        const urlParams = new URLSearchParams(window.location.search);
+        const paymentStatus = urlParams.get('payment');
+        
+        if (paymentStatus === 'success') {
+            grantAccess();
+            // Clean URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        } else if (paymentStatus === 'cancelled') {
+            showError('Payment was cancelled / تم إلغاء الدفع');
+            // Clean URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+        
+        // Enhanced Performance Monitoring
+        window.addEventListener('load', () => {
+            console.log('Enhanced OI vs AI platform loaded successfully');
+        });
     </script>
 </body>
 </html>
