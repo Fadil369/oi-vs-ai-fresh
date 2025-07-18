@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الذكاء الأصلي مقابل الذكاء الاصطناعي | د. محمد الفاضل</title>
+    <meta name="description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي، وما يعنيه أن تكون إنسانًا في عصر الآلة.">
+    <meta name="keywords" content="الذكاء الأصلي، الذكاء الاصطناعي، د. الفاضل، BrainSAIT، الوعي، تعلم الآلة">
+    <meta name="generator" content="BBEdit 15.5">
+    <link rel="canonical" href="https://oi.thefadil.site">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Elegant Dark Theme with Glassy Accents */
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-black: #2a2a2a;
+            --glass-primary: rgba(255, 255, 255, 0.1);
+            --glass-secondary: rgba(255, 255, 255, 0.05);
+            --glass-accent: rgba(255, 255, 255, 0.15);
+            --sepia-white: #f5f3f0;
+            --sepia-light: #e8e4df;
+            --sepia-dark: #d4cfc7;
+            --glow-primary: #00d4ff;
+            --glow-secondary: #7c3aed;
+            --glow-accent: #fbbf24;
+            --gradient-glow: linear-gradient(135deg, var(--glow-primary), var(--glow-secondary));
+            --gradient-glass: linear-gradient(135deg, var(--glass-primary), var(--glass-secondary));
+            --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.3);
+            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 18px;
+        }
+
+        body {
+            font-family: 'Amiri', serif;
+            background-color: var(--primary-black);
+            color: var(--sepia-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--sepia-white);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        a {
+            color: var(--glow-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--glow-secondary);
+            text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Header Bar */
+        .book-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-accent);
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .brand-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--sepia-white);
+        }
+
+        .header-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .language-toggle {
+            background: var(--glass-primary);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid var(--glass-accent);
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .language-toggle:hover {
+            background: var(--glass-accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glass);
+        }
+
+        /* Table of Contents */
+        .toc-toggle {
+            cursor: pointer;
+            background: var(--glass-primary);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--glass-accent);
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .toc-toggle:hover {
+            background: var(--glass-accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glass);
+        }
+
+        .toc-sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--secondary-black);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .toc-sidebar.active {
+            right: 0;
+        }
+
+        .toc-close {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--sepia-light);
+            transition: all 0.3s ease;
+        }
+
+        .toc-close:hover {
+            color: var(--glow-primary);
+        }
+
+        .toc-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--glow-primary);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .toc-item {
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .toc-item:hover {
+            background: var(--glass-primary);
+        }
+
+        .toc-item.active {
+            background: var(--glass-accent);
+            color: var(--sepia-white);
+            font-weight: 600;
+        }
+
+        .part-title {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--glow-primary);
+            font-size: 1.1rem;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            min-height: calc(100vh - 100px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--glass-primary), var(--glass-secondary));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-glass);
+            border: 1px solid var(--glass-accent);
+        }
+
+        .cover-page::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle, var(--glow-primary) 0%, transparent 70%);
+            opacity: 0.1;
+            animation: pulse 15s infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.05; }
+            50% { transform: scale(1.1); opacity: 0.1; }
+            100% { transform: scale(1); opacity: 0.05; }
+        }
+
+        .cover-page h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: var(--shadow-glow);
+        }
+
+        .cover-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            margin-bottom: 3rem;
+            color: var(--sepia-light);
+            font-weight: 400;
+            max-width: 800px;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .brand-logo-large {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 2rem;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .brand-logo-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-name {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .author-credentials {
+            font-size: 1.1rem;
+            color: var(--sepia-light);
+            margin-bottom: 3rem;
+            font-weight: 400;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .publisher-info {
+            margin-top: 5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--sepia-light);
+            font-family: 'Cairo', sans-serif;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 2px;
+        }
+
+        /* Preview and Purchase */
+        .preview-container {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .preview-text {
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.1rem;
+            color: var(--sepia-light);
+        }
+
+        .purchase-options {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .purchase-button {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            background: var(--gradient-glow);
+            color: var(--primary-black);
+            font-weight: 700;
+            font-family: 'Cairo', sans-serif;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .purchase-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+        }
+
+        .purchase-price {
+            font-weight: normal;
+            opacity: 0.8;
+            margin-left: 0.5rem;
+        }
+
+        .demo-button {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            background: var(--glass-primary);
+            color: var(--sepia-white);
+            font-weight: 600;
+            font-family: 'Cairo', sans-serif;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--glass-accent);
+        }
+
+        .demo-button:hover {
+            background: var(--glass-accent);
+            transform: translateY(-3px);
+        }
+
+        /* Chapter Styles */
+        .chapter {
+            margin: 5rem 0;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-glass);
+            border: 1px solid var(--glass-accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle, var(--glow-secondary) 0%, transparent 70%);
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        .chapter-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--glass-accent);
+        }
+
+        .chapter-number {
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.2rem;
+            color: var(--glow-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .chapter-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .chapter-quote {
+            font-style: italic;
+            text-align: center;
+            color: var(--sepia-light);
+            margin: 2rem 0;
+            padding: 0 3rem;
+            position: relative;
+            font-size: 1.2rem;
+        }
+
+        .chapter-quote::before {
+            content: '"';
+            position: absolute;
+            right: 0;
+            top: -1rem;
+            font-size: 4rem;
+            color: var(--glass-accent);
+            font-family: 'Amiri', serif;
+        }
+
+        .chapter-quote::after {
+            content: '"';
+            position: absolute;
+            left: 0;
+            bottom: -3rem;
+            font-size: 4rem;
+            color: var(--glass-accent);
+            font-family: 'Amiri', serif;
+        }
+
+        .chapter-quote-author {
+            text-align: left;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--sepia-light);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1.5rem;
+            color: var(--sepia-white);
+            position: relative;
+            padding-right: 1rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 4px;
+            background: var(--gradient-glow);
+            border-radius: 2px;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+
+            body {
+                padding: 10px;
+            }
+
+            .chapter {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 14px;
+            }
+
+            .book-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .header-controls {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .chapter {
+                padding: 1.5rem 1rem;
+            }
+
+            .chapter-quote {
+                padding: 0 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Bar -->
+    <div class="book-header">
+        <div class="brand-container">
+            <div class="brand-logo">
+                <img src="https://i.ibb.co/BrJjmX1/brainsait-logo.png" alt="BrainSAIT Logo">
+            </div>
+            <div class="book-title">الذكاء الأصلي مقابل الذكاء الاصطناعي</div>
+        </div>
+
+        <div class="header-controls">
+            <div class="toc-toggle" onclick="toggleTOC()">
+                <i class="fas fa-list"></i>
+                <span>المحتويات</span>
+            </div>
+
+            <div class="language-toggle" onclick="switchToEnglish()">
+                <i class="fas fa-globe"></i>
+                <span>English</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table of Contents Sidebar -->
+    <div class="toc-sidebar" id="toc-sidebar">
+        <div class="toc-close" onclick="toggleTOC()">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="toc-header">
+            <h2>المحتويات</h2>
+        </div>
+
+        <div class="toc-item" onclick="scrollToElement('cover-page')">الغلاف</div>
+
+        <div class="part-title">الجزء الأول: الأسس</div>
+        <div class="toc-item" onclick="scrollToElement('chapter-1')">الفصل 1: مقدمة - عالم العقول</div>
+        <div class="toc-item" onclick="scrollToElement('chapter-2')">الفصل 2: تاريخ الذكاء</div>
+        <div class="toc-item" onclick="scrollToElement('chapter-3')">الفصل 3: الوعي والإدراك الذاتي</div>
+        <div class="toc-item" onclick="scrollToElement('chapter-4')">الفصل 4: تأثير المرآة</div>
+        <div class="toc-item" onclick="scrollToElement('chapter-5')">الفصل 5: العاطفة، الأخلاق، والنوايا</div>
+    </div>
+
+    <!-- Cover Page -->
+    <div class="cover-page" id="cover-page">
+        <div class="brand-logo-large">
+            <img src="https://i.ibb.co/BrJjmX1/brainsait-logo.png" alt="BrainSAIT Logo">
+        </div>
+
+        <h1>الذكاء الأصلي مقابل الذكاء الاصطناعي</h1>
+        <div class="cover-subtitle">استكشاف العلاقة بين العقل البشري والعقل الآلي</div>
+
+        <div class="author-name">د. محمد الفاضل</div>
+        <div class="author-credentials">طبيب ورائد أعمال ومؤسس BrainSAIT</div>
+
+        <div class="preview-container">
+            <div class="preview-text">اكتشف الفرق بين الذكاء الأصلي والذكاء الاصطناعي في هذا الكتاب الرائد</div>
+
+            <div class="purchase-options">
+                <div class="purchase-button" onclick="showPaywall()">
+                    <i class="fas fa-book"></i>
+                    <span>شراء الكتاب الكامل</span>
+                    <span class="purchase-price">$24.99</span>
+                </div>
+
+                <div class="demo-button" onclick="startDemo()">
+                    <i class="fas fa-eye"></i>
+                    <span>قراءة مقتطفات</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="publisher-info">BrainSAIT للنشر الرقمي</div>
+    </div>
+
+    <!-- Chapter 1 -->
+    <div class="chapter" id="chapter-1">
+        <div class="chapter-header">
+            <div class="chapter-number">الفصل الأول</div>
+            <h1 class="chapter-title">مقدمة - عالم العقول</h1>
+        </div>
+
+        <div class="chapter-quote">
+            "العقل ليس وعاءً نملؤه، بل نارًا نشعلها."
+            <div class="chapter-quote-author">— بلوتارخ</div>
+        </div>
+
+        <h3 class="section-title">مقدمة</h3>
+        <p>قبل أن تتمكن الآلات من التفكير، كان البشر بالفعل يحلون المشكلات، ويتكيفون مع التغيرات، ويصنعون المعنى من الفوضى. الذكاء الأصلي (OI) هو الذكاء البيولوجي والعاطفي العميق الذي شكّل بقاءنا وتطورنا كنوع بشري. لكن ما هو الذكاء الأصلي تحديدًا؟ وكيف يختلف عن الذكاء الاصطناعي (AI) الذي نبنيه اليوم؟ ولماذا أصبحت معرفة الذكاء الأصلي أكثر أهمية من أي وقت مضى؟</p>
+
+        <h3 class="section-title">ما هو الذكاء الأصلي؟</h3>
+        <p>الذكاء الأصلي ليس مجرد "تفكير بشري". إنه الذكاء الطبيعي الذي نولد به، والذي تشكّل عبر ملايين السنين من التطور. يشمل:</p>
+        <ul>
+            <li>الوعي الذاتي</li>
+            <li>العواطف والتعاطف</li>
+            <li>التكيف والحدس</li>
+            <li>الخيال وسرد القصص</li>
+            <li>التعلم من الفشل والتجارب</li>
+        </ul>
+        <p>الذكاء الأصلي هو نوع من الذكاء ينمو في سياق—في الثقافة، والتاريخ، والهوية الشخصية، والعلاقات.</p>
+    </div>
+
+    <script>
+        // Toggle Table of Contents
+        function toggleTOC() {
+            const tocSidebar = document.getElementById('toc-sidebar');
+            tocSidebar.classList.toggle('active');
+        }
+
+        // Switch to English version
+        function switchToEnglish() {
+            window.location.href = 'oi-vs-ai-english-ebook.html';
+        }
+
+        // Scroll to element
+        function scrollToElement(elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+
+                // Close TOC after navigation on mobile
+                const tocSidebar = document.getElementById('toc-sidebar');
+                tocSidebar.classList.remove('active');
+            }
+        }
+
+        // Show Paywall
+        function showPaywall() {
+            alert('سيتم توجيهك إلى صفحة الدفع.');
+        }
+
+        // Start Demo
+        function startDemo() {
+            scrollToElement('chapter-1');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{
+  "name": "oi-vs-ai-fresh",
+  "domain": "oi-book.thefadil.site",
+  "build": {
+    "command": "",
+    "directory": "/",
+    "environment": {
+      "NODE_VERSION": "18",
+      "PRODUCTION": "true",
+      "FRESH_BUILD": "v2.1",
+      "BUILD_TIMESTAMP": "2025-07-14T20:45:00Z"
+    }
+  },
+  "deployment": {
+    "repository": "git@github.com:Fadil369/oi-vs-ai-fresh.git",
+    "branch": "main",
+    "auto_deploy": true
+  },
+  "features": {
+    "bilingual_support": true,
+    "payment_integration": true,
+    "security_headers": true,
+    "mobile_optimization": true,
+    "seo_optimization": true,
+    "content_protection": true,
+    "token_authentication": true,
+    "cache_busting": true
+  },
+  "pricing": {
+    "SAR": {
+      "original": 230,
+      "current": 130,
+      "discount": 43
+    },
+    "USD": {
+      "original": 61,
+      "current": 35,
+      "discount": 43
+    }
+  },
+  "author": {
+    "name": "Dr. Mohammed Al-Fadil",
+    "title": "Founder of BrainSAIT",
+    "bio": "A pioneering physician in medical artificial intelligence"
+  },
+  "performance": {
+    "compression": "brotli",
+    "minification": true,
+    "image_optimization": true,
+    "font_optimization": true,
+    "cache_strategy": "aggressive"
+  },
+  "security": {
+    "https_only": true,
+    "csp_enabled": true,
+    "xss_protection": true,
+    "frame_options": "DENY",
+    "content_type_options": "nosniff"
+  }
+}

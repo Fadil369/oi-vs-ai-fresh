@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="arabic">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الذكاء الأصلي مقابل الذكاء الاصطناعي | قراءة الكتاب</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="قراءة كتاب الذكاء الأصلي مقابل الذكاء الاصطناعي من د. محمد الفاضل">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* Professional Dark Theme */
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-black: #2a2a2a;
+            --glass-primary: rgba(255, 255, 255, 0.1);
+            --glass-secondary: rgba(255, 255, 255, 0.05);
+            --glass-accent: rgba(255, 255, 255, 0.15);
+            --sepia-white: #f5f3f0;
+            --sepia-light: #e8e4df;
+            --sepia-dark: #d4cfc7;
+            --glow-primary: #00d4ff;
+            --glow-secondary: #7c3aed;
+            --glow-accent: #fbbf24;
+            --gradient-glow: linear-gradient(135deg, var(--glow-primary), var(--glow-secondary));
+            --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.3);
+            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: clamp(14px, 2.5vw, 18px);
+        }
+        
+        body {
+            font-family: 'Amiri', serif;
+            background: var(--primary-black);
+            color: var(--sepia-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+            transition: var(--transition-smooth);
+            min-height: 100vh;
+        }
+        
+        /* English Language Override */
+        body.english {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+        }
+        
+        body.arabic .english-text { display: none; }
+        body.english .arabic-text { display: none; }
+        
+        /* Access Denied Screen */
+        .access-denied {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .access-denied-content {
+            max-width: 600px;
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-accent);
+            border-radius: 20px;
+            padding: 3rem;
+        }
+        
+        .access-denied-icon {
+            font-size: 4rem;
+            color: var(--glow-primary);
+            margin-bottom: 2rem;
+        }
+        
+        .access-denied-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .access-denied-text {
+            font-size: 1.2rem;
+            color: var(--sepia-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .purchase-button {
+            background: var(--gradient-glow);
+            border: none;
+            border-radius: 15px;
+            color: var(--primary-black);
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .purchase-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        /* Navigation Header */
+        .nav-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: var(--glass-secondary);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-primary);
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        /* Language Switcher */
+        .language-switcher {
+            background: var(--glass-primary);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .language-switcher button {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: none;
+            color: var(--sepia-white);
+            font-family: inherit;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .language-switcher button.active {
+            color: var(--primary-black);
+        }
+        
+        .language-switcher .indicator {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            background: var(--gradient-glow);
+            border-radius: 50px;
+            transition: var(--transition-smooth);
+            z-index: 1;
+        }
+        
+        /* Book Viewer */
+        .book-viewer {
+            padding-top: 70px;
+            min-height: 100vh;
+            background: var(--primary-black);
+            display: none;
+        }
+        
+        .book-viewer.active {
+            display: block;
+        }
+        
+        .book-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .book-content {
+            background: var(--glass-secondary);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--glass-primary);
+        }
+        
+        .book-controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            z-index: 100;
+        }
+        
+        .control-btn {
+            background: var(--glass-secondary);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sepia-white);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        
+        .control-btn:hover {
+            background: var(--glass-accent);
+            border-color: var(--glow-primary);
+        }
+        
+        .control-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .chapter-info {
+            font-size: 1rem;
+            color: var(--sepia-light);
+            min-width: 150px;
+            text-align: center;
+        }
+        
+        /* Content Protection */
+        .no-select {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media print {
+            body {
+                display: none !important;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .book-container {
+                padding: 1rem;
+            }
+            
+            .book-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .book-controls {
+                bottom: 20px;
+                padding: 0.8rem 1.5rem;
+                gap: 1rem;
+            }
+            
+            .control-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="arabic">
+    <!-- Access Denied Screen -->
+    <div class="access-denied" id="accessDenied">
+        <div class="access-denied-content">
+            <div class="access-denied-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h1 class="access-denied-title">
+                <span class="arabic-text">الوصول مقيد</span>
+                <span class="english-text">Access Restricted</span>
+            </h1>
+            <p class="access-denied-text">
+                <span class="arabic-text">يجب عليك شراء الكتاب أولاً للوصول إلى المحتوى. يُرجى العودة إلى الصفحة الرئيسية لإتمام عملية الشراء.</span>
+                <span class="english-text">You must purchase the book first to access the content. Please return to the main page to complete your purchase.</span>
+            </p>
+            <a href="/" class="purchase-button">
+                <span class="arabic-text">اشتري الكتاب الآن</span>
+                <span class="english-text">Buy Book Now</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Navigation Header -->
+    <header class="nav-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span class="arabic-text">قراءة الكتاب</span>
+                <span class="english-text">Reading Book</span>
+            </div>
+            
+            <div class="nav-controls">
+                <div class="language-switcher">
+                    <button class="lang-ar active" onclick="switchLanguage('ar')">عربي</button>
+                    <button class="lang-en" onclick="switchLanguage('en')">English</button>
+                    <div class="indicator"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Book Viewer -->
+    <div class="book-viewer" id="bookViewer">
+        <div class="book-container">
+            <div class="book-content no-select" id="bookContent">
+                <!-- Book content will be loaded here -->
+            </div>
+        </div>
+        
+        <div class="book-controls">
+            <button class="control-btn" id="prevBtn" onclick="previousChapter()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <span class="chapter-info" id="chapterInfo">
+                <span class="arabic-text">الفصل 1</span>
+                <span class="english-text">Chapter 1</span>
+            </span>
+            <button class="control-btn" id="nextBtn" onclick="nextChapter()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        // Global State
+        let state = {
+            language: 'ar',
+            currentChapter: 1,
+            totalChapters: 20,
+            hasAccess: false,
+            bookContent: {
+                ar: [],
+                en: []
+            }
+        };
+        
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAccess();
+            initializeApp();
+        });
+        
+        // Check Access
+        function checkAccess() {
+            const token = sessionStorage.getItem('bookAccess') || localStorage.getItem('bookAccessToken');
+            
+            if (!token) {
+                // No access token, show access denied
+                document.getElementById('accessDenied').style.display = 'flex';
+                document.getElementById('bookViewer').style.display = 'none';
+                return;
+            }
+            
+            try {
+                const tokenData = JSON.parse(atob(token));
+                const now = new Date().getTime();
+                
+                // Check if token is expired
+                if (tokenData.expiry && tokenData.expiry < now) {
+                    // Token expired
+                    sessionStorage.removeItem('bookAccess');
+                    localStorage.removeItem('bookAccessToken');
+                    document.getElementById('accessDenied').style.display = 'flex';
+                    document.getElementById('bookViewer').style.display = 'none';
+                    return;
+                }
+                
+                // Valid token, grant access
+                state.hasAccess = true;
+                document.getElementById('accessDenied').style.display = 'none';
+                document.getElementById('bookViewer').style.display = 'block';
+                loadBookContent();
+                
+            } catch (error) {
+                console.error('Token validation error:', error);
+                document.getElementById('accessDenied').style.display = 'flex';
+                document.getElementById('bookViewer').style.display = 'none';
+            }
+        }
+        
+        // Initialize App
+        function initializeApp() {
+            // Load saved preferences
+            const savedLang = localStorage.getItem('oi_language') || 'ar';
+            switchLanguage(savedLang, false);
+            
+            // Setup event listeners
+            setupEventListeners();
+        }
+        
+        // Setup Event Listeners
+        function setupEventListeners() {
+            // Prevent right-click
+            document.addEventListener('contextmenu', (e) => e.preventDefault());
+            
+            // Prevent text selection in book content
+            document.addEventListener('selectstart', function(e) {
+                if (e.target.closest('.book-content')) {
+                    e.preventDefault();
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (state.hasAccess) {
+                    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                        if (state.language === 'ar') {
+                            e.key === 'ArrowLeft' ? nextChapter() : previousChapter();
+                        } else {
+                            e.key === 'ArrowRight' ? nextChapter() : previousChapter();
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Language Switching
+        function switchLanguage(lang, save = true) {
+            state.language = lang;
+            document.body.className = lang === 'ar' ? 'arabic' : 'english';
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update active button
+            document.querySelectorAll('.language-switcher button').forEach(btn => {
+                btn.classList.toggle('active', btn.classList.contains(`lang-${lang}`));
+            });
+            
+            // Update indicator position
+            const indicator = document.querySelector('.language-switcher .indicator');
+            if (lang === 'ar') {
+                indicator.style.right = '0';
+                indicator.style.left = 'auto';
+                indicator.style.width = '50%';
+            } else {
+                indicator.style.left = '0';
+                indicator.style.right = 'auto';
+                indicator.style.width = '50%';
+            }
+            
+            if (save) {
+                localStorage.setItem('oi_language', lang);
+            }
+            
+            // Update chapter info and content if book is loaded
+            if (state.hasAccess && state.bookContent[lang].length > 0) {
+                updateChapterInfo();
+                displayChapter(state.currentChapter);
+            }
+        }
+        
+        // Load Book Content
+        async function loadBookContent() {
+            try {
+                // Load Arabic content
+                const arResponse = await fetch('/raw-arabic.html');
+                const arText = await arResponse.text();
+                state.bookContent.ar = parseBookContent(arText, 'ar');
+                
+                // Load English content
+                const enResponse = await fetch('/raw-english.html');
+                const enText = await enResponse.text();
+                state.bookContent.en = parseBookContent(enText, 'en');
+                
+                // Display first chapter
+                displayChapter(1);
+                
+            } catch (error) {
+                console.error('Error loading book content:', error);
+                document.getElementById('bookContent').innerHTML = '<p>Error loading content. Please refresh the page.</p>';
+            }
+        }
+        
+        // Parse Book Content
+        function parseBookContent(html, lang) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const chapters = [];
+            
+            // Get the main content
+            const content = doc.body.innerHTML;
+            
+            // For now, treat the entire content as one chapter
+            // In a real implementation, you'd parse this based on chapter markers
+            chapters.push({
+                number: 1,
+                title: lang === 'ar' ? 'الذكاء الأصلي مقابل الذكاء الاصطناعي' : 'Original Intelligence vs Artificial Intelligence',
+                content: content
+            });
+            
+            return chapters;
+        }
+        
+        // Display Chapter
+        function displayChapter(chapterNum) {
+            const bookContent = document.getElementById('bookContent');
+            const lang = state.language;
+            const chapter = state.bookContent[lang][chapterNum - 1];
+            
+            if (!chapter) {
+                bookContent.innerHTML = '<p>Chapter not found</p>';
+                return;
+            }
+            
+            bookContent.innerHTML = chapter.content;
+            state.currentChapter = chapterNum;
+            updateChapterInfo();
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Navigation Functions
+        function previousChapter() {
+            if (state.currentChapter > 1) {
+                displayChapter(state.currentChapter - 1);
+            }
+        }
+        
+        function nextChapter() {
+            if (state.currentChapter < state.totalChapters) {
+                displayChapter(state.currentChapter + 1);
+            }
+        }
+        
+        // Update Chapter Info
+        function updateChapterInfo() {
+            const info = document.getElementById('chapterInfo');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            if (state.language === 'ar') {
+                info.innerHTML = `<span class="arabic-text">الفصل ${state.currentChapter} من ${state.totalChapters}</span>`;
+            } else {
+                info.innerHTML = `<span class="english-text">Chapter ${state.currentChapter} of ${state.totalChapters}</span>`;
+            }
+            
+            // Update button states
+            prevBtn.disabled = state.currentChapter <= 1;
+            nextBtn.disabled = state.currentChapter >= state.totalChapters;
+        }
+    </script>
+</body>
+</html>

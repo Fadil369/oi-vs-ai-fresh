@@ -1,0 +1,51 @@
+{
+  "production": {
+    "domain": "oi.thefadil.site",
+    "ssl": "full-strict",
+    "cache": {
+      "html": "no-cache",
+      "assets": "max-age=31536000",
+      "api": "no-store"
+    },
+    "security": {
+      "headers": {
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "geolocation=(), microphone=(), camera=()",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      }
+    },
+    "performance": {
+      "compression": "brotli",
+      "http2": true,
+      "minify": {
+        "html": true,
+        "css": true,
+        "js": true
+      }
+    },
+    "payment": {
+      "stripe": {
+        "publicKey": "pk_live_your_stripe_public_key",
+        "webhookEndpoint": "/api/stripe-webhook"
+      },
+      "paypal": {
+        "clientId": "your_paypal_live_client_id",
+        "environment": "production"
+      }
+    },
+    "analytics": {
+      "googleAnalytics": "G-XXXXXXXXXX",
+      "cloudflareAnalytics": true
+    }
+  },
+  "deployment": {
+    "repository": "git@github.com:Fadil369/oi-vs-ai-book.git",
+    "branch": "main",
+    "buildCommand": "",
+    "outputDirectory": "/",
+    "rootDirectory": "AGENTS"
+  }
+}

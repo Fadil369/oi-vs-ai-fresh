@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="arabic">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>الذكاء الأصلي مقابل الذكاء الاصطناعي | Original Intelligence vs Artificial Intelligence</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي من د. محمد الفاضل، مؤسس BrainSAIT. كتاب ثنائي اللغة متاح حصريًا عبر الإنترنت.">
+    <meta name="keywords" content="الذكاء الأصلي، الذكاء الاصطناعي، د. محمد الفاضل، BrainSAIT، كتاب إلكتروني، ثنائي اللغة">
+    <meta name="author" content="Dr. Mohammed Al-Fadil">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oi.thefadil.site/">
+    <meta property="og:title" content="الذكاء الأصلي مقابل الذكاء الاصطناعي">
+    <meta property="og:description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي">
+    <meta property="og:image" content="https://oi.thefadil.site/assets/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://oi.thefadil.site/">
+    <meta property="twitter:title" content="الذكاء الأصلي مقابل الذكاء الاصطناعي">
+    <meta property="twitter:description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي">
+    <meta property="twitter:image" content="https://oi.thefadil.site/assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="canonical" href="https://oi.thefadil.site">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stripe Payment -->
+    <script src="https://js.stripe.com/v3/"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* Professional Dark Theme */
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-black: #2a2a2a;
+            --glass-primary: rgba(255, 255, 255, 0.1);
+            --glass-secondary: rgba(255, 255, 255, 0.05);
+            --glass-accent: rgba(255, 255, 255, 0.15);
+            --sepia-white: #f5f3f0;
+            --sepia-light: #e8e4df;
+            --sepia-dark: #d4cfc7;
+            --glow-primary: #00d4ff;
+            --glow-secondary: #7c3aed;
+            --glow-accent: #fbbf24;
+            --gradient-glow: linear-gradient(135deg, var(--glow-primary), var(--glow-secondary));
+            --gradient-glass: linear-gradient(135deg, var(--glass-primary), var(--glass-secondary));
+            --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.3);
+            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Success and Error Colors */
+            --success-color: #27ae60;
+            --error-color: #e74c3c;
+            --warning-color: #f39c12;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: clamp(14px, 2.5vw, 18px);
+        }
+        
+        body {
+            font-family: 'Amiri', serif;
+            background: var(--primary-black);
+            color: var(--sepia-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+            transition: var(--transition-smooth);
+            min-height: 100vh;
+        }
+        
+        /* English Language Override */
+        body.english {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+        }
+        
+        body.arabic .english-text { display: none; }
+        body.english .arabic-text { display: none; }
+        
+        /* APP Container */
+        #app {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: var(--primary-black);
+        }
+        
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-content {
+            text-align: center;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--glass-primary);
+            border-top: 4px solid var(--glow-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 2rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Navigation Header */
+        .nav-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: var(--glass-secondary);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-primary);
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        /* Language Switcher */
+        .language-switcher {
+            background: var(--glass-primary);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .language-switcher button {
+            padding: 0.5rem 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--sepia-white);
+            font-family: inherit;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .language-switcher button.active {
+            color: var(--primary-black);
+        }
+        
+        .language-switcher .indicator {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            background: var(--gradient-glow);
+            border-radius: 50px;
+            transition: var(--transition-smooth);
+            z-index: 1;
+        }
+        
+        body.arabic .language-switcher .indicator {
+            right: 0;
+            width: 50%;
+        }
+        
+        body.english .language-switcher .indicator {
+            left: 0;
+            width: 50%;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 2rem 2rem;
+            background: radial-gradient(ellipse at top, var(--glass-secondary), transparent 70%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--sepia-light);
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+        
+        /* Author Section */
+        .author-section {
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-accent);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .author-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--gradient-glow);
+            padding: 4px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-name {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--sepia-white);
+        }
+        
+        .author-title {
+            font-size: 1.2rem;
+            color: var(--glow-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .author-bio {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--sepia-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            padding: 4rem 2rem;
+            background: var(--secondary-black);
+        }
+        
+        .pricing-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .pricing-card {
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-accent);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--error-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        
+        body.english .price-badge {
+            left: 20px;
+            right: auto;
+        }
+        
+        .price-display {
+            margin: 2rem 0;
+        }
+        
+        .original-price {
+            font-size: 1.5rem;
+            color: var(--sepia-dark);
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        
+        .current-price {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 0.5rem;
+        }
+        
+        .currency-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .currency-option {
+            padding: 0.5rem 1.5rem;
+            background: var(--glass-secondary);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50px;
+            color: var(--sepia-white);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        
+        .currency-option.active {
+            background: var(--gradient-glow);
+            color: var(--primary-black);
+            font-weight: 700;
+        }
+        
+        /* Payment Section */
+        .payment-section {
+            padding: 3rem 2rem;
+            background: var(--primary-black);
+        }
+        
+        .payment-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .payment-options {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .payment-option {
+            background: var(--glass-primary);
+            border: 2px solid var(--glass-accent);
+            border-radius: 15px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .payment-option:hover {
+            border-color: var(--glow-primary);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .payment-option.selected {
+            background: var(--glass-accent);
+            border-color: var(--glow-primary);
+        }
+        
+        .payment-icon {
+            font-size: 2rem;
+            color: var(--glow-primary);
+        }
+        
+        .payment-label {
+            flex: 1;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        /* Checkout Button */
+        .checkout-button {
+            width: 100%;
+            padding: 1.5rem;
+            background: var(--gradient-glow);
+            border: none;
+            border-radius: 15px;
+            color: var(--primary-black);
+            font-size: 1.2rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .checkout-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .checkout-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Book Viewer */
+        .book-viewer {
+            display: none;
+            padding-top: 70px;
+            min-height: 100vh;
+            background: var(--primary-black);
+        }
+        
+        .book-viewer.active {
+            display: block;
+        }
+        
+        .book-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .book-controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass-primary);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            z-index: 100;
+        }
+        
+        .control-btn {
+            background: var(--glass-secondary);
+            border: 1px solid var(--glass-accent);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sepia-white);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        
+        .control-btn:hover {
+            background: var(--glass-accent);
+            border-color: var(--glow-primary);
+        }
+        
+        .chapter-info {
+            font-size: 1rem;
+            color: var(--sepia-light);
+            min-width: 150px;
+            text-align: center;
+        }
+        
+        /* Chapter Styles */
+        .chapter {
+            background: var(--glass-secondary);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--glass-primary);
+        }
+        
+        .chapter-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .chapter-content {
+            font-size: 1.2rem;
+            line-height: 2;
+            color: var(--sepia-white);
+        }
+        
+        .chapter-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--secondary-black);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--glass-primary);
+        }
+        
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: var(--sepia-light);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+        
+        .footer-link:hover {
+            color: var(--glow-primary);
+        }
+        
+        .copyright {
+            color: var(--sepia-dark);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .author-section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .pricing-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .book-controls {
+                bottom: 20px;
+                padding: 0.8rem 1.5rem;
+                gap: 1rem;
+            }
+            
+            .control-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .chapter {
+                padding: 2rem 1.5rem;
+            }
+            
+            .chapter-title {
+                font-size: 1.8rem;
+            }
+            
+            .chapter-content {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Content Protection */
+        .no-select {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media print {
+            body {
+                display: none !important;
+            }
+        }
+        
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="arabic">
+    <div id="app">
+        <!-- Loading Screen -->
+        <div class="loading-screen" id="loadingScreen">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <h2 class="loading-text">
+                    <span class="arabic-text">جاري التحميل...</span>
+                    <span class="english-text">Loading...</span>
+                </h2>
+            </div>
+        </div>
+        
+        <!-- Navigation Header -->
+        <header class="nav-header">
+            <nav class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span class="arabic-text">الذكاء الأصلي</span>
+                    <span class="english-text">Original Intelligence</span>
+                </div>
+                
+                <div class="nav-controls">
+                    <div class="language-switcher">
+                        <button class="lang-ar active" onclick="switchLanguage('ar')">عربي</button>
+                        <button class="lang-en" onclick="switchLanguage('en')">English</button>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <!-- Demo Mode Banner -->
+        <div style="background: linear-gradient(135deg, #ffa500, #ff6b35); color: white; text-align: center; padding: 0.5rem; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span class="arabic-text">🚀 وضع التجريب - الدفع مجاني للاختبار</span>
+            <span class="english-text">🚀 Demo Mode - Free Payment for Testing</span>
+        </div>
+        
+        <!-- Main Content -->
+        <main id="mainContent">
+            <!-- Hero Section -->
+            <section class="hero-section fade-in">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="arabic-text">الذكاء الأصلي<br>مقابل<br>الذكاء الاصطناعي</span>
+                        <span class="english-text">Original Intelligence<br>vs<br>Artificial Intelligence</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        <span class="arabic-text">رحلة استكشافية في عمق الوعي البشري وعصر الآلة الذكية</span>
+                        <span class="english-text">An Exploratory Journey into Human Consciousness and the Age of Intelligent Machines</span>
+                    </p>
+                    
+                    <!-- Author Section -->
+                    <div class="author-section">
+                        <div class="author-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='100' fill='%232a2a2a'/><text x='100' y='120' text-anchor='middle' font-size='80' fill='%23f5f3f0'>👨‍⚕️</text></svg>" alt="Dr. Mohammed Al-Fadil">
+                        </div>
+                        <h2 class="author-name">
+                            <span class="arabic-text">د. محمد الفاضل</span>
+                            <span class="english-text">Dr. Mohammed Al-Fadil</span>
+                        </h2>
+                        <p class="author-title">
+                            <span class="arabic-text">مؤسس BrainSAIT</span>
+                            <span class="english-text">Founder of BrainSAIT</span>
+                        </p>
+                        <p class="author-bio">
+                            <span class="arabic-text">رائد في مجال الذكاء الاصطناعي الطبي، يجمع بين الخبرة الطبية العميقة والابتكار التقني لبناء مستقبل الرعاية الصحية الذكية.</span>
+                            <span class="english-text">A pioneer in medical artificial intelligence, combining deep medical expertise with technological innovation to build the future of intelligent healthcare.</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Pricing Section -->
+            <section class="pricing-section">
+                <div class="pricing-container">
+                    <h2 class="section-title">
+                        <span class="arabic-text">احصل على نسختك الآن</span>
+                        <span class="english-text">Get Your Copy Now</span>
+                    </h2>
+                    
+                    <div class="pricing-card">
+                        <div class="price-badge">
+                            <span class="arabic-text">خصم 43%</span>
+                            <span class="english-text">43% OFF</span>
+                        </div>
+                        
+                        <div class="currency-toggle">
+                            <div class="currency-option active" onclick="setCurrency('SAR')">SAR 🇸🇦</div>
+                            <div class="currency-option" onclick="setCurrency('USD')">USD 🇺🇸</div>
+                        </div>
+                        
+                        <div class="price-display" id="priceDisplay">
+                            <div class="original-price">
+                                <span class="price-sar">230 ر.س</span>
+                                <span class="price-usd" style="display:none">$61</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price-sar">130 ر.س</span>
+                                <span class="price-usd" style="display:none">$35</span>
+                            </div>
+                        </div>
+                        
+                        <p class="pricing-note">
+                            <span class="arabic-text">نسخة رقمية كاملة ثنائية اللغة - متاحة فورًا عبر الإنترنت</span>
+                            <span class="english-text">Complete bilingual digital edition - instantly available online</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Payment Section -->
+            <section class="payment-section">
+                <div class="payment-container">
+                    <h3 class="section-subtitle">
+                        <span class="arabic-text">اختر طريقة الدفع</span>
+                        <span class="english-text">Choose Payment Method</span>
+                    </h3>
+                    
+                    <div class="payment-options">
+                        <div class="payment-option" data-method="card" onclick="selectPayment('card')">
+                            <i class="payment-icon fas fa-credit-card"></i>
+                            <span class="payment-label">
+                                <span class="arabic-text">بطاقة ائتمان</span>
+                                <span class="english-text">Credit Card</span>
+                            </span>
+                            <i class="fas fa-check-circle" style="display:none"></i>
+                        </div>
+                        
+                        <div class="payment-option" data-method="apple" onclick="selectPayment('apple')">
+                            <i class="payment-icon fab fa-apple"></i>
+                            <span class="payment-label">Apple Pay</span>
+                            <i class="fas fa-check-circle" style="display:none"></i>
+                        </div>
+                        
+                        <div class="payment-option" data-method="paypal" onclick="selectPayment('paypal')">
+                            <i class="payment-icon fab fa-paypal"></i>
+                            <span class="payment-label">PayPal</span>
+                            <i class="fas fa-check-circle" style="display:none"></i>
+                        </div>
+                    </div>
+                    
+                    <button class="checkout-button pulse" id="checkoutButton" onclick="processPayment()" disabled>
+                        <span class="arabic-text">إتمام الشراء</span>
+                        <span class="english-text">Complete Purchase</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Book Viewer (Hidden until purchase) -->
+        <div class="book-viewer" id="bookViewer">
+            <div class="book-container" id="bookContent">
+                <!-- Book content will be loaded here -->
+            </div>
+            
+            <div class="book-controls">
+                <button class="control-btn" onclick="previousChapter()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <span class="chapter-info" id="chapterInfo">
+                    <span class="arabic-text">الفصل 1 من 20</span>
+                    <span class="english-text">Chapter 1 of 20</span>
+                </span>
+                <button class="control-btn" onclick="nextChapter()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#privacy" class="footer-link">
+                        <span class="arabic-text">سياسة الخصوصية</span>
+                        <span class="english-text">Privacy Policy</span>
+                    </a>
+                    <a href="#terms" class="footer-link">
+                        <span class="arabic-text">الشروط والأحكام</span>
+                        <span class="english-text">Terms & Conditions</span>
+                    </a>
+                    <a href="#contact" class="footer-link">
+                        <span class="arabic-text">اتصل بنا</span>
+                        <span class="english-text">Contact Us</span>
+                    </a>
+                </div>
+                <p class="copyright">
+                    <span class="arabic-text">© 2025 د. محمد الفاضل - جميع الحقوق محفوظة</span>
+                    <span class="english-text">© 2025 Dr. Mohammed Al-Fadil - All Rights Reserved</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Integrated JavaScript -->
+    <script>
+        // Configuration
+        const config = {
+            stripe: {
+                publicKey: 'pk_test_51O4QW5L0dRYGmvgkIXfp7vZR6rKNMjP2Xt5xQZQm1234567890',
+                products: {
+                    book_sar: 'price_1O4QW5L0dRYGmvgk1234SAR',
+                    book_usd: 'price_1O4QW5L0dRYGmvgk1234USD'
+                }
+            },
+            paypal: {
+                clientId: 'AZDxjDScFpQtjWTOUtWKbyN_1234567890',
+                currency: 'SAR'
+            },
+            prices: {
+                SAR: { original: 230, current: 130, currency: 'SAR' },
+                USD: { original: 61, current: 35, currency: 'USD' }
+            },
+            tokenValidity: 30 * 24 * 60 * 60 * 1000 // 30 days
+        };
+        
+        // Global State
+        let state = {
+            language: 'ar',
+            currency: 'SAR',
+            paymentMethod: null,
+            accessToken: null,
+            currentChapter: 1,
+            totalChapters: 20,
+            bookContent: {
+                ar: [],
+                en: []
+            }
+        };
+        
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            handleURLRoutes();
+            checkExistingAccess();
+            setupEventListeners();
+            hideLoading();
+        });
+        
+        // Handle URL Routes
+        function handleURLRoutes() {
+            const path = window.location.pathname;
+            
+            // If user is trying to access /book, /reader, or /read directly
+            if (path === '/book' || path === '/reader' || path === '/read') {
+                // Check if they have access, if not, redirect to landing
+                const token = sessionStorage.getItem('bookAccess') || localStorage.getItem('bookAccessToken');
+                if (!token) {
+                    // Redirect to landing page
+                    window.location.href = '/';
+                    return;
+                }
+            }
+        }
+        
+        // App Initialization
+        function initializeApp() {
+            // Check for saved preferences
+            const savedLang = localStorage.getItem('oi_language') || 'ar';
+            const savedCurrency = localStorage.getItem('oi_currency') || 'SAR';
+            
+            state.language = savedLang;
+            state.currency = savedCurrency;
+            
+            // Apply saved preferences
+            switchLanguage(savedLang, false);
+            setCurrency(savedCurrency);
+            
+            // Initialize payment SDKs
+            if (typeof Stripe !== 'undefined') {
+                window.stripe = Stripe(config.stripe.publicKey);
+            }
+        }
+        
+        // Check Existing Access
+        function checkExistingAccess() {
+            const token = sessionStorage.getItem('bookAccess') || localStorage.getItem('bookAccessToken');
+            
+            if (token) {
+                try {
+                    const tokenData = JSON.parse(atob(token));
+                    
+                    // Check if token is expired (be lenient in demo mode)
+                    const now = new Date().getTime();
+                    if (tokenData.expiry && tokenData.expiry < now) {
+                        // In demo mode, extend expiry by 30 days
+                        tokenData.expiry = now + (30 * 24 * 60 * 60 * 1000);
+                        const updatedToken = btoa(JSON.stringify(tokenData));
+                        sessionStorage.setItem('bookAccess', updatedToken);
+                        localStorage.setItem('bookAccessToken', updatedToken);
+                        console.log('Demo mode: Extended access token expiry');
+                    }
+                    
+                    state.accessToken = token;
+                    showBookViewer();
+                    loadBookContent();
+                } catch (error) {
+                    console.error('Token parsing error:', error);
+                    // Clear invalid tokens
+                    sessionStorage.removeItem('bookAccess');
+                    localStorage.removeItem('bookAccessToken');
+                }
+            }
+        }
+        
+        // Setup Event Listeners
+        function setupEventListeners() {
+            // Prevent right-click
+            document.addEventListener('contextmenu', (e) => e.preventDefault());
+            
+            // Prevent text selection in book content
+            document.addEventListener('selectstart', function(e) {
+                if (e.target.closest('.chapter-content')) {
+                    e.preventDefault();
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (state.accessToken && document.getElementById('bookViewer').classList.contains('active')) {
+                    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                        if (state.language === 'ar') {
+                            e.key === 'ArrowLeft' ? nextChapter() : previousChapter();
+                        } else {
+                            e.key === 'ArrowRight' ? nextChapter() : previousChapter();
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Language Switching
+        function switchLanguage(lang, save = true) {
+            state.language = lang;
+            document.body.className = lang === 'ar' ? 'arabic' : 'english';
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update active button
+            document.querySelectorAll('.language-switcher button').forEach(btn => {
+                btn.classList.toggle('active', btn.classList.contains(`lang-${lang}`));
+            });
+            
+            if (save) {
+                localStorage.setItem('oi_language', lang);
+            }
+            
+            // Update chapter info if book is open
+            if (state.accessToken) {
+                updateChapterInfo();
+            }
+        }
+        
+        // Currency Switching
+        function setCurrency(currency) {
+            state.currency = currency;
+            localStorage.setItem('oi_currency', currency);
+            
+            // Update UI
+            document.querySelectorAll('.currency-option').forEach(opt => {
+                opt.classList.toggle('active', opt.textContent.includes(currency));
+            });
+            
+            // Update price display
+            document.querySelectorAll('.price-sar').forEach(el => {
+                el.style.display = currency === 'SAR' ? 'inline' : 'none';
+            });
+            document.querySelectorAll('.price-usd').forEach(el => {
+                el.style.display = currency === 'USD' ? 'inline' : 'none';
+            });
+            
+            // Update PayPal currency
+            config.paypal.currency = currency;
+        }
+        
+        // Payment Selection
+        function selectPayment(method) {
+            state.paymentMethod = method;
+            
+            // Update UI
+            document.querySelectorAll('.payment-option').forEach(opt => {
+                const isSelected = opt.dataset.method === method;
+                opt.classList.toggle('selected', isSelected);
+                opt.querySelector('.fa-check-circle').style.display = isSelected ? 'block' : 'none';
+            });
+            
+            // Enable checkout button
+            document.getElementById('checkoutButton').disabled = false;
+        }
+        
+        // Process Payment (Fake/Demo Mode)
+        async function processPayment() {
+            if (!state.paymentMethod) {
+                showError('Please select a payment method');
+                return;
+            }
+            
+            const button = document.getElementById('checkoutButton');
+            button.disabled = true;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            
+            try {
+                // Simulate payment processing delay
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                // Simulate successful payment
+                await simulatePaymentSuccess();
+                
+            } catch (error) {
+                console.error('Payment error:', error);
+                showError('Payment failed. Please try again.');
+                button.disabled = false;
+                button.innerHTML = state.language === 'ar' ? 'إتمام الشراء' : 'Complete Purchase';
+            }
+        }
+        
+        // Simulate Payment Success (Demo Mode)
+        async function simulatePaymentSuccess() {
+            // Update current payment info
+            state.currentPayment = {
+                method: state.paymentMethod,
+                currency: state.currency,
+                amount: config.prices[state.currency].current
+            };
+            
+            // Show processing message
+            const button = document.getElementById('checkoutButton');
+            button.innerHTML = '<i class="fas fa-check"></i> Payment Successful!';
+            
+            // Grant access after a short delay
+            setTimeout(() => {
+                grantAccess();
+            }, 1000);
+        }
+        
+        // Stripe Payment
+        async function processStripePayment() {
+            const priceId = state.currency === 'SAR' ? 
+                config.stripe.products.book_sar : 
+                config.stripe.products.book_usd;
+            
+            const { error } = await stripe.redirectToCheckout({
+                lineItems: [{ price: priceId, quantity: 1 }],
+                mode: 'payment',
+                successUrl: window.location.origin + '?payment=success',
+                cancelUrl: window.location.origin + '?payment=cancelled',
+            });
+            
+            if (error) {
+                throw error;
+            }
+        }
+        
+        // Apple Pay
+        async function processApplePayment() {
+            if (!window.PaymentRequest) {
+                throw new Error('Apple Pay not supported');
+            }
+            
+            const paymentRequest = new PaymentRequest([{
+                supportedMethods: 'https://apple.com/apple-pay',
+                data: {
+                    version: 3,
+                    merchantIdentifier: 'merchant.com.oi.thefadil',
+                    merchantCapabilities: ['supports3DS'],
+                    supportedNetworks: ['visa', 'masterCard', 'amex'],
+                    countryCode: state.currency === 'SAR' ? 'SA' : 'US',
+                }
+            }], {
+                total: {
+                    label: 'OI vs AI Book',
+                    amount: {
+                        currency: state.currency,
+                        value: config.prices[state.currency].current.toString()
+                    }
+                }
+            });
+            
+            const paymentResponse = await paymentRequest.show();
+            // Process payment response
+            await paymentResponse.complete('success');
+            grantAccess();
+        }
+        
+        // PayPal Payment
+        async function processPayPalPayment() {
+            // Simulate PayPal payment flow
+            // In production, integrate with PayPal SDK
+            setTimeout(() => {
+                grantAccess();
+            }, 2000);
+        }
+        
+        // Grant Access
+        function grantAccess() {
+            // Generate access token with payment info
+            const tokenData = {
+                method: state.currentPayment.method,
+                currency: state.currentPayment.currency,
+                amount: state.currentPayment.amount,
+                transactionId: 'txn_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+                purchaseDate: new Date().toISOString(),
+                expiry: new Date().getTime() + config.tokenValidity,
+                language: state.currentLanguage
+            };
+            
+            const token = btoa(JSON.stringify(tokenData));
+            
+            // Save to both sessionStorage and localStorage
+            sessionStorage.setItem('bookAccess', token);
+            localStorage.setItem('bookAccessToken', token);
+            
+            state.accessToken = token;
+            
+            // Show success message and then show book content
+            showSuccessMessage();
+            
+            // Show book viewer after a short delay
+            setTimeout(() => {
+                showBookViewer();
+                loadBookContent();
+            }, 2000);
+        }
+        
+        // Generate Token
+        function generateToken() {
+            return 'oi_' + Math.random().toString(36).substr(2) + Date.now().toString(36);
+        }
+        
+        // Show Book Viewer
+        function showBookViewer() {
+            document.getElementById('mainContent').style.display = 'none';
+            document.getElementById('bookViewer').classList.add('active');
+        }
+        
+        // Load Book Content
+        async function loadBookContent() {
+            try {
+                // Load Arabic content
+                const arResponse = await fetch('/raw-arabic.html');
+                const arText = await arResponse.text();
+                state.bookContent.ar = parseBookContent(arText, 'ar');
+                
+                // Load English content
+                const enResponse = await fetch('/raw-english.html');
+                const enText = await enResponse.text();
+                state.bookContent.en = parseBookContent(enText, 'en');
+                
+                // Display first chapter
+                displayChapter(1);
+            } catch (error) {
+                console.error('Error loading book content:', error);
+                showError('Failed to load book content');
+            }
+        }
+        
+        // Parse Book Content
+        function parseBookContent(html, lang) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const chapters = [];
+            
+            // Extract chapters based on structure
+            const chapterElements = doc.querySelectorAll('.chapter, h1, h2');
+            
+            chapterElements.forEach((element, index) => {
+                if (element.tagName === 'H1' || element.classList.contains('chapter-title')) {
+                    const title = element.textContent.trim();
+                    const content = [];
+                    
+                    let nextElement = element.nextElementSibling;
+                    while (nextElement && !nextElement.matches('h1, h2, .chapter-title')) {
+                        if (nextElement.textContent.trim()) {
+                            content.push(nextElement.outerHTML);
+                        }
+                        nextElement = nextElement.nextElementSibling;
+                    }
+                    
+                    chapters.push({
+                        number: chapters.length + 1,
+                        title: title,
+                        content: content.join('\n')
+                    });
+                }
+            });
+            
+            return chapters;
+        }
+        
+        // Display Chapter
+        function displayChapter(chapterNum) {
+            const bookContent = document.getElementById('bookContent');
+            const lang = state.language;
+            const chapter = state.bookContent[lang][chapterNum - 1];
+            
+            if (!chapter) {
+                bookContent.innerHTML = '<p>Chapter not found</p>';
+                return;
+            }
+            
+            bookContent.innerHTML = `
+                <div class="chapter fade-in">
+                    <h1 class="chapter-title">${chapter.title}</h1>
+                    <div class="chapter-content no-select">
+                        ${chapter.content}
+                    </div>
+                </div>
+            `;
+            
+            state.currentChapter = chapterNum;
+            updateChapterInfo();
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Navigation Functions
+        function previousChapter() {
+            if (state.currentChapter > 1) {
+                displayChapter(state.currentChapter - 1);
+            }
+        }
+        
+        function nextChapter() {
+            if (state.currentChapter < state.totalChapters) {
+                displayChapter(state.currentChapter + 1);
+            }
+        }
+        
+        // Update Chapter Info
+        function updateChapterInfo() {
+            const info = document.getElementById('chapterInfo');
+            if (state.language === 'ar') {
+                info.innerHTML = `<span class="arabic-text">الفصل ${state.currentChapter} من ${state.totalChapters}</span>`;
+            } else {
+                info.innerHTML = `<span class="english-text">Chapter ${state.currentChapter} of ${state.totalChapters}</span>`;
+            }
+        }
+        
+        // Hide Loading Screen
+        function hideLoading() {
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1000);
+        }
+        
+        // Show Error
+        function showError(message) {
+            // Create error notification
+            const notification = document.createElement('div');
+            notification.className = 'error-notification';
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--error-color);
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                z-index: 10000;
+                animation: fadeIn 0.3s ease;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        // Show Success Message
+        function showSuccessMessage() {
+            const message = state.language === 'ar' ? 
+                'تم الدفع بنجاح! سيتم توجيهك إلى الكتاب...' : 
+                'Payment successful! Redirecting to the book...';
+                
+            // Create success notification
+            const notification = document.createElement('div');
+            notification.className = 'success-notification';
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--success-color);
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                z-index: 10000;
+                animation: fadeIn 0.3s ease;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        // Show Success Message
+        function showSuccessMessage() {
+            const message = state.language === 'ar' ? 
+                'تم الدفع بنجاح! مرحباً بك في الكتاب!' : 
+                'Payment successful! Welcome to the book!';
+                
+            // Create success notification
+            const notification = document.createElement('div');
+            notification.className = 'success-notification';
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #28a745;
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                z-index: 10000;
+                animation: fadeIn 0.3s ease;
+                box-shadow: 0 4px 20px rgba(40, 167, 69, 0.3);
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        // Handle URL parameters (for payment callbacks)
+        const urlParams = new URLSearchParams(window.location.search);
+        const paymentStatus = urlParams.get('payment');
+        
+        if (paymentStatus === 'success') {
+            grantAccess();
+            // Clean URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        } else if (paymentStatus === 'cancelled') {
+            showError('Payment was cancelled');
+            // Clean URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    </script>
+</body>
+</html>

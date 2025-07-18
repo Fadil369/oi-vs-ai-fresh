@@ -1,0 +1,7 @@
+Deploy hook triggered: Sat Jul 12 18:54:08 +03 2025
+
+Clean redirects deployment: fc905919-6e0c-4adb-bd6c-79a3d1499435
+
+Production deployment fix: $(date)
+Fixed index.html redirect to oi-vs-ai-production.html
+Commit: ce728c2

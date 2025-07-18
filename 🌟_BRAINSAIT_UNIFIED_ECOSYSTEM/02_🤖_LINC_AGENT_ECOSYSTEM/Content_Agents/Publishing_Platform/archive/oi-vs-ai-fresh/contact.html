@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Original Intelligence vs Artificial Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact-item p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .support-info {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .support-info h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .support-info p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .email-highlight {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px solid #667eea;
+            margin: 1rem 0;
+        }
+        
+        .email-highlight a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        
+        .response-time {
+            background: #e8f5e8;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin: 1rem 0;
+        }
+        
+        .response-time strong {
+            color: #28a745;
+        }
+        
+        .topics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .topic-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+        
+        .topic-item i {
+            font-size: 1.2rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .topic-item h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .topic-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+        
+        .back-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-card">
+            <div class="header">
+                <h1><i class="fas fa-envelope"></i> Contact Us</h1>
+                <p>We're here to help with your Original Intelligence vs Artificial Intelligence ebook</p>
+            </div>
+
+            <div class="content">
+                <div class="support-info">
+                    <h2><i class="fas fa-headset"></i> Customer Support</h2>
+                    <p>For any questions, technical support, or assistance with your ebook purchase:</p>
+                    
+                    <div class="email-highlight">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:support@brainsait.io">support@brainsait.io</a>
+                    </div>
+                    
+                    <div class="response-time">
+                        <i class="fas fa-clock"></i>
+                        <strong>Response Time:</strong> Within 48 hours
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-book"></i>
+                        <h3>About the Author</h3>
+                        <p><strong>Dr. Mohammed Al-Fadil</strong></p>
+                        <p>Founder of BrainSAIT</p>
+                        <p>Expert in AI and Original Intelligence</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-building"></i>
+                        <h3>Organization</h3>
+                        <p><strong>BrainSAIT</strong></p>
+                        <p>Advancing the understanding of intelligence in the digital age</p>
+                        <p>Bridging human wisdom with artificial intelligence</p>
+                    </div>
+                </div>
+
+                <div class="support-info">
+                    <h2><i class="fas fa-question-circle"></i> Common Support Topics</h2>
+                    <div class="topics">
+                        <div class="topic-item">
+                            <i class="fas fa-credit-card"></i>
+                            <h4>Payment Issues</h4>
+                            <p>Problems with payment processing or billing</p>
+                        </div>
+                        
+                        <div class="topic-item">
+                            <i class="fas fa-lock"></i>
+                            <h4>Access Problems</h4>
+                            <p>Cannot access your purchased ebook</p>
+                        </div>
+                        
+                        <div class="topic-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Technical Support</h4>
+                            <p>Website functionality or compatibility issues</p>
+                        </div>
+                        
+                        <div class="topic-item">
+                            <i class="fas fa-undo"></i>
+                            <h4>Refund Requests</h4>
+                            <p>Questions about our refund policy</p>
+                        </div>
+                        
+                        <div class="topic-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Privacy & Terms</h4>
+                            <p>Questions about privacy policy or terms</p>
+                        </div>
+                        
+                        <div class="topic-item">
+                            <i class="fas fa-language"></i>
+                            <h4>Language Support</h4>
+                            <p>Issues with Arabic/English content</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="support-info">
+                    <h2><i class="fas fa-info-circle"></i> Before You Contact Us</h2>
+                    <p>To help us assist you better, please include:</p>
+                    <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+                        <li>Your order/transaction ID (if applicable)</li>
+                        <li>Description of the issue you're experiencing</li>
+                        <li>Device and browser information</li>
+                        <li>Screenshots (if relevant)</li>
+                        <li>Any error messages you received</li>
+                    </ul>
+                </div>
+
+                <div class="support-info">
+                    <h2><i class="fas fa-heart"></i> We Value Your Feedback</h2>
+                    <p>Your experience matters to us. We welcome:</p>
+                    <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                        <li>Suggestions for improvement</li>
+                        <li>Feedback about the ebook content</li>
+                        <li>Technical enhancement ideas</li>
+                        <li>General comments and reviews</li>
+                    </ul>
+                </div>
+
+                <div class="footer">
+                    <p>&copy; 2025 BrainSAIT. All rights reserved.</p>
+                    <p>Thank you for choosing "Original Intelligence vs Artificial Intelligence"</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Back to Book
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

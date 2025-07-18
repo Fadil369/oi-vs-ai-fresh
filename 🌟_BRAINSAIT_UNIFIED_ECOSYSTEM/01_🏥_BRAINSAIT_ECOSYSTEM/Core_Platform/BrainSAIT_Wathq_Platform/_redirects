@@ -1,0 +1,5 @@
+# Cloudflare Pages redirect rules
+/ /wathq_partnership_updated.html 200
+/app /brainsait_demo_app_enhanced.html 200
+/landing /wathq_partnership_updated.html 200
+/demo /brainsait_demo_app_enhanced.html 200
