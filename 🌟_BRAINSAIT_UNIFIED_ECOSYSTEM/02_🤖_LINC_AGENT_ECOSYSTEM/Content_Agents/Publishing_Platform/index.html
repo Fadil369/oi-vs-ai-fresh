@@ -32,10 +32,10 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
     <link rel="canonical" href="https://read.thefadil.site">
     
-    <!-- Enhanced Font Stack -->
+    <!-- Revolutionary Font Stack -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Electrolize&family=Michroma&family=Audiowide&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -52,223 +52,429 @@
         }
         
         :root {
-            /* Enhanced Ultrathink Color Palette */
-            --pure-black: #000000;
-            --deep-navy: #0a192f;
-            --navy-light: #112240;
-            --navy-medium: #1a2947;
-            --navy-glass: rgba(17, 34, 64, 0.3);
+            /* Revolutionary Color Palette */
+            --void-black: #000000;
+            --cosmic-purple: #6B46C1;
+            --electric-blue: #0EA5E9;
+            --cyber-cyan: #06B6D4;
+            --neon-green: #10B981;
+            --plasma-pink: #EC4899;
+            --solar-orange: #F59E0B;
+            --quantum-violet: #8B5CF6;
             
-            /* Production Theme Colors */
-            --primary-black: #0a0a0a;
-            --secondary-black: #1a1a1a;
-            --accent-black: #2a2a2a;
-            --sepia-white: #f5f3f0;
-            --sepia-light: #e8e4df;
-            --sepia-dark: #d4cfc7;
+            /* Dark Theme Colors */
+            --space-black: #0a0a0a;
+            --nebula-dark: #1a1a2e;
+            --stellar-navy: #16213e;
+            --galactic-blue: #0f3460;
+            --cosmic-indigo: #1e1b4b;
             
-            /* Glass White Variants */
-            --glass-white-5: rgba(255, 255, 255, 0.05);
-            --glass-white-10: rgba(255, 255, 255, 0.1);
-            --glass-white-15: rgba(255, 255, 255, 0.15);
-            --glass-white-20: rgba(255, 255, 255, 0.2);
-            --glass-white-80: rgba(255, 255, 255, 0.8);
-            --glass-primary: rgba(255, 255, 255, 0.1);
-            --glass-secondary: rgba(255, 255, 255, 0.05);
-            --glass-accent: rgba(255, 255, 255, 0.15);
+            /* Neon Glow Effects */
+            --neon-cyan: #00ffff;
+            --neon-purple: #bf00ff;
+            --neon-pink: #ff0080;
+            --neon-green: #00ff41;
+            --neon-yellow: #ffff00;
+            --neon-orange: #ff4500;
             
-            /* Enhanced Glow Colors */
-            --glow-cyan: #00d9ff;
-            --glow-purple: #7928ca;
-            --glow-pink: #ff0080;
-            --glow-blue: #0070f3;
-            --glow-primary: #00d4ff;
-            --glow-secondary: #7c3aed;
-            --glow-accent: #fbbf24;
+            /* Glass & Transparency */
+            --glass-ultra: rgba(255, 255, 255, 0.03);
+            --glass-light: rgba(255, 255, 255, 0.08);
+            --glass-medium: rgba(255, 255, 255, 0.12);
+            --glass-strong: rgba(255, 255, 255, 0.18);
+            --glass-crystal: rgba(255, 255, 255, 0.25);
             
-            /* Status Colors */
-            --success-color: #27ae60;
-            --error-color: #e74c3c;
-            --warning-color: #f39c12;
+            /* Holographic Gradients */
+            --hologram-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --hologram-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --hologram-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --hologram-quaternary: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --hologram-rainbow: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            --hologram-cyber: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 25%, #10b981 50%, #f59e0b 75%, #ec4899 100%);
             
-            /* Text Colors */
-            --text-primary: rgba(255, 255, 255, 0.95);
-            --text-secondary: rgba(255, 255, 255, 0.7);
-            --text-tertiary: rgba(255, 255, 255, 0.5);
+            /* Advanced Shadows */
+            --shadow-neon: 0 0 30px rgba(0, 255, 255, 0.5);
+            --shadow-purple: 0 0 40px rgba(139, 92, 246, 0.6);
+            --shadow-cyber: 0 0 50px rgba(6, 182, 212, 0.4);
+            --shadow-plasma: 0 0 60px rgba(236, 72, 153, 0.5);
+            --shadow-hologram: 0 0 80px rgba(102, 126, 234, 0.3);
+            --shadow-deep: 0 20px 60px rgba(0, 0, 0, 0.8);
+            --shadow-floating: 0 30px 80px rgba(0, 0, 0, 0.6);
             
-            /* Enhanced Gradients */
-            --gradient-glow: linear-gradient(135deg, var(--glow-cyan), var(--glow-purple));
-            --gradient-subtle: linear-gradient(180deg, var(--glass-white-10), var(--glass-white-5));
-            --gradient-navy: linear-gradient(180deg, var(--deep-navy), var(--navy-light));
-            --gradient-glass: linear-gradient(135deg, var(--glass-primary), var(--glass-secondary));
+            /* 3D Effects */
+            --perspective-far: 2000px;
+            --perspective-close: 1000px;
+            --rotate-x: 15deg;
+            --rotate-y: 25deg;
+            --rotate-z: 5deg;
             
-            /* Advanced Effects */
-            --blur-glass: blur(12px);
-            --blur-heavy: blur(24px);
-            --shadow-glow: 0 0 40px rgba(0, 217, 255, 0.3);
-            --shadow-subtle: 0 4px 24px rgba(0, 0, 0, 0.5);
-            --shadow-elevation: 0 12px 48px rgba(0, 0, 0, 0.3);
-            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+            /* Advanced Filters */
+            --blur-ultra: blur(20px);
+            --blur-heavy: blur(30px);
+            --blur-extreme: blur(40px);
+            --saturate-high: saturate(1.5);
+            --brightness-glow: brightness(1.2);
+            --contrast-high: contrast(1.3);
             
-            /* Enhanced Transitions */
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            /* Animation Timings */
+            --duration-instant: 0.1s;
+            --duration-fast: 0.3s;
+            --duration-medium: 0.6s;
+            --duration-slow: 1s;
+            --duration-epic: 2s;
+            --duration-eternal: 4s;
             
-            /* Responsive Spacing */
-            --space-xs: clamp(0.5rem, 1vw, 0.75rem);
-            --space-sm: clamp(1rem, 2vw, 1.5rem);
-            --space-md: clamp(1.5rem, 3vw, 2.5rem);
-            --space-lg: clamp(2rem, 4vw, 4rem);
-            --space-xl: clamp(3rem, 6vw, 6rem);
-            --space-2xl: clamp(4rem, 8vw, 8rem);
+            /* Bezier Curves */
+            --ease-cyber: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --ease-power: cubic-bezier(0.77, 0, 0.175, 1);
             
-            /* Token Validity */
-            --token-validity: 2592000000; /* 30 days */
+            /* Responsive Scale */
+            --scale-micro: clamp(0.25rem, 0.5vw, 0.5rem);
+            --scale-tiny: clamp(0.5rem, 1vw, 1rem);
+            --scale-small: clamp(1rem, 2vw, 1.5rem);
+            --scale-medium: clamp(1.5rem, 3vw, 2.5rem);
+            --scale-large: clamp(2rem, 4vw, 4rem);
+            --scale-xl: clamp(3rem, 6vw, 6rem);
+            --scale-xxl: clamp(4rem, 8vw, 8rem);
+            --scale-mega: clamp(6rem, 12vw, 12rem);
+            --scale-ultra: clamp(8rem, 16vw, 16rem);
         }
         
-        /* Enhanced Base Styles */
+        /* Revolutionary Base Styles */
         html {
             scroll-behavior: smooth;
-            font-size: clamp(14px, 2.5vw, 18px);
+            font-size: 16px;
+            overflow-x: hidden;
         }
         
         body {
-            font-family: 'Amiri', serif;
-            background: var(--pure-black);
-            color: var(--text-primary);
-            line-height: 1.8;
+            font-family: 'Exo 2', 'Rajdhani', 'Orbitron', futuristic, sans-serif;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.2) 0%, transparent 50%),
+                linear-gradient(135deg, var(--void-black) 0%, var(--space-black) 50%, var(--nebula-dark) 100%);
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.6;
             overflow-x: hidden;
             min-height: 100vh;
             position: relative;
+            animation: cosmicBreathing var(--duration-eternal) ease-in-out infinite;
         }
         
-        /* Enhanced Language Support */
+        @keyframes cosmicBreathing {
+            0%, 100% { 
+                background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+            }
+            50% { 
+                background-size: 110% 110%, 110% 110%, 110% 110%, 100% 100%;
+            }
+        }
+        
+        /* Futuristic Language Support */
         body.english {
-            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-family: 'Orbitron', 'Electrolize', 'Michroma', 'Audiowide', futuristic, sans-serif;
             direction: ltr;
         }
         
         body.arabic .english-text { display: none; }
         body.english .arabic-text { display: none; }
         
-        /* App Container */
+        /* Cosmic Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--space-black);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--hologram-cyber);
+            border-radius: 10px;
+            box-shadow: var(--shadow-neon);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--hologram-rainbow);
+            box-shadow: var(--shadow-hologram);
+        }
+        
+        /* Quantum App Container */
         #app {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background: var(--pure-black);
+            position: relative;
+            overflow: hidden;
         }
         
-        /* Enhanced Loading Screen */
+        /* Cosmic Particles Background */
+        #app::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.8), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.6), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(236, 72, 153, 0.7), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(16, 185, 129, 0.5), transparent),
+                radial-gradient(2px 2px at 160px 30px, rgba(245, 158, 11, 0.6), transparent);
+            background-repeat: repeat;
+            background-size: 200px 100px;
+            animation: cosmicDrift var(--duration-eternal) linear infinite;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        @keyframes cosmicDrift {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100px); }
+        }
+        
+        /* Spectacular Loading Screen */
         .loading-screen {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--pure-black);
+            background: 
+                radial-gradient(circle at center, rgba(139, 92, 246, 0.4) 0%, transparent 70%),
+                var(--void-black);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 10000;
-            transition: opacity 0.5s ease;
+            transition: opacity var(--duration-slow) var(--ease-power);
         }
         
         .loading-content {
             text-align: center;
+            transform: perspective(var(--perspective-far)) rotateX(var(--rotate-x));
         }
         
         .loading-spinner {
-            width: 60px;
-            height: 60px;
-            border: 4px solid var(--glass-primary);
-            border-top: 4px solid var(--glow-primary);
+            width: 120px;
+            height: 120px;
+            border: 6px solid transparent;
+            border-top: 6px solid var(--neon-cyan);
+            border-right: 6px solid var(--neon-purple);
+            border-bottom: 6px solid var(--neon-pink);
+            border-left: 6px solid var(--neon-green);
             border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 2rem;
+            animation: 
+                quantumSpin var(--duration-medium) linear infinite,
+                pulseGlow var(--duration-slow) ease-in-out infinite;
+            margin: 0 auto var(--scale-large);
+            box-shadow: 
+                var(--shadow-neon),
+                inset 0 0 30px rgba(0, 255, 255, 0.3);
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        @keyframes quantumSpin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.1); }
+            100% { transform: rotate(360deg) scale(1); }
         }
         
-        /* Enhanced Navigation */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: var(--shadow-neon); }
+            50% { box-shadow: var(--shadow-hologram); }
+        }
+        
+        .loading-text {
+            font-size: var(--scale-large);
+            font-weight: 700;
+            background: var(--hologram-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: hologramText var(--duration-epic) ease-in-out infinite;
+            font-family: 'Orbitron', futuristic;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+        
+        @keyframes hologramText {
+            0%, 100% { 
+                background-position: 0% 50%;
+                transform: translateY(0);
+            }
+            50% { 
+                background-position: 100% 50%;
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Futuristic Navigation */
         .nav-header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            height: 80px;
-            background: var(--glass-secondary);
-            backdrop-filter: var(--blur-glass);
-            border-bottom: 1px solid var(--glass-primary);
+            height: 100px;
+            background: 
+                linear-gradient(180deg, 
+                    rgba(10, 10, 10, 0.95) 0%, 
+                    rgba(26, 26, 46, 0.8) 100%);
+            backdrop-filter: var(--blur-heavy);
+            border-bottom: 2px solid transparent;
+            border-image: var(--hologram-cyber) 1;
             z-index: 1000;
-            transition: var(--transition-smooth);
+            transition: all var(--duration-fast) var(--ease-cyber);
+            box-shadow: 
+                0 10px 50px rgba(0, 0, 0, 0.8),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-header::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--hologram-cyber);
+            animation: energyFlow var(--duration-epic) linear infinite;
+        }
+        
+        @keyframes energyFlow {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
             height: 100%;
-            padding: 0 var(--space-md);
+            padding: 0 var(--scale-medium);
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-size: var(--scale-large);
             font-weight: 900;
-            background: var(--gradient-glow);
+            background: var(--hologram-rainbow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
             display: flex;
             align-items: center;
-            gap: var(--space-xs);
+            gap: var(--scale-small);
+            font-family: 'Orbitron', futuristic;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            animation: logoGlow var(--duration-epic) ease-in-out infinite;
+            cursor: pointer;
+            transition: all var(--duration-fast) var(--ease-elastic);
+        }
+        
+        .logo:hover {
+            transform: scale(1.05) translateY(-2px);
+            filter: var(--brightness-glow);
+        }
+        
+        .logo i {
+            font-size: var(--scale-xl);
+            animation: brainPulse var(--duration-slow) ease-in-out infinite;
+        }
+        
+        @keyframes logoGlow {
+            0%, 100% { 
+                background-position: 0% 50%;
+                text-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+            }
+            50% { 
+                background-position: 100% 50%;
+                text-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+            }
+        }
+        
+        @keyframes brainPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
         }
         
         .nav-controls {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: var(--scale-medium);
         }
         
-        /* Enhanced Language Switcher */
+        /* Quantum Language Switcher */
         .language-switcher {
-            background: var(--glass-primary);
-            border: 1px solid var(--glass-accent);
+            background: var(--glass-medium);
+            border: 2px solid transparent;
+            border-image: var(--hologram-tertiary) 1;
             border-radius: 50px;
             display: flex;
             overflow: hidden;
             position: relative;
+            box-shadow: 
+                var(--shadow-cyber),
+                inset 0 0 20px rgba(79, 172, 254, 0.2);
+            backdrop-filter: var(--blur-ultra);
+        }
+        
+        .language-switcher::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hologram-tertiary);
+            opacity: 0;
+            transition: opacity var(--duration-fast) var(--ease-cyber);
+            border-radius: 50px;
+            z-index: 1;
+        }
+        
+        .language-switcher:hover::before {
+            opacity: 0.1;
         }
         
         .language-switcher button {
-            padding: var(--space-xs) var(--space-sm);
+            padding: var(--scale-small) var(--scale-medium);
             background: transparent;
             border: none;
-            color: var(--text-primary);
-            font-family: inherit;
-            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: 'Orbitron', futuristic;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: var(--transition-smooth);
+            transition: all var(--duration-fast) var(--ease-elastic);
             position: relative;
             z-index: 2;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
         }
         
         .language-switcher button.active {
-            color: var(--pure-black);
+            color: var(--void-black);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
         }
         
         .language-switcher .indicator {
             position: absolute;
             top: 0;
             height: 100%;
-            background: var(--gradient-glow);
+            background: var(--hologram-tertiary);
             border-radius: 50px;
-            transition: var(--transition-spring);
+            transition: all var(--duration-medium) var(--ease-bounce);
             z-index: 1;
+            box-shadow: 
+                0 0 20px rgba(79, 172, 254, 0.5),
+                inset 0 0 20px rgba(255, 255, 255, 0.2);
         }
         
         body.arabic .language-switcher .indicator {
@@ -281,16 +487,38 @@
             width: 50%;
         }
         
-        /* Enhanced Hero Section */
+        /* Epic Hero Section */
         .hero-section {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 120px var(--space-md) var(--space-xl);
-            background: radial-gradient(ellipse at top, var(--glass-secondary), transparent 70%);
+            padding: 120px var(--scale-medium) var(--scale-xxl);
+            background: 
+                radial-gradient(ellipse at center top, rgba(139, 92, 246, 0.3) 0%, transparent 70%),
+                radial-gradient(ellipse at 20% 80%, rgba(6, 182, 212, 0.2) 0%, transparent 70%),
+                radial-gradient(ellipse at 80% 20%, rgba(236, 72, 153, 0.2) 0%, transparent 70%);
             position: relative;
             overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(45deg, transparent 45%, rgba(0, 255, 255, 0.1) 50%, transparent 55%),
+                linear-gradient(-45deg, transparent 45%, rgba(139, 92, 246, 0.1) 50%, transparent 55%);
+            animation: gridScan var(--duration-eternal) linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes gridScan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         
         .hero-content {
@@ -299,50 +527,130 @@
             text-align: center;
             position: relative;
             z-index: 2;
+            transform: perspective(var(--perspective-far)) rotateX(5deg);
         }
         
         .hero-title {
-            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 900;
-            margin-bottom: var(--space-md);
-            background: var(--gradient-glow);
+            margin-bottom: var(--scale-large);
+            background: var(--hologram-rainbow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1.1;
+            background-clip: text;
+            line-height: 1;
             letter-spacing: -0.02em;
+            font-family: 'Orbitron', futuristic;
+            text-transform: uppercase;
+            animation: 
+                titleGlow var(--duration-epic) ease-in-out infinite,
+                titleFloat var(--duration-eternal) ease-in-out infinite;
+            text-shadow: 
+                0 0 50px rgba(102, 126, 234, 0.5),
+                0 0 100px rgba(139, 92, 246, 0.3);
+        }
+        
+        @keyframes titleGlow {
+            0%, 100% { 
+                background-position: 0% 50%;
+                filter: hue-rotate(0deg);
+            }
+            50% { 
+                background-position: 100% 50%;
+                filter: hue-rotate(180deg);
+            }
+        }
+        
+        @keyframes titleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
         
         .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            font-weight: 400;
-            max-width: 800px;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--scale-xxl);
+            font-weight: 300;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            font-family: 'Rajdhani', futuristic;
+            letter-spacing: 0.05em;
+            animation: subtitleGlow var(--duration-slow) ease-in-out infinite;
         }
         
-        /* Enhanced Author Section */
+        @keyframes subtitleGlow {
+            0%, 100% { 
+                text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+            }
+            50% { 
+                text-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+            }
+        }
+        
+        /* Spectacular Author Section */
         .author-section {
-            background: var(--glass-primary);
-            backdrop-filter: var(--blur-glass);
-            border: 1px solid var(--glass-accent);
-            border-radius: 24px;
-            padding: var(--space-xl);
-            margin: var(--space-xl) auto;
-            max-width: 900px;
+            background: 
+                linear-gradient(135deg, 
+                    rgba(255, 255, 255, 0.1) 0%, 
+                    rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: var(--blur-heavy);
+            border: 2px solid transparent;
+            border-image: var(--hologram-secondary) 1;
+            border-radius: 30px;
+            padding: var(--scale-xxl);
+            margin: var(--scale-xxl) auto;
+            max-width: 1000px;
             text-align: center;
-            box-shadow: var(--shadow-glass);
+            box-shadow: 
+                var(--shadow-floating),
+                inset 0 0 50px rgba(240, 147, 251, 0.2);
+            position: relative;
+            overflow: hidden;
+            transform: perspective(var(--perspective-close)) rotateX(10deg);
+            animation: authorFloat var(--duration-eternal) ease-in-out infinite;
+        }
+        
+        @keyframes authorFloat {
+            0%, 100% { transform: perspective(var(--perspective-close)) rotateX(10deg) translateY(0); }
+            50% { transform: perspective(var(--perspective-close)) rotateX(10deg) translateY(-15px); }
+        }
+        
+        .author-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hologram-secondary);
+            opacity: 0.1;
+            border-radius: 30px;
+            animation: authorPulse var(--duration-slow) ease-in-out infinite;
+        }
+        
+        @keyframes authorPulse {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.2; }
         }
         
         .author-image {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            background: var(--gradient-glow);
-            padding: 6px;
-            margin: 0 auto var(--space-md);
+            background: var(--hologram-rainbow);
+            padding: 8px;
+            margin: 0 auto var(--scale-large);
             position: relative;
+            box-shadow: 
+                var(--shadow-hologram),
+                inset 0 0 30px rgba(102, 126, 234, 0.3);
+            animation: authorImageSpin var(--duration-eternal) linear infinite;
+        }
+        
+        @keyframes authorImageSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         .author-image img {
@@ -350,371 +658,781 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
+            animation: authorImageCounter var(--duration-eternal) linear infinite;
+        }
+        
+        @keyframes authorImageCounter {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-360deg); }
         }
         
         .author-name {
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 800;
-            margin-bottom: var(--space-xs);
-            color: var(--text-primary);
+            margin-bottom: var(--scale-small);
+            color: rgba(255, 255, 255, 0.95);
+            font-family: 'Orbitron', futuristic;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            animation: nameGlow var(--duration-epic) ease-in-out infinite;
+        }
+        
+        @keyframes nameGlow {
+            0%, 100% { 
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+            50% { 
+                text-shadow: 0 0 40px rgba(6, 182, 212, 0.8);
+            }
         }
         
         .author-title {
-            font-size: 1.4rem;
-            color: var(--glow-primary);
-            margin-bottom: var(--space-md);
+            font-size: var(--scale-large);
+            background: var(--hologram-tertiary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--scale-large);
             font-weight: 600;
+            font-family: 'Rajdhani', futuristic;
+            letter-spacing: 0.05em;
+            animation: titleShimmer var(--duration-epic) ease-in-out infinite;
+        }
+        
+        @keyframes titleShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
         
         .author-bio {
-            font-size: 1.2rem;
+            font-size: var(--scale-medium);
             line-height: 1.8;
-            color: var(--text-secondary);
-            max-width: 700px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
             margin: 0 auto;
+            font-family: 'Exo 2', futuristic;
+            position: relative;
+            z-index: 2;
         }
         
-        /* Enhanced Pricing Section */
+        /* Holographic Pricing Section */
         .pricing-section {
-            padding: var(--space-2xl) var(--space-md);
-            background: var(--secondary-black);
+            padding: var(--scale-ultra) var(--scale-medium);
+            background: 
+                linear-gradient(180deg, 
+                    transparent 0%, 
+                    rgba(26, 26, 46, 0.5) 50%, 
+                    transparent 100%);
+            position: relative;
+        }
+        
+        .pricing-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 100px,
+                    rgba(0, 255, 255, 0.1) 100px,
+                    rgba(0, 255, 255, 0.1) 102px
+                );
+            animation: gridMove var(--duration-eternal) linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(102px); }
         }
         
         .pricing-container {
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
         .section-title {
             text-align: center;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: var(--space-xl);
-            background: var(--gradient-glow);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: var(--scale-xxl);
+            background: var(--hologram-cyber);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Orbitron', futuristic;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            animation: sectionTitleGlow var(--duration-epic) ease-in-out infinite;
+        }
+        
+        @keyframes sectionTitleGlow {
+            0%, 100% { 
+                background-position: 0% 50%;
+                filter: hue-rotate(0deg);
+            }
+            50% { 
+                background-position: 100% 50%;
+                filter: hue-rotate(120deg);
+            }
         }
         
         .pricing-card {
-            background: var(--glass-primary);
-            backdrop-filter: var(--blur-glass);
-            border: 1px solid var(--glass-accent);
-            border-radius: 24px;
-            padding: var(--space-xl);
+            background: 
+                linear-gradient(135deg, 
+                    rgba(255, 255, 255, 0.15) 0%, 
+                    rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: var(--blur-heavy);
+            border: 3px solid transparent;
+            border-image: var(--hologram-quaternary) 1;
+            border-radius: 40px;
+            padding: var(--scale-xxl);
             text-align: center;
             position: relative;
             overflow: hidden;
-            box-shadow: var(--shadow-glass);
+            box-shadow: 
+                var(--shadow-deep),
+                inset 0 0 60px rgba(67, 233, 123, 0.2);
+            transform: perspective(var(--perspective-close)) rotateX(15deg);
+            animation: pricingFloat var(--duration-eternal) ease-in-out infinite;
+        }
+        
+        @keyframes pricingFloat {
+            0%, 100% { transform: perspective(var(--perspective-close)) rotateX(15deg) translateY(0); }
+            50% { transform: perspective(var(--perspective-close)) rotateX(15deg) translateY(-20px); }
+        }
+        
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hologram-quaternary);
+            opacity: 0.1;
+            border-radius: 40px;
+            animation: pricingPulse var(--duration-slow) ease-in-out infinite;
+        }
+        
+        @keyframes pricingPulse {
+            0%, 100% { opacity: 0.1; transform: scale(1); }
+            50% { opacity: 0.2; transform: scale(1.02); }
         }
         
         .price-badge {
             position: absolute;
-            top: 24px;
-            right: 24px;
-            background: var(--error-color);
-            color: white;
-            padding: var(--space-xs) var(--space-sm);
+            top: 30px;
+            right: 30px;
+            background: var(--hologram-secondary);
+            color: var(--void-black);
+            padding: var(--scale-small) var(--scale-medium);
             border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            box-shadow: var(--shadow-subtle);
+            font-size: 1.1rem;
+            font-weight: 800;
+            font-family: 'Orbitron', futuristic;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            box-shadow: 
+                var(--shadow-plasma),
+                inset 0 0 20px rgba(255, 255, 255, 0.3);
+            animation: badgeGlow var(--duration-slow) ease-in-out infinite;
+        }
+        
+        @keyframes badgeGlow {
+            0%, 100% { 
+                box-shadow: var(--shadow-plasma);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 80px rgba(236, 72, 153, 0.8);
+                transform: scale(1.05);
+            }
         }
         
         body.english .price-badge {
-            left: 24px;
+            left: 30px;
             right: auto;
         }
         
         .price-display {
-            margin: var(--space-lg) 0;
+            margin: var(--scale-xxl) 0;
+            position: relative;
+            z-index: 2;
         }
         
         .original-price {
-            font-size: 1.8rem;
-            color: var(--text-tertiary);
+            font-size: var(--scale-large);
+            color: rgba(255, 255, 255, 0.4);
             text-decoration: line-through;
-            opacity: 0.7;
+            opacity: 0.8;
+            font-family: 'Rajdhani', futuristic;
         }
         
         .current-price {
-            font-size: 4rem;
-            font-weight: 800;
-            background: var(--gradient-glow);
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            background: var(--hologram-rainbow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-top: var(--space-xs);
+            background-clip: text;
+            margin-top: var(--scale-small);
+            font-family: 'Orbitron', futuristic;
+            animation: priceGlow var(--duration-epic) ease-in-out infinite;
+        }
+        
+        @keyframes priceGlow {
+            0%, 100% { 
+                background-position: 0% 50%;
+                text-shadow: 0 0 50px rgba(102, 126, 234, 0.5);
+            }
+            50% { 
+                background-position: 100% 50%;
+                text-shadow: 0 0 80px rgba(139, 92, 246, 0.8);
+            }
         }
         
         .currency-toggle {
             display: flex;
             justify-content: center;
-            gap: var(--space-sm);
-            margin: var(--space-lg) 0;
+            gap: var(--scale-medium);
+            margin: var(--scale-xxl) 0;
         }
         
         .currency-option {
-            padding: var(--space-xs) var(--space-md);
-            background: var(--glass-secondary);
-            border: 1px solid var(--glass-accent);
+            padding: var(--scale-small) var(--scale-large);
+            background: var(--glass-medium);
+            border: 2px solid transparent;
+            border-image: var(--hologram-primary) 1;
             border-radius: 50px;
-            color: var(--text-primary);
+            color: rgba(255, 255, 255, 0.8);
             cursor: pointer;
-            transition: var(--transition-smooth);
+            transition: all var(--duration-medium) var(--ease-bounce);
             font-weight: 600;
+            font-family: 'Orbitron', futuristic;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            backdrop-filter: var(--blur-ultra);
+            box-shadow: var(--shadow-cyber);
+        }
+        
+        .currency-option:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: var(--shadow-hologram);
         }
         
         .currency-option.active {
-            background: var(--gradient-glow);
-            color: var(--pure-black);
-            box-shadow: var(--shadow-glow);
+            background: var(--hologram-primary);
+            color: var(--void-black);
+            box-shadow: var(--shadow-hologram);
+            transform: translateY(-2px);
         }
         
-        /* Enhanced Payment Section */
+        /* Quantum Payment Section */
         .payment-section {
-            padding: var(--space-xl) var(--space-md);
-            background: var(--pure-black);
+            padding: var(--scale-xxl) var(--scale-medium);
+            background: 
+                radial-gradient(circle at center, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
+            position: relative;
         }
         
         .payment-container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
         .payment-options {
             display: grid;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-lg);
+            gap: var(--scale-medium);
+            margin-bottom: var(--scale-xxl);
         }
         
         .payment-option {
-            background: var(--glass-primary);
-            border: 2px solid var(--glass-accent);
-            border-radius: 16px;
-            padding: var(--space-md);
+            background: 
+                linear-gradient(135deg, 
+                    rgba(255, 255, 255, 0.1) 0%, 
+                    rgba(255, 255, 255, 0.05) 100%);
+            border: 2px solid transparent;
+            border-image: var(--hologram-quaternary) 1;
+            border-radius: 25px;
+            padding: var(--scale-large);
             cursor: pointer;
-            transition: var(--transition-smooth);
+            transition: all var(--duration-medium) var(--ease-elastic);
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: var(--scale-medium);
+            backdrop-filter: var(--blur-heavy);
+            box-shadow: var(--shadow-cyber);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .payment-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            right: 0;
+            bottom: 0;
+            background: var(--hologram-quaternary);
+            opacity: 0.1;
+            transition: all var(--duration-medium) var(--ease-power);
         }
         
         .payment-option:hover {
-            border-color: var(--glow-primary);
-            box-shadow: var(--shadow-glow);
-            transform: translateY(-2px);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-hologram);
+            border-image: var(--hologram-rainbow) 1;
+        }
+        
+        .payment-option:hover::before {
+            left: 0;
+            opacity: 0.2;
         }
         
         .payment-option.selected {
-            background: var(--glass-accent);
-            border-color: var(--glow-primary);
-            box-shadow: var(--shadow-glow);
+            background: 
+                linear-gradient(135deg, 
+                    rgba(67, 233, 123, 0.2) 0%, 
+                    rgba(67, 233, 123, 0.1) 100%);
+            border-image: var(--hologram-rainbow) 1;
+            box-shadow: var(--shadow-hologram);
+            transform: translateY(-5px) scale(1.05);
+        }
+        
+        .payment-option.selected::before {
+            left: 0;
+            opacity: 0.3;
         }
         
         .payment-icon {
-            font-size: 2.5rem;
-            color: var(--glow-primary);
+            font-size: var(--scale-xl);
+            background: var(--hologram-quaternary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: iconGlow var(--duration-slow) ease-in-out infinite;
+        }
+        
+        @keyframes iconGlow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 10px rgba(67, 233, 123, 0.5));
+            }
+            50% { 
+                filter: drop-shadow(0 0 20px rgba(67, 233, 123, 0.8));
+            }
         }
         
         .payment-label {
             flex: 1;
-            font-size: 1.2rem;
+            font-size: var(--scale-medium);
             font-weight: 600;
+            font-family: 'Rajdhani', futuristic;
+            letter-spacing: 0.05em;
         }
         
-        /* Enhanced Checkout Button */
+        /* Epic Checkout Button */
         .checkout-button {
             width: 100%;
-            padding: var(--space-md);
-            background: var(--gradient-glow);
+            padding: var(--scale-large);
+            background: var(--hologram-rainbow);
             border: none;
-            border-radius: 16px;
-            color: var(--pure-black);
-            font-size: 1.3rem;
-            font-weight: 800;
+            border-radius: 25px;
+            color: var(--void-black);
+            font-size: var(--scale-large);
+            font-weight: 900;
+            font-family: 'Orbitron', futuristic;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
             cursor: pointer;
-            transition: var(--transition-smooth);
+            transition: all var(--duration-medium) var(--ease-elastic);
             position: relative;
             overflow: hidden;
-            box-shadow: var(--shadow-glow);
+            box-shadow: var(--shadow-hologram);
+            animation: buttonPulse var(--duration-slow) ease-in-out infinite;
+        }
+        
+        .checkout-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all var(--duration-medium) var(--ease-power);
         }
         
         .checkout-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 60px rgba(0, 217, 255, 0.4);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 
+                0 0 100px rgba(102, 126, 234, 0.6),
+                inset 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+        
+        .checkout-button:hover::before {
+            left: 100%;
+        }
+        
+        .checkout-button:active {
+            transform: translateY(-5px) scale(1.02);
         }
         
         .checkout-button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
             transform: none;
+            animation: none;
         }
         
-        /* Enhanced Book Viewer */
+        @keyframes buttonPulse {
+            0%, 100% { 
+                box-shadow: var(--shadow-hologram);
+            }
+            50% { 
+                box-shadow: 0 0 80px rgba(102, 126, 234, 0.8);
+            }
+        }
+        
+        /* Spectacular Book Viewer */
         .book-viewer {
             display: none;
-            padding-top: 80px;
+            padding-top: 100px;
             min-height: 100vh;
-            background: var(--pure-black);
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.2) 0%, transparent 70%),
+                radial-gradient(circle at 70% 30%, rgba(6, 182, 212, 0.2) 0%, transparent 70%),
+                var(--void-black);
+            position: relative;
         }
         
         .book-viewer.active {
             display: block;
+            animation: bookViewerReveal var(--duration-slow) var(--ease-power);
+        }
+        
+        @keyframes bookViewerReveal {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
         }
         
         .book-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: var(--space-lg);
+            padding: var(--scale-xxl);
         }
         
         .book-controls {
             position: fixed;
-            bottom: 30px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--glass-primary);
-            backdrop-filter: var(--blur-glass);
-            border: 1px solid var(--glass-accent);
+            background: 
+                linear-gradient(135deg, 
+                    rgba(255, 255, 255, 0.15) 0%, 
+                    rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: var(--blur-heavy);
+            border: 2px solid transparent;
+            border-image: var(--hologram-cyber) 1;
             border-radius: 50px;
-            padding: var(--space-sm) var(--space-lg);
+            padding: var(--scale-medium) var(--scale-xxl);
             display: flex;
             align-items: center;
-            gap: var(--space-lg);
+            gap: var(--scale-xxl);
             z-index: 100;
-            box-shadow: var(--shadow-glass);
+            box-shadow: 
+                var(--shadow-floating),
+                inset 0 0 30px rgba(6, 182, 212, 0.2);
         }
         
         .control-btn {
-            background: var(--glass-secondary);
-            border: 1px solid var(--glass-accent);
+            background: var(--glass-medium);
+            border: 2px solid transparent;
+            border-image: var(--hologram-tertiary) 1;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-primary);
-            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: var(--scale-large);
             cursor: pointer;
-            transition: var(--transition-smooth);
+            transition: all var(--duration-medium) var(--ease-elastic);
+            backdrop-filter: var(--blur-ultra);
+            box-shadow: var(--shadow-cyber);
         }
         
         .control-btn:hover {
-            background: var(--glass-accent);
-            border-color: var(--glow-primary);
-            transform: scale(1.1);
+            transform: scale(1.2) translateY(-5px);
+            box-shadow: var(--shadow-hologram);
+            border-image: var(--hologram-rainbow) 1;
+        }
+        
+        .control-btn:active {
+            transform: scale(1.1) translateY(-2px);
         }
         
         .chapter-info {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            min-width: 180px;
+            font-size: var(--scale-medium);
+            color: rgba(255, 255, 255, 0.8);
+            min-width: 200px;
             text-align: center;
             font-weight: 600;
+            font-family: 'Orbitron', futuristic;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            animation: chapterGlow var(--duration-slow) ease-in-out infinite;
         }
         
-        /* Enhanced Chapter Styles */
+        @keyframes chapterGlow {
+            0%, 100% { 
+                text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+            }
+            50% { 
+                text-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+            }
+        }
+        
+        /* Futuristic Chapter Styles */
         .chapter {
-            background: var(--glass-secondary);
-            border-radius: 24px;
-            padding: var(--space-xl);
-            margin-bottom: var(--space-xl);
-            border: 1px solid var(--glass-primary);
-            box-shadow: var(--shadow-glass);
+            background: 
+                linear-gradient(135deg, 
+                    rgba(255, 255, 255, 0.1) 0%, 
+                    rgba(255, 255, 255, 0.05) 100%);
+            border-radius: 40px;
+            padding: var(--scale-ultra);
+            margin-bottom: var(--scale-xxl);
+            border: 2px solid transparent;
+            border-image: var(--hologram-primary) 1;
+            box-shadow: 
+                var(--shadow-floating),
+                inset 0 0 50px rgba(102, 126, 234, 0.1);
+            backdrop-filter: var(--blur-heavy);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chapter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hologram-primary);
+            opacity: 0.05;
+            border-radius: 40px;
+            animation: chapterPulse var(--duration-slow) ease-in-out infinite;
+        }
+        
+        @keyframes chapterPulse {
+            0%, 100% { opacity: 0.05; transform: scale(1); }
+            50% { opacity: 0.1; transform: scale(1.005); }
         }
         
         .chapter-title {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 800;
-            margin-bottom: var(--space-lg);
-            background: var(--gradient-glow);
+            margin-bottom: var(--scale-xxl);
+            background: var(--hologram-cyber);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Orbitron', futuristic;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+            animation: chapterTitleGlow var(--duration-epic) ease-in-out infinite;
+        }
+        
+        @keyframes chapterTitleGlow {
+            0%, 100% { 
+                background-position: 0% 50%;
+                text-shadow: 0 0 30px rgba(6, 182, 212, 0.5);
+            }
+            50% { 
+                background-position: 100% 50%;
+                text-shadow: 0 0 50px rgba(16, 185, 129, 0.8);
+            }
         }
         
         .chapter-content {
-            font-size: 1.3rem;
+            font-size: var(--scale-medium);
             line-height: 2;
-            color: var(--text-primary);
+            color: rgba(255, 255, 255, 0.9);
+            font-family: 'Exo 2', futuristic;
+            position: relative;
+            z-index: 2;
         }
         
         .chapter-content p {
-            margin-bottom: var(--space-md);
+            margin-bottom: var(--scale-large);
             text-align: justify;
+            animation: contentGlow var(--duration-slow) ease-in-out infinite;
         }
         
-        /* Enhanced Footer */
+        @keyframes contentGlow {
+            0%, 100% { 
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+            50% { 
+                text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            }
+        }
+        
+        /* Cosmic Footer */
         .footer {
-            background: var(--secondary-black);
-            padding: var(--space-xl) var(--space-md);
+            background: 
+                linear-gradient(180deg, 
+                    transparent 0%, 
+                    rgba(26, 26, 46, 0.8) 100%);
+            padding: var(--scale-ultra) var(--scale-medium);
             text-align: center;
-            border-top: 1px solid var(--glass-primary);
+            border-top: 2px solid transparent;
+            border-image: var(--hologram-cyber) 1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(0, 255, 255, 0.1) 50px,
+                    rgba(0, 255, 255, 0.1) 52px
+                );
+            animation: footerPattern var(--duration-eternal) linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes footerPattern {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(52px); }
         }
         
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: var(--space-lg);
-            margin-bottom: var(--space-lg);
+            gap: var(--scale-xxl);
+            margin-bottom: var(--scale-xxl);
             flex-wrap: wrap;
         }
         
         .footer-link {
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            transition: var(--transition-smooth);
+            transition: all var(--duration-medium) var(--ease-elastic);
             font-weight: 600;
+            font-family: 'Orbitron', futuristic;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--hologram-tertiary);
+            transform: scaleX(0);
+            transition: transform var(--duration-medium) var(--ease-elastic);
         }
         
         .footer-link:hover {
-            color: var(--glow-primary);
+            color: rgba(255, 255, 255, 1);
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.8);
+            transform: translateY(-3px);
+        }
+        
+        .footer-link:hover::after {
+            transform: scaleX(1);
         }
         
         .copyright {
-            color: var(--text-tertiary);
-            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: var(--scale-small);
+            font-family: 'Exo 2', futuristic;
+            animation: copyrightGlow var(--duration-slow) ease-in-out infinite;
         }
         
-        /* Enhanced Responsive Design */
+        @keyframes copyrightGlow {
+            0%, 100% { 
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+            50% { 
+                text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            }
+        }
+        
+        /* Revolutionary Responsive Design */
         @media (max-width: 768px) {
             .nav-container {
-                padding: 0 var(--space-sm);
+                padding: 0 var(--scale-small);
             }
             
             .hero-section {
-                padding: 100px var(--space-sm) var(--space-lg);
+                padding: 100px var(--scale-small) var(--scale-xxl);
             }
             
             .author-section {
-                padding: var(--space-lg) var(--space-md);
+                padding: var(--scale-xxl) var(--scale-medium);
+                margin: var(--scale-xxl) var(--scale-small);
             }
             
             .pricing-card {
-                padding: var(--space-lg) var(--space-md);
+                padding: var(--scale-xxl) var(--scale-medium);
             }
             
             .book-controls {
                 bottom: 20px;
-                padding: var(--space-sm);
-                gap: var(--space-sm);
+                padding: var(--scale-small) var(--scale-medium);
+                gap: var(--scale-medium);
             }
             
             .control-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
+                width: 60px;
+                height: 60px;
+                font-size: var(--scale-medium);
             }
             
             .chapter {
-                padding: var(--space-lg) var(--space-md);
+                padding: var(--scale-xxl) var(--scale-medium);
+            }
+            
+            .footer-links {
+                gap: var(--scale-medium);
             }
         }
         
-        /* Enhanced Content Protection */
+        /* Ultimate Content Protection */
         .no-select {
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -741,38 +1459,118 @@
             border: 0;
         }
         
-        /* Enhanced Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Mind-Blowing Animations */
+        @keyframes hologramFlicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
         }
         
-        @keyframes slideUp {
-            from { transform: translateY(100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        @keyframes quantumShift {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-2px); }
+            100% { transform: translateX(0); }
+        }
+        
+        @keyframes dimensionWarp {
+            0% { transform: perspective(1000px) rotateY(0deg); }
+            100% { transform: perspective(1000px) rotateY(360deg); }
+        }
+        
+        @keyframes energyWave {
+            0% { transform: translateX(-100%) skewX(-15deg); }
+            100% { transform: translateX(100%) skewX(-15deg); }
         }
         
         .fade-in {
-            animation: fadeIn 0.8s ease forwards;
+            animation: 
+                fadeIn var(--duration-slow) var(--ease-power) forwards,
+                quantumShift var(--duration-medium) var(--ease-elastic) 0.5s;
         }
         
         .slide-up {
-            animation: slideUp 0.6s ease forwards;
+            animation: 
+                slideUp var(--duration-slow) var(--ease-bounce) forwards,
+                hologramFlicker var(--duration-slow) ease-in-out infinite 1s;
         }
         
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(50px) scale(0.8); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
         }
         
+        @keyframes slideUp {
+            from { transform: translateY(100px) rotateX(90deg); opacity: 0; }
+            to { transform: translateY(0) rotateX(0deg); opacity: 1; }
+        }
+        
+        /* Quantum Pulse Effect */
         .pulse {
-            animation: pulse 2s infinite;
+            animation: 
+                quantumPulse var(--duration-slow) ease-in-out infinite,
+                energyWave var(--duration-epic) linear infinite;
+        }
+        
+        @keyframes quantumPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 0 50px rgba(139, 92, 246, 0.8);
+            }
+        }
+        
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: 
+                linear-gradient(135deg, 
+                    rgba(255, 255, 255, 0.2) 0%, 
+                    rgba(255, 255, 255, 0.1) 100%);
+            backdrop-filter: var(--blur-heavy);
+            border: 2px solid transparent;
+            border-radius: 20px;
+            padding: var(--scale-medium) var(--scale-xxl);
+            z-index: 10000;
+            animation: notificationSlide var(--duration-medium) var(--ease-bounce);
+            max-width: 90%;
+            text-align: center;
+            box-shadow: var(--shadow-floating);
+            font-family: 'Orbitron', futuristic;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+        
+        .notification.error {
+            border-image: var(--hologram-secondary) 1;
+            color: #ff6b6b;
+        }
+        
+        .notification.success {
+            border-image: var(--hologram-quaternary) 1;
+            color: #51cf66;
+        }
+        
+        .notification.info {
+            border-image: var(--hologram-tertiary) 1;
+            color: #74c0fc;
+        }
+        
+        @keyframes notificationSlide {
+            0% { transform: translateX(-50%) translateY(-100px) scale(0.8); opacity: 0; }
+            100% { transform: translateX(-50%) translateY(0) scale(1); opacity: 1; }
         }
     </style>
 </head>
 <body class="arabic">
     <div id="app">
-        <!-- Enhanced Loading Screen -->
+        <!-- Spectacular Loading Screen -->
         <div class="loading-screen" id="loadingScreen">
             <div class="loading-content">
                 <div class="loading-spinner"></div>
@@ -783,7 +1581,7 @@
             </div>
         </div>
         
-        <!-- Enhanced Navigation Header -->
+        <!-- Futuristic Navigation Header -->
         <header class="nav-header">
             <nav class="nav-container">
                 <div class="logo">
@@ -804,7 +1602,7 @@
         
         <!-- Main Content -->
         <main id="mainContent">
-            <!-- Enhanced Hero Section -->
+            <!-- Epic Hero Section -->
             <section class="hero-section fade-in">
                 <div class="hero-content">
                     <h1 class="hero-title">
@@ -816,7 +1614,7 @@
                         <span class="english-text">An Exploratory Journey into Human Consciousness and the Age of Intelligent Machines</span>
                     </p>
                     
-                    <!-- Enhanced Author Section -->
+                    <!-- Spectacular Author Section -->
                     <div class="author-section slide-up">
                         <div class="author-image">
                             <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='100' fill='%232a2a2a'/><text x='100' y='120' text-anchor='middle' font-size='80' fill='%23f5f3f0'>👨‍⚕️</text></svg>" alt="Dr. Mohammed Al-Fadil">
@@ -837,7 +1635,7 @@
                 </div>
             </section>
             
-            <!-- Enhanced Pricing Section -->
+            <!-- Holographic Pricing Section -->
             <section class="pricing-section">
                 <div class="pricing-container">
                     <h2 class="section-title">
@@ -875,7 +1673,7 @@
                 </div>
             </section>
             
-            <!-- Enhanced Payment Section -->
+            <!-- Quantum Payment Section -->
             <section class="payment-section">
                 <div class="payment-container">
                     <h3 class="section-title">
@@ -914,7 +1712,7 @@
             </section>
         </main>
         
-        <!-- Enhanced Book Viewer (Hidden until purchase) -->
+        <!-- Spectacular Book Viewer (Hidden until purchase) -->
         <div class="book-viewer" id="bookViewer">
             <div class="book-container" id="bookContent">
                 <!-- Book content will be loaded here -->
@@ -934,7 +1732,7 @@
             </div>
         </div>
         
-        <!-- Enhanced Footer -->
+        <!-- Cosmic Footer -->
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-links">
@@ -959,9 +1757,9 @@
         </footer>
     </div>
     
-    <!-- Enhanced JavaScript -->
+    <!-- Revolutionary JavaScript -->
     <script>
-        // Enhanced Configuration
+        // Revolutionary Configuration
         const config = {
             stripe: {
                 publicKey: 'pk_test_51O4QW5L0dRYGmvgkIXfp7vZR6rKNMjP2Xt5xQZQm1234567890',
@@ -981,7 +1779,7 @@
             tokenValidity: 30 * 24 * 60 * 60 * 1000 // 30 days
         };
         
-        // Enhanced Global State
+        // Quantum Global State
         let state = {
             language: 'ar',
             currency: 'SAR',
@@ -996,7 +1794,7 @@
             isBookViewerActive: false
         };
         
-        // Enhanced App Initialization
+        // Revolutionary App Initialization
         document.addEventListener('DOMContentLoaded', function() {
             initializeApp();
             checkExistingAccess();
@@ -1021,7 +1819,7 @@
                 window.stripe = Stripe(config.stripe.publicKey);
             }
             
-            console.log('App initialized with enhanced features');
+            console.log('🚀 Revolutionary OI vs AI platform initialized!');
         }
         
         function checkExistingAccess() {
@@ -1043,7 +1841,7 @@
         }
         
         function setupEventListeners() {
-            // Enhanced content protection
+            // Ultimate content protection
             document.addEventListener('contextmenu', (e) => e.preventDefault());
             
             // Prevent text selection in book content
@@ -1053,7 +1851,7 @@
                 }
             });
             
-            // Enhanced keyboard navigation
+            // Quantum keyboard navigation
             document.addEventListener('keydown', function(e) {
                 if (state.isBookViewerActive) {
                     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
@@ -1065,7 +1863,6 @@
                         }
                     }
                     if (e.key === 'Escape') {
-                        // Option to return to main content
                         if (confirm('العودة إلى الصفحة الرئيسية؟ / Return to main page?')) {
                             showMainContent();
                         }
@@ -1076,11 +1873,27 @@
             // Print prevention
             window.addEventListener('beforeprint', function(e) {
                 e.preventDefault();
-                alert('Printing is not allowed / الطباعة غير مسموحة');
+                showNotification('Printing is not allowed / الطباعة غير مسموحة', 'error');
             });
+            
+            // DevTools detection
+            let devtools = {open: false, orientation: null};
+            const threshold = 160;
+            
+            setInterval(() => {
+                if (window.outerHeight - window.innerHeight > threshold || 
+                    window.outerWidth - window.innerWidth > threshold) {
+                    if (!devtools.open) {
+                        devtools.open = true;
+                        showNotification('Developer tools detected / تم اكتشاف أدوات المطور', 'error');
+                    }
+                } else {
+                    devtools.open = false;
+                }
+            }, 500);
         }
         
-        // Enhanced Language Switching
+        // Futuristic Language Switching
         function switchLanguage(lang, save = true) {
             state.language = lang;
             document.body.className = lang === 'ar' ? 'arabic' : 'english';
@@ -1102,7 +1915,7 @@
             }
         }
         
-        // Enhanced Currency Switching
+        // Quantum Currency Switching
         function setCurrency(currency) {
             state.currency = currency;
             localStorage.setItem('oi_currency', currency);
@@ -1124,7 +1937,7 @@
             config.paypal.currency = currency;
         }
         
-        // Enhanced Payment Selection
+        // Spectacular Payment Selection
         function selectPayment(method) {
             state.paymentMethod = method;
             
@@ -1139,10 +1952,10 @@
             document.getElementById('checkoutButton').disabled = false;
         }
         
-        // Enhanced Payment Processing
+        // Revolutionary Payment Processing
         async function processPayment() {
             if (!state.paymentMethod) {
-                showError('Please select a payment method / يرجى اختيار طريقة الدفع');
+                showNotification('Please select a payment method / يرجى اختيار طريقة الدفع', 'error');
                 return;
             }
             
@@ -1165,13 +1978,13 @@
                 }
             } catch (error) {
                 console.error('Payment error:', error);
-                showError('Payment failed. Please try again. / فشل في الدفع، يرجى المحاولة مرة أخرى.');
+                showNotification('Payment failed. Please try again. / فشل في الدفع، يرجى المحاولة مرة أخرى.', 'error');
                 button.disabled = false;
                 button.innerHTML = state.language === 'ar' ? 'إتمام الشراء' : 'Complete Purchase';
             }
         }
         
-        // Enhanced Stripe Payment
+        // Quantum Stripe Payment
         async function processStripePayment() {
             const priceId = state.currency === 'SAR' ? 
                 config.stripe.products.book_sar : 
@@ -1190,7 +2003,7 @@
             }
         }
         
-        // Enhanced Apple Pay
+        // Holographic Apple Pay
         async function processApplePayment() {
             if (!window.PaymentRequest) {
                 throw new Error('Apple Pay not supported');
@@ -1220,10 +2033,9 @@
             grantAccess();
         }
         
-        // Enhanced PayPal Payment
+        // Cosmic PayPal Payment
         async function processPayPalPayment() {
             return new Promise((resolve, reject) => {
-                // Simulate PayPal payment flow
                 setTimeout(() => {
                     grantAccess();
                     resolve();
@@ -1231,17 +2043,18 @@
             });
         }
         
-        // Enhanced Access Grant
+        // Spectacular Access Grant
         function grantAccess() {
-            // Generate enhanced access token
+            // Generate quantum access token
             const tokenData = {
                 method: state.paymentMethod,
                 currency: state.currency,
                 amount: config.prices[state.currency].current,
-                transactionId: 'oi_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+                transactionId: 'oi_quantum_' + Date.now() + '_' + Math.random().toString(36).substr(2, 12),
                 purchaseDate: new Date().toISOString(),
                 expiry: new Date().getTime() + config.tokenValidity,
-                language: state.language
+                language: state.language,
+                signature: btoa(Date.now().toString() + Math.random().toString())
             };
             
             const token = btoa(JSON.stringify(tokenData));
@@ -1254,16 +2067,16 @@
             state.accessToken = token;
             
             // Show success message
-            showSuccess('Payment successful! Loading your book... / تم الدفع بنجاح! جاري تحميل كتابك...');
+            showNotification('🎉 Payment successful! Loading your book... / تم الدفع بنجاح! جاري تحميل كتابك...', 'success');
             
             // Show book viewer
             setTimeout(() => {
                 showBookViewer();
                 loadBookContent();
-            }, 1500);
+            }, 2000);
         }
         
-        // Enhanced Book Viewer
+        // Revolutionary Book Viewer
         function showBookViewer() {
             document.getElementById('mainContent').style.display = 'none';
             document.getElementById('bookViewer').classList.add('active');
@@ -1276,9 +2089,11 @@
             state.isBookViewerActive = false;
         }
         
-        // Enhanced Content Loading
+        // Quantum Content Loading
         async function loadBookContent() {
             try {
+                showNotification('Loading book content... / جاري تحميل محتوى الكتاب...', 'info');
+                
                 // Load Arabic content
                 const arResponse = await fetch('/raw-arabic.html');
                 const arText = await arResponse.text();
@@ -1291,19 +2106,21 @@
                 
                 // Display first chapter
                 displayChapter(1);
+                
+                showNotification('📚 Book loaded successfully! / تم تحميل الكتاب بنجاح!', 'success');
             } catch (error) {
                 console.error('Error loading book content:', error);
-                showError('Failed to load book content / فشل في تحميل محتوى الكتاب');
+                showNotification('Failed to load book content / فشل في تحميل محتوى الكتاب', 'error');
             }
         }
         
-        // Enhanced Content Parser
+        // Futuristic Content Parser
         function parseBookContent(html, lang) {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
             const chapters = [];
             
-            // Enhanced chapter extraction
+            // Advanced chapter extraction
             const chapterElements = doc.querySelectorAll('.chapter, h1, h2, [data-chapter]');
             
             chapterElements.forEach((element, index) => {
@@ -1330,7 +2147,7 @@
             return chapters;
         }
         
-        // Enhanced Chapter Display
+        // Spectacular Chapter Display
         function displayChapter(chapterNum) {
             const bookContent = document.getElementById('bookContent');
             const lang = state.language;
@@ -1354,10 +2171,10 @@
             updateChapterInfo();
             
             // Scroll to top
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         
-        // Enhanced Navigation
+        // Quantum Navigation
         function previousChapter() {
             if (state.currentChapter > 1) {
                 displayChapter(state.currentChapter - 1);
@@ -1379,7 +2196,7 @@
             }
         }
         
-        // Enhanced UI Helpers
+        // Revolutionary UI Helpers
         function hideLoading() {
             setTimeout(() => {
                 const loadingScreen = document.getElementById('loadingScreen');
@@ -1387,42 +2204,13 @@
                 setTimeout(() => {
                     loadingScreen.style.display = 'none';
                 }, 500);
-            }, 1000);
-        }
-        
-        function showError(message) {
-            showNotification(message, 'error');
-        }
-        
-        function showSuccess(message) {
-            showNotification(message, 'success');
+            }, 1500);
         }
         
         function showNotification(message, type = 'info') {
             const notification = document.createElement('div');
             notification.className = `notification ${type}`;
             notification.textContent = message;
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: ${type === 'error' ? 'var(--error-color)' : 
-                           type === 'success' ? 'var(--success-color)' : 
-                           'var(--glass-primary)'};
-                color: white;
-                padding: var(--space-sm) var(--space-lg);
-                border-radius: 12px;
-                z-index: 10000;
-                animation: fadeIn 0.3s ease;
-                max-width: 90%;
-                text-align: center;
-                box-shadow: var(--shadow-glass);
-                backdrop-filter: var(--blur-glass);
-                border: 1px solid ${type === 'error' ? 'var(--error-color)' : 
-                                   type === 'success' ? 'var(--success-color)' : 
-                                   'var(--glass-accent)'};
-            `;
             
             document.body.appendChild(notification);
             
@@ -1430,27 +2218,42 @@
                 notification.style.opacity = '0';
                 setTimeout(() => {
                     notification.remove();
-                }, 300);
+                }, 500);
             }, 4000);
         }
         
-        // Enhanced URL Parameter Handling
+        // Quantum URL Parameter Handling
         const urlParams = new URLSearchParams(window.location.search);
         const paymentStatus = urlParams.get('payment');
         
         if (paymentStatus === 'success') {
             grantAccess();
-            // Clean URL
             window.history.replaceState({}, document.title, window.location.pathname);
         } else if (paymentStatus === 'cancelled') {
-            showError('Payment was cancelled / تم إلغاء الدفع');
-            // Clean URL
+            showNotification('Payment was cancelled / تم إلغاء الدفع', 'error');
             window.history.replaceState({}, document.title, window.location.pathname);
         }
         
-        // Enhanced Performance Monitoring
+        // Revolutionary Performance Monitoring
         window.addEventListener('load', () => {
-            console.log('Enhanced OI vs AI platform loaded successfully');
+            console.log('🌟 Revolutionary OI vs AI platform loaded with quantum power!');
+        });
+        
+        // Cosmic Easter Eggs
+        const konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+        let konamiIndex = 0;
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.keyCode === konami[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konami.length) {
+                    showNotification('🎉 Quantum mode activated! / تم تفعيل الوضع الكمي!', 'success');
+                    document.body.style.animation = 'dimensionWarp 10s linear infinite';
+                    konamiIndex = 0;
+                }
+            } else {
+                konamiIndex = 0;
+            }
         });
     </script>
 </body>
