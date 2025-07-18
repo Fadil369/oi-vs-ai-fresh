@@ -1,3 +1,32 @@
-.gitmodules
-ai-vs-oi/
-AGENTS/ai-vs-oi/
+# Dependencies
+node_modules/
+.npm
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Archive folders (keep contents but ignore from git)
+# archive/

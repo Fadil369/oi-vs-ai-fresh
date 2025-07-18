@@ -12,10 +12,10 @@
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
     
-    <!-- Google Fonts -->
+    <!-- Modern Font Stack -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,48 +28,122 @@
         }
         
         :root {
-            /* Professional Dark Theme */
-            --primary-black: #0a0a0a;
-            --secondary-black: #1a1a1a;
-            --accent-black: #2a2a2a;
-            --glass-primary: rgba(255, 255, 255, 0.1);
-            --glass-secondary: rgba(255, 255, 255, 0.05);
-            --glass-accent: rgba(255, 255, 255, 0.15);
-            --sepia-white: #f5f3f0;
-            --sepia-light: #e8e4df;
-            --sepia-dark: #d4cfc7;
-            --glow-primary: #00d4ff;
-            --glow-secondary: #7c3aed;
-            --glow-accent: #fbbf24;
-            --gradient-glow: linear-gradient(135deg, var(--glow-primary), var(--glow-secondary));
-            --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.3);
-            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+            /* Ultrathink Color Palette */
+            --pure-black: #000000;
+            --deep-navy: #0a192f;
+            --navy-light: #112240;
+            --navy-medium: #1a2947;
+            --navy-glass: rgba(17, 34, 64, 0.3);
+            
+            /* Glass White Variants */
+            --glass-white-5: rgba(255, 255, 255, 0.05);
+            --glass-white-10: rgba(255, 255, 255, 0.1);
+            --glass-white-15: rgba(255, 255, 255, 0.15);
+            --glass-white-20: rgba(255, 255, 255, 0.2);
+            --glass-white-80: rgba(255, 255, 255, 0.8);
+            
+            /* Glow Colors */
+            --glow-cyan: #00d9ff;
+            --glow-purple: #7928ca;
+            --glow-pink: #ff0080;
+            --glow-blue: #0070f3;
+            
+            /* Text Colors */
+            --text-primary: rgba(255, 255, 255, 0.95);
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-tertiary: rgba(255, 255, 255, 0.5);
+            
+            /* Reading Mode Colors */
+            --reading-bg: #faf8f5;
+            --reading-text: #1a1a1a;
+            --reading-accent: #0a192f;
+            
+            /* Gradients */
+            --gradient-glow: linear-gradient(135deg, var(--glow-cyan), var(--glow-purple));
+            --gradient-subtle: linear-gradient(180deg, var(--glass-white-10), var(--glass-white-5));
+            --gradient-navy: linear-gradient(180deg, var(--deep-navy), var(--navy-light));
+            
+            /* Effects */
+            --blur-glass: blur(12px);
+            --blur-heavy: blur(24px);
+            --shadow-glow: 0 0 40px rgba(0, 217, 255, 0.3);
+            --shadow-subtle: 0 4px 24px rgba(0, 0, 0, 0.5);
+            --shadow-elevation: 0 12px 48px rgba(0, 0, 0, 0.3);
+            
+            /* Transitions */
             --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            
+            /* Spacing Scale */
+            --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+            --space-sm: clamp(1rem, 2vw, 1.5rem);
+            --space-md: clamp(1.5rem, 3vw, 2.5rem);
+            --space-lg: clamp(2rem, 4vw, 4rem);
+            --space-xl: clamp(3rem, 6vw, 6rem);
         }
         
+        /* Base Styles */
         html {
             scroll-behavior: smooth;
-            font-size: clamp(14px, 2.5vw, 18px);
+            font-size: 16px;
         }
         
         body {
-            font-family: 'Amiri', serif;
-            background: var(--primary-black);
-            color: var(--sepia-white);
-            line-height: 1.8;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--pure-black);
+            color: var(--text-primary);
+            line-height: 1.6;
             overflow-x: hidden;
-            transition: var(--transition-smooth);
             min-height: 100vh;
+            position: relative;
         }
         
-        /* English Language Override */
+        /* Arabic Typography */
+        body.arabic {
+            font-family: 'Amiri', 'Noto Kufi Arabic', serif;
+            direction: rtl;
+        }
+        
         body.english {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Merriweather', 'Georgia', serif;
             direction: ltr;
         }
         
         body.arabic .english-text { display: none; }
         body.english .arabic-text { display: none; }
+        
+        /* Reading Modes */
+        body.reading-mode {
+            background: var(--reading-bg);
+            color: var(--reading-text);
+        }
+        
+        body.reading-mode .nav-header {
+            background: rgba(250, 248, 245, 0.95);
+            border-bottom-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        body.reading-mode .book-content {
+            background: white;
+            color: var(--reading-text);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Background Effects */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, var(--glow-cyan) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, var(--glow-purple) 0%, transparent 40%);
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 0;
+        }
         
         /* Access Denied Screen */
         .access-denied {
@@ -78,64 +152,77 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--primary-black);
+            background: var(--pure-black);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 10000;
-            flex-direction: column;
-            text-align: center;
-            padding: 2rem;
+            padding: var(--space-md);
         }
         
         .access-denied-content {
             max-width: 600px;
-            background: var(--glass-primary);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-accent);
-            border-radius: 20px;
-            padding: 3rem;
+            text-align: center;
+            animation: fadeInUp 0.8s ease;
         }
         
         .access-denied-icon {
-            font-size: 4rem;
-            color: var(--glow-primary);
-            margin-bottom: 2rem;
-        }
-        
-        .access-denied-title {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
+            font-size: 5rem;
             background: var(--gradient-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: var(--space-md);
+            filter: drop-shadow(0 0 40px var(--glow-cyan));
+        }
+        
+        .access-denied-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: var(--space-sm);
         }
         
         .access-denied-text {
-            font-size: 1.2rem;
-            color: var(--sepia-light);
-            margin-bottom: 2rem;
-            line-height: 1.6;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+            line-height: 1.8;
         }
         
         .purchase-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
             background: var(--gradient-glow);
             border: none;
-            border-radius: 15px;
-            color: var(--primary-black);
-            font-size: 1.1rem;
-            font-weight: 700;
-            padding: 1rem 2rem;
+            border-radius: 100px;
+            color: var(--pure-black);
+            font-size: 1.125rem;
+            font-weight: 600;
+            padding: 1.25rem 2.5rem;
             cursor: pointer;
-            transition: var(--transition-smooth);
             text-decoration: none;
-            display: inline-block;
+            transition: var(--transition-spring);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .purchase-button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
         }
         
         .purchase-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-glow);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.4);
+        }
+        
+        .purchase-button:hover::before {
+            transform: translateX(100%);
         }
         
         /* Navigation Header */
@@ -145,82 +232,128 @@
             left: 0;
             right: 0;
             height: 70px;
-            background: var(--glass-secondary);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-primary);
+            background: var(--glass-white-5);
+            backdrop-filter: var(--blur-heavy);
+            -webkit-backdrop-filter: var(--blur-heavy);
+            border-bottom: 1px solid var(--glass-white-10);
             z-index: 1000;
             transition: var(--transition-smooth);
         }
         
         .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
             height: 100%;
-            padding: 0 2rem;
+            padding: 0 var(--space-md);
             display: flex;
             align-items: center;
             justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
         }
         
         .logo {
-            font-size: 1.2rem;
-            font-weight: 800;
+            font-size: 1.25rem;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
             background: var(--gradient-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            cursor: pointer;
         }
         
-        .nav-controls {
+        .logo-icon {
+            font-size: 1.5rem;
+            filter: drop-shadow(0 0 20px var(--glow-cyan));
+        }
+        
+        /* Reader Controls */
+        .reader-controls {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: var(--space-sm);
+        }
+        
+        /* Reading Mode Toggle */
+        .reading-mode-toggle {
+            background: var(--glass-white-10);
+            backdrop-filter: var(--blur-glass);
+            border: 1px solid var(--glass-white-20);
+            border-radius: 100px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+        }
+        
+        .reading-mode-toggle:hover {
+            background: var(--glass-white-15);
+            color: var(--text-primary);
+        }
+        
+        body.reading-mode .reading-mode-toggle {
+            background: var(--reading-accent);
+            color: white;
         }
         
         /* Language Switcher */
         .language-switcher {
-            background: var(--glass-primary);
-            border: 1px solid var(--glass-accent);
-            border-radius: 50px;
-            display: flex;
-            overflow: hidden;
             position: relative;
+            display: flex;
+            background: var(--glass-white-10);
+            backdrop-filter: var(--blur-glass);
+            border: 1px solid var(--glass-white-20);
+            border-radius: 100px;
+            padding: 4px;
+            gap: 4px;
         }
         
         .language-switcher button {
             padding: 0.5rem 1rem;
             background: transparent;
             border: none;
-            color: var(--sepia-white);
+            color: var(--text-secondary);
             font-family: inherit;
             font-size: 0.8rem;
+            font-weight: 500;
             cursor: pointer;
+            border-radius: 100px;
             transition: var(--transition-smooth);
             position: relative;
             z-index: 2;
         }
         
         .language-switcher button.active {
-            color: var(--primary-black);
+            color: var(--pure-black);
         }
         
-        .language-switcher .indicator {
+        .language-indicator {
             position: absolute;
-            top: 0;
-            height: 100%;
+            top: 4px;
+            bottom: 4px;
+            width: calc(50% - 4px);
             background: var(--gradient-glow);
-            border-radius: 50px;
-            transition: var(--transition-smooth);
-            z-index: 1;
+            border-radius: 100px;
+            transition: var(--transition-spring);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        body.arabic .language-indicator {
+            right: 4px;
+        }
+        
+        body.english .language-indicator {
+            left: 4px;
         }
         
         /* Book Viewer */
         .book-viewer {
-            padding-top: 70px;
+            padding-top: calc(70px + var(--space-lg));
             min-height: 100vh;
-            background: var(--primary-black);
+            position: relative;
             display: none;
         }
         
@@ -231,63 +364,225 @@
         .book-container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 0 var(--space-md) var(--space-xl);
+            position: relative;
         }
         
-        .book-content {
-            background: var(--glass-secondary);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            border: 1px solid var(--glass-primary);
-        }
-        
-        .book-controls {
+        /* Progress Bar */
+        .reading-progress {
             position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--glass-primary);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-accent);
-            border-radius: 50px;
-            padding: 1rem 2rem;
+            top: 70px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--glass-white-10);
+            z-index: 999;
+        }
+        
+        .reading-progress-bar {
+            height: 100%;
+            background: var(--gradient-glow);
+            width: 0;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 20px var(--glow-cyan);
+        }
+        
+        /* Chapter Navigation */
+        .chapter-nav {
+            margin-bottom: var(--space-lg);
+            padding: var(--space-sm);
+            background: var(--glass-white-5);
+            backdrop-filter: var(--blur-glass);
+            border: 1px solid var(--glass-white-10);
+            border-radius: 24px;
             display: flex;
             align-items: center;
-            gap: 2rem;
+            justify-content: space-between;
+            gap: var(--space-sm);
+        }
+        
+        .chapter-nav-btn {
+            background: var(--glass-white-10);
+            border: 1px solid var(--glass-white-20);
+            border-radius: 100px;
+            padding: 0.75rem 1.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .chapter-nav-btn:hover:not(:disabled) {
+            background: var(--glass-white-15);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+        
+        .chapter-nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .chapter-info {
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Book Content */
+        .book-content {
+            background: var(--glass-white-5);
+            backdrop-filter: var(--blur-glass);
+            border: 1px solid var(--glass-white-10);
+            border-radius: 32px;
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+        
+        .book-content::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-subtle);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        /* Chapter Styles */
+        .chapter-header {
+            margin-bottom: var(--space-lg);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .chapter-number {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--glow-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .chapter-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.2;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .chapter-divider {
+            width: 80px;
+            height: 3px;
+            background: var(--gradient-glow);
+            margin: 0 auto;
+            border-radius: 100px;
+        }
+        
+        /* Content Typography */
+        .chapter-content {
+            position: relative;
+            z-index: 1;
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+        
+        body.arabic .chapter-content {
+            font-size: 1.25rem;
+            line-height: 2;
+        }
+        
+        .chapter-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        .chapter-content h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin: var(--space-md) 0 var(--space-sm);
+            color: var(--text-primary);
+        }
+        
+        .chapter-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: var(--space-sm) 0 1rem;
+            color: var(--text-primary);
+        }
+        
+        .chapter-content blockquote {
+            margin: var(--space-md) 0;
+            padding: var(--space-sm);
+            background: var(--glass-white-5);
+            border-right: 4px solid var(--glow-cyan);
+            border-radius: 8px;
+            font-style: italic;
+            position: relative;
+        }
+        
+        body.english .chapter-content blockquote {
+            border-right: none;
+            border-left: 4px solid var(--glow-cyan);
+        }
+        
+        /* Floating Controls */
+        .floating-controls {
+            position: fixed;
+            bottom: var(--space-md);
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass-white-10);
+            backdrop-filter: var(--blur-heavy);
+            -webkit-backdrop-filter: var(--blur-heavy);
+            border: 1px solid var(--glass-white-20);
+            border-radius: 100px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            box-shadow: var(--shadow-elevation);
             z-index: 100;
         }
         
         .control-btn {
-            background: var(--glass-secondary);
-            border: 1px solid var(--glass-accent);
+            background: var(--glass-white-10);
+            border: 1px solid var(--glass-white-20);
             border-radius: 50%;
             width: 50px;
             height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--sepia-white);
-            font-size: 1.2rem;
+            color: var(--text-secondary);
+            font-size: 1.25rem;
             cursor: pointer;
             transition: var(--transition-smooth);
         }
         
-        .control-btn:hover {
-            background: var(--glass-accent);
-            border-color: var(--glow-primary);
+        .control-btn:hover:not(:disabled) {
+            background: var(--glass-white-20);
+            color: var(--text-primary);
+            transform: scale(1.1);
+            border-color: var(--glow-cyan);
         }
         
         .control-btn:disabled {
             opacity: 0.5;
             cursor: not-allowed;
-        }
-        
-        .chapter-info {
-            font-size: 1rem;
-            color: var(--sepia-light);
-            min-width: 150px;
-            text-align: center;
         }
         
         /* Content Protection */
@@ -298,29 +593,77 @@
             user-select: none;
         }
         
-        @media print {
-            body {
-                display: none !important;
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
         
-        /* Responsive */
+        /* Mobile Optimizations */
         @media (max-width: 768px) {
-            .nav-container {
-                padding: 0 1rem;
+            .nav-header {
+                height: 60px;
+            }
+            
+            .reader-controls {
+                gap: 0.5rem;
+            }
+            
+            .language-switcher {
+                padding: 3px;
+                gap: 3px;
+            }
+            
+            .language-switcher button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.75rem;
+            }
+            
+            .reading-mode-toggle {
+                padding: 0.4rem;
+                font-size: 1rem;
             }
             
             .book-container {
-                padding: 1rem;
+                padding: 0 var(--space-sm) var(--space-xl);
+            }
+            
+            .chapter-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .chapter-nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
             }
             
             .book-content {
-                padding: 2rem 1.5rem;
+                padding: var(--space-md);
+                border-radius: 20px;
             }
             
-            .book-controls {
-                bottom: 20px;
-                padding: 0.8rem 1.5rem;
+            .chapter-title {
+                font-size: 1.75rem;
+            }
+            
+            .chapter-content {
+                font-size: 1rem;
+            }
+            
+            body.arabic .chapter-content {
+                font-size: 1.125rem;
+            }
+            
+            .floating-controls {
+                bottom: var(--space-sm);
+                padding: 0.75rem 1rem;
                 gap: 1rem;
             }
             
@@ -328,6 +671,13 @@
                 width: 40px;
                 height: 40px;
                 font-size: 1rem;
+            }
+        }
+        
+        /* Print Protection */
+        @media print {
+            body {
+                display: none !important;
             }
         }
     </style>
@@ -350,6 +700,7 @@
             <a href="/" class="purchase-button">
                 <span class="arabic-text">اشتري الكتاب الآن</span>
                 <span class="english-text">Buy Book Now</span>
+                <i class="fas fa-arrow-right"></i>
             </a>
         </div>
     </div>
@@ -358,37 +709,82 @@
     <header class="nav-header">
         <nav class="nav-container">
             <div class="logo">
-                <i class="fas fa-brain"></i>
+                <i class="fas fa-brain logo-icon"></i>
                 <span class="arabic-text">قراءة الكتاب</span>
                 <span class="english-text">Reading Book</span>
             </div>
             
-            <div class="nav-controls">
+            <div class="reader-controls">
+                <button class="reading-mode-toggle" onclick="toggleReadingMode()" title="Toggle Reading Mode">
+                    <i class="fas fa-sun" id="themeIcon"></i>
+                </button>
+                
                 <div class="language-switcher">
                     <button class="lang-ar active" onclick="switchLanguage('ar')">عربي</button>
                     <button class="lang-en" onclick="switchLanguage('en')">English</button>
-                    <div class="indicator"></div>
+                    <div class="language-indicator"></div>
                 </div>
             </div>
         </nav>
     </header>
     
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress">
+        <div class="reading-progress-bar" id="progressBar"></div>
+    </div>
+    
     <!-- Book Viewer -->
     <div class="book-viewer" id="bookViewer">
         <div class="book-container">
+            <!-- Chapter Navigation -->
+            <div class="chapter-nav">
+                <button class="chapter-nav-btn" id="prevChapterBtn" onclick="previousChapter()">
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="arabic-text">السابق</span>
+                    <span class="english-text">Previous</span>
+                </button>
+                
+                <div class="chapter-info" id="chapterInfo">
+                    <span class="arabic-text">الفصل 1 من 20</span>
+                    <span class="english-text">Chapter 1 of 20</span>
+                </div>
+                
+                <button class="chapter-nav-btn" id="nextChapterBtn" onclick="nextChapter()">
+                    <span class="arabic-text">التالي</span>
+                    <span class="english-text">Next</span>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+            
+            <!-- Book Content -->
             <div class="book-content no-select" id="bookContent">
-                <!-- Book content will be loaded here -->
+                <div class="chapter-header">
+                    <div class="chapter-number" id="chapterNumber">
+                        <span class="arabic-text">الفصل الأول</span>
+                        <span class="english-text">Chapter One</span>
+                    </div>
+                    <h1 class="chapter-title" id="chapterTitle">
+                        <!-- Chapter title will be loaded here -->
+                    </h1>
+                    <div class="chapter-divider"></div>
+                </div>
+                
+                <div class="chapter-content" id="chapterContent">
+                    <!-- Chapter content will be loaded here -->
+                </div>
             </div>
         </div>
         
-        <div class="book-controls">
+        <!-- Floating Controls -->
+        <div class="floating-controls">
             <button class="control-btn" id="prevBtn" onclick="previousChapter()">
                 <i class="fas fa-chevron-right"></i>
             </button>
-            <span class="chapter-info" id="chapterInfo">
-                <span class="arabic-text">الفصل 1</span>
-                <span class="english-text">Chapter 1</span>
-            </span>
+            
+            <button class="control-btn" onclick="toggleFullscreen()">
+                <i class="fas fa-expand" id="fullscreenIcon"></i>
+            </button>
+            
             <button class="control-btn" id="nextBtn" onclick="nextChapter()">
                 <i class="fas fa-chevron-left"></i>
             </button>
@@ -402,6 +798,8 @@
             currentChapter: 1,
             totalChapters: 20,
             hasAccess: false,
+            readingMode: false,
+            isFullscreen: false,
             bookContent: {
                 ar: [],
                 en: []
@@ -456,7 +854,12 @@
         function initializeApp() {
             // Load saved preferences
             const savedLang = localStorage.getItem('oi_language') || 'ar';
+            const savedMode = localStorage.getItem('oi_reading_mode') === 'true';
+            
             switchLanguage(savedLang, false);
+            if (savedMode) {
+                toggleReadingMode(false);
+            }
             
             // Setup event listeners
             setupEventListeners();
@@ -484,14 +887,27 @@
                             e.key === 'ArrowRight' ? nextChapter() : previousChapter();
                         }
                     }
+                    
+                    // Fullscreen toggle with F key
+                    if (e.key === 'f' || e.key === 'F') {
+                        toggleFullscreen();
+                    }
+                    
+                    // Reading mode toggle with M key
+                    if (e.key === 'm' || e.key === 'M') {
+                        toggleReadingMode();
+                    }
                 }
             });
+            
+            // Update reading progress
+            window.addEventListener('scroll', updateReadingProgress);
         }
         
         // Language Switching
         function switchLanguage(lang, save = true) {
             state.language = lang;
-            document.body.className = lang === 'ar' ? 'arabic' : 'english';
+            document.body.className = `${lang === 'ar' ? 'arabic' : 'english'}${state.readingMode ? ' reading-mode' : ''}`;
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
             
@@ -500,27 +916,65 @@
                 btn.classList.toggle('active', btn.classList.contains(`lang-${lang}`));
             });
             
-            // Update indicator position
-            const indicator = document.querySelector('.language-switcher .indicator');
-            if (lang === 'ar') {
-                indicator.style.right = '0';
-                indicator.style.left = 'auto';
-                indicator.style.width = '50%';
-            } else {
-                indicator.style.left = '0';
-                indicator.style.right = 'auto';
-                indicator.style.width = '50%';
-            }
-            
             if (save) {
                 localStorage.setItem('oi_language', lang);
             }
             
-            // Update chapter info and content if book is loaded
+            // Update content if book is loaded
             if (state.hasAccess && state.bookContent[lang].length > 0) {
                 updateChapterInfo();
                 displayChapter(state.currentChapter);
             }
+        }
+        
+        // Toggle Reading Mode
+        function toggleReadingMode(save = true) {
+            state.readingMode = !state.readingMode;
+            document.body.classList.toggle('reading-mode', state.readingMode);
+            
+            const icon = document.getElementById('themeIcon');
+            icon.className = state.readingMode ? 'fas fa-moon' : 'fas fa-sun';
+            
+            if (save) {
+                localStorage.setItem('oi_reading_mode', state.readingMode.toString());
+            }
+        }
+        
+        // Toggle Fullscreen
+        function toggleFullscreen() {
+            const elem = document.documentElement;
+            const icon = document.getElementById('fullscreenIcon');
+            
+            if (!state.isFullscreen) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) {
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) {
+                    elem.msRequestFullscreen();
+                }
+                state.isFullscreen = true;
+                icon.className = 'fas fa-compress';
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+                state.isFullscreen = false;
+                icon.className = 'fas fa-expand';
+            }
+        }
+        
+        // Update Reading Progress
+        function updateReadingProgress() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            
+            document.getElementById('progressBar').style.width = progress + '%';
         }
         
         // Load Book Content
@@ -541,7 +995,7 @@
                 
             } catch (error) {
                 console.error('Error loading book content:', error);
-                document.getElementById('bookContent').innerHTML = '<p>Error loading content. Please refresh the page.</p>';
+                document.getElementById('chapterContent').innerHTML = '<p>Error loading content. Please refresh the page.</p>';
             }
         }
         
@@ -551,37 +1005,65 @@
             const doc = parser.parseFromString(html, 'text/html');
             const chapters = [];
             
-            // Get the main content
-            const content = doc.body.innerHTML;
+            // Get the body content and extract text
+            const bodyContent = doc.body.innerHTML;
             
-            // For now, treat the entire content as one chapter
-            // In a real implementation, you'd parse this based on chapter markers
-            chapters.push({
-                number: 1,
-                title: lang === 'ar' ? 'الذكاء الأصلي مقابل الذكاء الاصطناعي' : 'Original Intelligence vs Artificial Intelligence',
-                content: content
-            });
+            // For demo, create sample chapters
+            const sampleTitles = lang === 'ar' ? 
+                ['مقدمة في الذكاء الأصلي', 'تطور الوعي البشري', 'ظهور الآلة الذكية'] :
+                ['Introduction to Original Intelligence', 'Evolution of Human Consciousness', 'Rise of the Intelligent Machine'];
             
+            // Split content into chapters (simplified for demo)
+            const contentParts = bodyContent.split(/<h[123]|<hr|<div class="chapter/);
+            
+            for (let i = 0; i < Math.min(3, contentParts.length); i++) {
+                if (contentParts[i].trim()) {
+                    chapters.push({
+                        number: i + 1,
+                        title: sampleTitles[i] || `Chapter ${i + 1}`,
+                        content: contentParts[i]
+                    });
+                }
+            }
+            
+            // If no chapters found, use entire content as one chapter
+            if (chapters.length === 0) {
+                chapters.push({
+                    number: 1,
+                    title: lang === 'ar' ? 'الذكاء الأصلي مقابل الذكاء الاصطناعي' : 'Original Intelligence vs Artificial Intelligence',
+                    content: bodyContent
+                });
+            }
+            
+            state.totalChapters = chapters.length;
             return chapters;
         }
         
         // Display Chapter
         function displayChapter(chapterNum) {
-            const bookContent = document.getElementById('bookContent');
             const lang = state.language;
             const chapter = state.bookContent[lang][chapterNum - 1];
             
             if (!chapter) {
-                bookContent.innerHTML = '<p>Chapter not found</p>';
+                document.getElementById('chapterContent').innerHTML = '<p>Chapter not found</p>';
                 return;
             }
             
-            bookContent.innerHTML = chapter.content;
+            // Update chapter header
+            document.getElementById('chapterNumber').innerHTML = lang === 'ar' ? 
+                `<span class="arabic-text">الفصل ${toArabicNumber(chapter.number)}</span>` :
+                `<span class="english-text">Chapter ${toRomanNumeral(chapter.number)}</span>`;
+            
+            document.getElementById('chapterTitle').textContent = chapter.title;
+            document.getElementById('chapterContent').innerHTML = chapter.content;
+            
             state.currentChapter = chapterNum;
             updateChapterInfo();
+            updateNavigationButtons();
             
             // Scroll to top
             window.scrollTo(0, 0);
+            updateReadingProgress();
         }
         
         // Navigation Functions
@@ -600,18 +1082,36 @@
         // Update Chapter Info
         function updateChapterInfo() {
             const info = document.getElementById('chapterInfo');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            
             if (state.language === 'ar') {
                 info.innerHTML = `<span class="arabic-text">الفصل ${state.currentChapter} من ${state.totalChapters}</span>`;
             } else {
                 info.innerHTML = `<span class="english-text">Chapter ${state.currentChapter} of ${state.totalChapters}</span>`;
             }
+        }
+        
+        // Update Navigation Buttons
+        function updateNavigationButtons() {
+            const prevBtns = [document.getElementById('prevBtn'), document.getElementById('prevChapterBtn')];
+            const nextBtns = [document.getElementById('nextBtn'), document.getElementById('nextChapterBtn')];
             
-            // Update button states
-            prevBtn.disabled = state.currentChapter <= 1;
-            nextBtn.disabled = state.currentChapter >= state.totalChapters;
+            prevBtns.forEach(btn => {
+                btn.disabled = state.currentChapter <= 1;
+            });
+            
+            nextBtns.forEach(btn => {
+                btn.disabled = state.currentChapter >= state.totalChapters;
+            });
+        }
+        
+        // Utility Functions
+        function toArabicNumber(num) {
+            const arabicNumbers = ['١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩', '١٠', '١١', '١٢', '١٣', '١٤', '١٥', '١٦', '١٧', '١٨', '١٩', '٢٠'];
+            return arabicNumbers[num - 1] || num;
+        }
+        
+        function toRomanNumeral(num) {
+            const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX'];
+            return romanNumerals[num - 1] || num;
         }
     </script>
 </body>

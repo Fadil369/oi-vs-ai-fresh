@@ -16,26 +16,19 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://oi.thefadil.site/">
+    <meta property="og:url" content="https://read.thefadil.site/">
     <meta property="og:title" content="الذكاء الأصلي مقابل الذكاء الاصطناعي">
     <meta property="og:description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي">
-    <meta property="og:image" content="https://oi.thefadil.site/assets/og-image.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://oi.thefadil.site/">
-    <meta property="twitter:title" content="الذكاء الأصلي مقابل الذكاء الاصطناعي">
-    <meta property="twitter:description" content="استكشاف رائد للعلاقة بين الذكاء الأصلي والذكاء الاصطناعي">
-    <meta property="twitter:image" content="https://oi.thefadil.site/assets/og-image.jpg">
+    <meta property="og:image" content="https://read.thefadil.site/assets/og-image.jpg">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
-    <link rel="canonical" href="https://oi.thefadil.site">
+    <link rel="canonical" href="https://read.thefadil.site">
     
-    <!-- Google Fonts -->
+    <!-- Modern Font Stack -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -51,61 +44,123 @@
         }
         
         :root {
-            /* Professional Dark Theme */
-            --primary-black: #0a0a0a;
-            --secondary-black: #1a1a1a;
-            --accent-black: #2a2a2a;
-            --glass-primary: rgba(255, 255, 255, 0.1);
-            --glass-secondary: rgba(255, 255, 255, 0.05);
-            --glass-accent: rgba(255, 255, 255, 0.15);
-            --sepia-white: #f5f3f0;
-            --sepia-light: #e8e4df;
-            --sepia-dark: #d4cfc7;
-            --glow-primary: #00d4ff;
-            --glow-secondary: #7c3aed;
-            --glow-accent: #fbbf24;
-            --gradient-glow: linear-gradient(135deg, var(--glow-primary), var(--glow-secondary));
-            --gradient-glass: linear-gradient(135deg, var(--glass-primary), var(--glass-secondary));
-            --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.3);
-            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            /* Ultrathink Color Palette */
+            --pure-black: #000000;
+            --deep-navy: #0a192f;
+            --navy-light: #112240;
+            --navy-medium: #1a2947;
+            --navy-glass: rgba(17, 34, 64, 0.3);
             
-            /* Success and Error Colors */
-            --success-color: #27ae60;
-            --error-color: #e74c3c;
-            --warning-color: #f39c12;
+            /* Glass White Variants */
+            --glass-white-5: rgba(255, 255, 255, 0.05);
+            --glass-white-10: rgba(255, 255, 255, 0.1);
+            --glass-white-15: rgba(255, 255, 255, 0.15);
+            --glass-white-20: rgba(255, 255, 255, 0.2);
+            --glass-white-80: rgba(255, 255, 255, 0.8);
+            
+            /* Glow Colors */
+            --glow-cyan: #00d9ff;
+            --glow-purple: #7928ca;
+            --glow-pink: #ff0080;
+            --glow-blue: #0070f3;
+            
+            /* Text Colors */
+            --text-primary: rgba(255, 255, 255, 0.95);
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-tertiary: rgba(255, 255, 255, 0.5);
+            
+            /* Gradients */
+            --gradient-glow: linear-gradient(135deg, var(--glow-cyan), var(--glow-purple));
+            --gradient-subtle: linear-gradient(180deg, var(--glass-white-10), var(--glass-white-5));
+            --gradient-navy: linear-gradient(180deg, var(--deep-navy), var(--navy-light));
+            
+            /* Effects */
+            --blur-glass: blur(12px);
+            --blur-heavy: blur(24px);
+            --shadow-glow: 0 0 40px rgba(0, 217, 255, 0.3);
+            --shadow-subtle: 0 4px 24px rgba(0, 0, 0, 0.5);
+            --shadow-elevation: 0 12px 48px rgba(0, 0, 0, 0.3);
+            
+            /* Transitions */
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            
+            /* Spacing Scale */
+            --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+            --space-sm: clamp(1rem, 2vw, 1.5rem);
+            --space-md: clamp(1.5rem, 3vw, 2.5rem);
+            --space-lg: clamp(2rem, 4vw, 4rem);
+            --space-xl: clamp(3rem, 6vw, 6rem);
+            --space-2xl: clamp(4rem, 8vw, 8rem);
         }
         
+        /* Base Styles */
         html {
             scroll-behavior: smooth;
-            font-size: clamp(14px, 2.5vw, 18px);
+            font-size: 16px;
         }
         
         body {
-            font-family: 'Amiri', serif;
-            background: var(--primary-black);
-            color: var(--sepia-white);
-            line-height: 1.8;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--pure-black);
+            color: var(--text-primary);
+            line-height: 1.6;
             overflow-x: hidden;
-            transition: var(--transition-smooth);
             min-height: 100vh;
+            position: relative;
         }
         
-        /* English Language Override */
+        /* Arabic Typography */
+        body.arabic {
+            font-family: 'Noto Kufi Arabic', 'Tajawal', sans-serif;
+            direction: rtl;
+        }
+        
         body.english {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             direction: ltr;
         }
         
         body.arabic .english-text { display: none; }
         body.english .arabic-text { display: none; }
         
-        /* APP Container */
-        #app {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: var(--primary-black);
+        /* Background Effects */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, var(--glow-cyan) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, var(--glow-purple) 0%, transparent 50%),
+                radial-gradient(circle at 50% 100%, var(--deep-navy) 0%, transparent 100%);
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* Glass Container Mixin */
+        .glass {
+            background: var(--glass-white-10);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border: 1px solid var(--glass-white-20);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glass::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-subtle);
+            opacity: 0.3;
+            pointer-events: none;
         }
         
         /* Loading Screen */
@@ -115,7 +170,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--primary-black);
+            background: var(--pure-black);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -128,13 +183,30 @@
         }
         
         .loading-spinner {
-            width: 60px;
-            height: 60px;
-            border: 4px solid var(--glass-primary);
-            border-top: 4px solid var(--glow-primary);
+            width: 80px;
+            height: 80px;
+            position: relative;
+            margin: 0 auto var(--space-md);
+        }
+        
+        .loading-spinner::before,
+        .loading-spinner::after {
+            content: '';
+            position: absolute;
             border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 2rem;
+            border: 3px solid transparent;
+            border-top-color: var(--glow-cyan);
+            animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+        }
+        
+        .loading-spinner::before {
+            inset: 0;
+        }
+        
+        .loading-spinner::after {
+            inset: 10px;
+            border-top-color: var(--glow-purple);
+            animation-delay: 0.2s;
         }
         
         @keyframes spin {
@@ -148,86 +220,101 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 70px;
-            background: var(--glass-secondary);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-primary);
+            height: 80px;
             z-index: 1000;
             transition: var(--transition-smooth);
         }
         
         .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
             height: 100%;
-            padding: 0 2rem;
+            padding: 0 var(--space-md);
             display: flex;
             align-items: center;
             justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .nav-header.scrolled {
+            background: var(--glass-white-5);
+            backdrop-filter: var(--blur-heavy);
+            -webkit-backdrop-filter: var(--blur-heavy);
+            border-bottom: 1px solid var(--glass-white-10);
         }
         
         .logo {
             font-size: 1.5rem;
-            font-weight: 900;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
             background: var(--gradient-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
         }
         
-        .nav-controls {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+        .logo:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.2);
+        }
+        
+        .logo-icon {
+            font-size: 1.75rem;
+            filter: drop-shadow(0 0 20px var(--glow-cyan));
         }
         
         /* Language Switcher */
         .language-switcher {
-            background: var(--glass-primary);
-            border: 1px solid var(--glass-accent);
-            border-radius: 50px;
-            display: flex;
-            overflow: hidden;
             position: relative;
+            display: flex;
+            background: var(--glass-white-10);
+            backdrop-filter: var(--blur-glass);
+            border: 1px solid var(--glass-white-20);
+            border-radius: 100px;
+            padding: 4px;
+            gap: 4px;
         }
         
         .language-switcher button {
-            padding: 0.5rem 1.5rem;
+            padding: 0.5rem 1.25rem;
             background: transparent;
             border: none;
-            color: var(--sepia-white);
+            color: var(--text-secondary);
             font-family: inherit;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
+            font-weight: 500;
             cursor: pointer;
+            border-radius: 100px;
             transition: var(--transition-smooth);
             position: relative;
             z-index: 2;
         }
         
         .language-switcher button.active {
-            color: var(--primary-black);
+            color: var(--pure-black);
         }
         
-        .language-switcher .indicator {
+        .language-indicator {
             position: absolute;
-            top: 0;
-            height: 100%;
+            top: 4px;
+            bottom: 4px;
+            width: calc(50% - 4px);
             background: var(--gradient-glow);
-            border-radius: 50px;
-            transition: var(--transition-smooth);
-            z-index: 1;
+            border-radius: 100px;
+            transition: var(--transition-spring);
+            box-shadow: var(--shadow-glow);
         }
         
-        body.arabic .language-switcher .indicator {
-            right: 0;
-            width: 50%;
+        body.arabic .language-indicator {
+            right: 4px;
         }
         
-        body.english .language-switcher .indicator {
-            left: 0;
-            width: 50%;
+        body.english .language-indicator {
+            left: 4px;
         }
         
         /* Hero Section */
@@ -236,182 +323,411 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 100px 2rem 2rem;
-            background: radial-gradient(ellipse at top, var(--glass-secondary), transparent 70%);
+            padding: calc(80px + var(--space-lg)) var(--space-md) var(--space-lg);
             position: relative;
             overflow: hidden;
         }
         
+        .hero-background {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+        
+        .hero-gradient {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: 
+                radial-gradient(circle at 30% 50%, var(--navy-glass) 0%, transparent 40%),
+                radial-gradient(circle at 70% 50%, var(--navy-glass) 0%, transparent 40%);
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(-10%, -10%) rotate(0deg); }
+            50% { transform: translate(10%, 10%) rotate(180deg); }
+        }
+        
         .hero-content {
-            max-width: 1000px;
+            max-width: 1200px;
             width: 100%;
             text-align: center;
             position: relative;
             z-index: 2;
         }
         
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.5rem;
+            background: var(--glass-white-10);
+            backdrop-filter: var(--blur-glass);
+            border: 1px solid var(--glass-white-20);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+            animation: fadeInUp 0.8s ease backwards;
+        }
+        
         .hero-title {
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: 900;
-            margin-bottom: 1.5rem;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 800;
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: var(--space-sm);
+            animation: fadeInUp 0.8s ease 0.1s backwards;
+        }
+        
+        .hero-title span {
+            display: block;
+        }
+        
+        .title-gradient {
             background: var(--gradient-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1.2;
+            filter: drop-shadow(0 0 40px var(--glow-cyan));
         }
         
         .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            color: var(--sepia-light);
-            margin-bottom: 3rem;
-            font-weight: 400;
+            font-size: clamp(1.125rem, 3vw, 1.5rem);
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto var(--space-lg);
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2.5rem;
+            background: var(--gradient-glow);
+            border: none;
+            border-radius: 100px;
+            color: var(--pure-black);
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-spring);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease 0.3s backwards;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.4);
+        }
+        
+        .cta-button:hover::before {
+            transform: translateX(100%);
         }
         
         /* Author Section */
         .author-section {
-            background: var(--glass-primary);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-accent);
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 3rem auto;
-            max-width: 800px;
-            text-align: center;
+            padding: var(--space-xl) var(--space-md);
+            background: linear-gradient(180deg, transparent, var(--deep-navy) 50%, transparent);
+            position: relative;
+        }
+        
+        .author-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        body.english .author-content {
+            grid-template-columns: 2fr 1fr;
+        }
+        
+        .author-image-container {
+            position: relative;
         }
         
         .author-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: var(--gradient-glow);
-            padding: 4px;
-            margin: 0 auto 2rem;
+            width: 300px;
+            height: 300px;
             position: relative;
+            margin: 0 auto;
+        }
+        
+        .author-image-glow {
+            position: absolute;
+            inset: -20px;
+            background: var(--gradient-glow);
+            border-radius: 50%;
+            opacity: 0.3;
+            filter: blur(40px);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+        
+        .author-image-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--glass-white-20);
+            background: var(--navy-light);
         }
         
         .author-image img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             object-fit: cover;
         }
         
+        .author-info {
+            position: relative;
+        }
+        
         .author-name {
-            font-size: 2rem;
-            font-weight: 800;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
             margin-bottom: 0.5rem;
-            color: var(--sepia-white);
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
         .author-title {
-            font-size: 1.2rem;
-            color: var(--glow-primary);
-            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-sm);
         }
         
         .author-bio {
-            font-size: 1.1rem;
+            font-size: 1.125rem;
             line-height: 1.8;
-            color: var(--sepia-light);
-            max-width: 600px;
+            color: var(--text-secondary);
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: var(--space-xl) var(--space-md);
+            position: relative;
+        }
+        
+        .features-grid {
+            max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .feature-card {
+            padding: var(--space-md);
+            background: var(--glass-white-5);
+            backdrop-filter: var(--blur-glass);
+            border: 1px solid var(--glass-white-10);
+            border-radius: 24px;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-glow);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: var(--glass-white-10);
+            border-color: var(--glass-white-20);
+            box-shadow: var(--shadow-elevation);
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-glow);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: var(--space-sm);
+            color: var(--pure-black);
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
         
         /* Pricing Section */
         .pricing-section {
-            padding: 4rem 2rem;
-            background: var(--secondary-black);
+            padding: var(--space-xl) var(--space-md);
+            position: relative;
         }
         
         .pricing-container {
-            max-width: 1000px;
+            max-width: 600px;
             margin: 0 auto;
         }
         
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: var(--space-lg);
             background: var(--gradient-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
         .pricing-card {
-            background: var(--glass-primary);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-accent);
-            border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
+            background: var(--glass-white-5);
+            backdrop-filter: var(--blur-glass);
+            border: 2px solid var(--glass-white-20);
+            border-radius: 32px;
+            padding: var(--space-lg);
             position: relative;
             overflow: hidden;
         }
         
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: var(--gradient-glow);
+            border-radius: 32px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+        }
+        
+        .pricing-card:hover::before {
+            opacity: 0.3;
+        }
+        
         .price-badge {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--error-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
+            top: 2rem;
+            right: 2rem;
+            background: var(--gradient-glow);
+            color: var(--pure-black);
+            padding: 0.5rem 1.5rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
             font-weight: 700;
+            box-shadow: var(--shadow-glow);
         }
         
         body.english .price-badge {
-            left: 20px;
+            left: 2rem;
             right: auto;
         }
         
-        .price-display {
-            margin: 2rem 0;
-        }
-        
-        .original-price {
-            font-size: 1.5rem;
-            color: var(--sepia-dark);
-            text-decoration: line-through;
-            opacity: 0.6;
-        }
-        
-        .current-price {
-            font-size: 3rem;
-            font-weight: 800;
-            background: var(--gradient-glow);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-top: 0.5rem;
-        }
-        
-        .currency-toggle {
+        .currency-selector {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
+            gap: 0.5rem;
+            margin-bottom: var(--space-md);
         }
         
-        .currency-option {
-            padding: 0.5rem 1.5rem;
-            background: var(--glass-secondary);
-            border: 1px solid var(--glass-accent);
-            border-radius: 50px;
-            color: var(--sepia-white);
+        .currency-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--glass-white-10);
+            border: 1px solid var(--glass-white-20);
+            border-radius: 100px;
+            color: var(--text-secondary);
+            font-weight: 500;
             cursor: pointer;
             transition: var(--transition-smooth);
         }
         
-        .currency-option.active {
+        .currency-btn.active {
             background: var(--gradient-glow);
-            color: var(--primary-black);
-            font-weight: 700;
+            color: var(--pure-black);
+            border-color: transparent;
+            transform: scale(1.05);
         }
         
-        /* Payment Section */
+        .price-display {
+            text-align: center;
+            margin: var(--space-md) 0;
+        }
+        
+        .price-original {
+            font-size: 1.5rem;
+            color: var(--text-tertiary);
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+        
+        .price-current {
+            font-size: 4rem;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-top: 0.5rem;
+        }
+        
+        .price-note {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Payment Options */
         .payment-section {
-            padding: 3rem 2rem;
-            background: var(--primary-black);
+            padding: var(--space-lg) var(--space-md);
+            background: linear-gradient(180deg, transparent, var(--navy-light) 20%, var(--navy-light) 80%, transparent);
         }
         
         .payment-container {
@@ -419,43 +735,85 @@
             margin: 0 auto;
         }
         
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
         .payment-options {
             display: grid;
             gap: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: var(--space-md);
         }
         
         .payment-option {
-            background: var(--glass-primary);
-            border: 2px solid var(--glass-accent);
-            border-radius: 15px;
+            background: var(--glass-white-5);
+            backdrop-filter: var(--blur-glass);
+            border: 2px solid var(--glass-white-10);
+            border-radius: 20px;
             padding: 1.5rem;
             cursor: pointer;
             transition: var(--transition-smooth);
             display: flex;
             align-items: center;
             gap: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .payment-option::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-glow);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         
         .payment-option:hover {
-            border-color: var(--glow-primary);
-            box-shadow: var(--shadow-glow);
+            border-color: var(--glass-white-20);
+            transform: translateY(-2px);
         }
         
         .payment-option.selected {
-            background: var(--glass-accent);
-            border-color: var(--glow-primary);
+            border-color: var(--glow-cyan);
+            background: var(--glass-white-10);
+        }
+        
+        .payment-option.selected::before {
+            opacity: 0.1;
         }
         
         .payment-icon {
             font-size: 2rem;
-            color: var(--glow-primary);
+            color: var(--glow-cyan);
+            width: 60px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
         }
         
         .payment-label {
             flex: 1;
-            font-size: 1.1rem;
+            font-size: 1.125rem;
             font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .payment-check {
+            font-size: 1.5rem;
+            color: var(--glow-cyan);
+            opacity: 0;
+            transform: scale(0);
+            transition: var(--transition-spring);
+        }
+        
+        .payment-option.selected .payment-check {
+            opacity: 1;
+            transform: scale(1);
         }
         
         /* Checkout Button */
@@ -464,206 +822,158 @@
             padding: 1.5rem;
             background: var(--gradient-glow);
             border: none;
-            border-radius: 15px;
-            color: var(--primary-black);
-            font-size: 1.2rem;
-            font-weight: 800;
+            border-radius: 100px;
+            color: var(--pure-black);
+            font-size: 1.25rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: var(--transition-smooth);
+            transition: var(--transition-spring);
             position: relative;
             overflow: hidden;
         }
         
-        .checkout-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-glow);
+        .checkout-button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+        
+        .checkout-button:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.4);
+        }
+        
+        .checkout-button:hover:not(:disabled)::before {
+            transform: translateX(100%);
         }
         
         .checkout-button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
-        }
-        
-        /* Book Viewer */
-        .book-viewer {
-            display: none;
-            padding-top: 70px;
-            min-height: 100vh;
-            background: var(--primary-black);
-        }
-        
-        .book-viewer.active {
-            display: block;
-        }
-        
-        .book-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .book-controls {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--glass-primary);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-accent);
-            border-radius: 50px;
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            z-index: 100;
-        }
-        
-        .control-btn {
-            background: var(--glass-secondary);
-            border: 1px solid var(--glass-accent);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--sepia-white);
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-        }
-        
-        .control-btn:hover {
-            background: var(--glass-accent);
-            border-color: var(--glow-primary);
-        }
-        
-        .chapter-info {
-            font-size: 1rem;
-            color: var(--sepia-light);
-            min-width: 150px;
-            text-align: center;
-        }
-        
-        /* Chapter Styles */
-        .chapter {
-            background: var(--glass-secondary);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            border: 1px solid var(--glass-primary);
-        }
-        
-        .chapter-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 2rem;
-            background: var(--gradient-glow);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .chapter-content {
-            font-size: 1.2rem;
-            line-height: 2;
-            color: var(--sepia-white);
-        }
-        
-        .chapter-content p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
+            filter: grayscale(0.5);
         }
         
         /* Footer */
         .footer {
-            background: var(--secondary-black);
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid var(--glass-primary);
+            padding: var(--space-lg) var(--space-md);
+            background: var(--navy-light);
+            border-top: 1px solid var(--glass-white-10);
+            margin-top: var(--space-2xl);
         }
         
         .footer-content {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
+            text-align: center;
         }
         
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
             flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
         }
         
         .footer-link {
-            color: var(--sepia-light);
+            color: var(--text-secondary);
             text-decoration: none;
+            font-weight: 500;
             transition: var(--transition-smooth);
+            position: relative;
+        }
+        
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-glow);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease;
         }
         
         .footer-link:hover {
-            color: var(--glow-primary);
+            color: var(--text-primary);
+        }
+        
+        .footer-link:hover::after {
+            transform: scaleX(1);
         }
         
         .copyright {
-            color: var(--sepia-dark);
-            font-size: 0.9rem;
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
         }
         
-        /* Responsive Design */
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mobile Optimizations */
         @media (max-width: 768px) {
-            .nav-container {
-                padding: 0 1rem;
+            .nav-header {
+                height: 70px;
             }
             
             .hero-title {
-                font-size: 2rem;
+                font-size: clamp(2rem, 10vw, 3.5rem);
             }
             
-            .author-section {
-                padding: 2rem 1.5rem;
+            .author-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: var(--space-md);
+            }
+            
+            body.english .author-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .author-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
             }
             
             .pricing-card {
-                padding: 2rem 1.5rem;
+                padding: var(--space-md);
             }
             
-            .book-controls {
-                bottom: 20px;
-                padding: 0.8rem 1.5rem;
-                gap: 1rem;
+            .price-badge {
+                position: static;
+                display: inline-block;
+                margin-bottom: var(--space-sm);
             }
             
-            .control-btn {
+            .price-current {
+                font-size: 3rem;
+            }
+            
+            .payment-option {
+                padding: 1rem;
+            }
+            
+            .payment-icon {
                 width: 40px;
-                height: 40px;
-                font-size: 1rem;
-            }
-            
-            .chapter {
-                padding: 2rem 1.5rem;
-            }
-            
-            .chapter-title {
-                font-size: 1.8rem;
-            }
-            
-            .chapter-content {
-                font-size: 1rem;
-            }
-        }
-        
-        /* Content Protection */
-        .no-select {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        @media print {
-            body {
-                display: none !important;
+                font-size: 1.5rem;
             }
         }
         
@@ -680,223 +990,263 @@
             border: 0;
         }
         
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.6s ease forwards;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        .pulse {
-            animation: pulse 2s infinite;
+        /* Print Protection */
+        @media print {
+            body {
+                display: none !important;
+            }
         }
     </style>
 </head>
 <body class="arabic">
-    <div id="app">
-        <!-- Loading Screen -->
-        <div class="loading-screen" id="loadingScreen">
-            <div class="loading-content">
-                <div class="loading-spinner"></div>
-                <h2 class="loading-text">
-                    <span class="arabic-text">جاري التحميل...</span>
-                    <span class="english-text">Loading...</span>
-                </h2>
-            </div>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2 class="loading-text">
+                <span class="arabic-text">جاري التحميل...</span>
+                <span class="english-text">Loading...</span>
+            </h2>
         </div>
-        
-        <!-- Navigation Header -->
-        <header class="nav-header">
-            <nav class="nav-container">
-                <div class="logo">
-                    <i class="fas fa-brain"></i>
-                    <span class="arabic-text">الذكاء الأصلي</span>
-                    <span class="english-text">Original Intelligence</span>
-                </div>
-                
-                <div class="nav-controls">
-                    <div class="language-switcher">
-                        <button class="lang-ar active" onclick="switchLanguage('ar')">عربي</button>
-                        <button class="lang-en" onclick="switchLanguage('en')">English</button>
-                        <div class="indicator"></div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        
-        <!-- Demo Mode Banner -->
-        <div style="background: linear-gradient(135deg, #ffa500, #ff6b35); color: white; text-align: center; padding: 0.5rem; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000;">
-            <i class="fas fa-exclamation-triangle"></i>
-            <span class="arabic-text">🚀 وضع التجريب - الدفع مجاني للاختبار</span>
-            <span class="english-text">🚀 Demo Mode - Free Payment for Testing</span>
-        </div>
-        
-        <!-- Main Content -->
-        <main id="mainContent">
-            <!-- Hero Section -->
-            <section class="hero-section fade-in">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span class="arabic-text">الذكاء الأصلي<br>مقابل<br>الذكاء الاصطناعي</span>
-                        <span class="english-text">Original Intelligence<br>vs<br>Artificial Intelligence</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        <span class="arabic-text">رحلة استكشافية في عمق الوعي البشري وعصر الآلة الذكية</span>
-                        <span class="english-text">An Exploratory Journey into Human Consciousness and the Age of Intelligent Machines</span>
-                    </p>
-                    
-                    <!-- Author Section -->
-                    <div class="author-section">
-                        <div class="author-image">
-                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='100' fill='%232a2a2a'/><text x='100' y='120' text-anchor='middle' font-size='80' fill='%23f5f3f0'>👨‍⚕️</text></svg>" alt="Dr. Mohammed Al-Fadil">
-                        </div>
-                        <h2 class="author-name">
-                            <span class="arabic-text">د. محمد الفاضل</span>
-                            <span class="english-text">Dr. Mohammed Al-Fadil</span>
-                        </h2>
-                        <p class="author-title">
-                            <span class="arabic-text">مؤسس BrainSAIT</span>
-                            <span class="english-text">Founder of BrainSAIT</span>
-                        </p>
-                        <p class="author-bio">
-                            <span class="arabic-text">رائد في مجال الذكاء الاصطناعي الطبي، يجمع بين الخبرة الطبية العميقة والابتكار التقني لبناء مستقبل الرعاية الصحية الذكية.</span>
-                            <span class="english-text">A pioneer in medical artificial intelligence, combining deep medical expertise with technological innovation to build the future of intelligent healthcare.</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Pricing Section -->
-            <section class="pricing-section">
-                <div class="pricing-container">
-                    <h2 class="section-title">
-                        <span class="arabic-text">احصل على نسختك الآن</span>
-                        <span class="english-text">Get Your Copy Now</span>
-                    </h2>
-                    
-                    <div class="pricing-card">
-                        <div class="price-badge">
-                            <span class="arabic-text">خصم 43%</span>
-                            <span class="english-text">43% OFF</span>
-                        </div>
-                        
-                        <div class="currency-toggle">
-                            <div class="currency-option active" onclick="setCurrency('SAR')">SAR 🇸🇦</div>
-                            <div class="currency-option" onclick="setCurrency('USD')">USD 🇺🇸</div>
-                        </div>
-                        
-                        <div class="price-display" id="priceDisplay">
-                            <div class="original-price">
-                                <span class="price-sar">230 ر.س</span>
-                                <span class="price-usd" style="display:none">$61</span>
-                            </div>
-                            <div class="current-price">
-                                <span class="price-sar">130 ر.س</span>
-                                <span class="price-usd" style="display:none">$35</span>
-                            </div>
-                        </div>
-                        
-                        <p class="pricing-note">
-                            <span class="arabic-text">نسخة رقمية كاملة ثنائية اللغة - متاحة فورًا عبر الإنترنت</span>
-                            <span class="english-text">Complete bilingual digital edition - instantly available online</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Payment Section -->
-            <section class="payment-section">
-                <div class="payment-container">
-                    <h3 class="section-subtitle">
-                        <span class="arabic-text">اختر طريقة الدفع</span>
-                        <span class="english-text">Choose Payment Method</span>
-                    </h3>
-                    
-                    <div class="payment-options">
-                        <div class="payment-option" data-method="card" onclick="selectPayment('card')">
-                            <i class="payment-icon fas fa-credit-card"></i>
-                            <span class="payment-label">
-                                <span class="arabic-text">بطاقة ائتمان</span>
-                                <span class="english-text">Credit Card</span>
-                            </span>
-                            <i class="fas fa-check-circle" style="display:none"></i>
-                        </div>
-                        
-                        <div class="payment-option" data-method="apple" onclick="selectPayment('apple')">
-                            <i class="payment-icon fab fa-apple"></i>
-                            <span class="payment-label">Apple Pay</span>
-                            <i class="fas fa-check-circle" style="display:none"></i>
-                        </div>
-                        
-                        <div class="payment-option" data-method="paypal" onclick="selectPayment('paypal')">
-                            <i class="payment-icon fab fa-paypal"></i>
-                            <span class="payment-label">PayPal</span>
-                            <i class="fas fa-check-circle" style="display:none"></i>
-                        </div>
-                    </div>
-                    
-                    <button class="checkout-button pulse" id="checkoutButton" onclick="processPayment()" disabled>
-                        <span class="arabic-text">إتمام الشراء</span>
-                        <span class="english-text">Complete Purchase</span>
-                    </button>
-                </div>
-            </section>
-        </main>
-        
-        <!-- Book Viewer (Hidden until purchase) -->
-        <div class="book-viewer" id="bookViewer">
-            <div class="book-container" id="bookContent">
-                <!-- Book content will be loaded here -->
-            </div>
-            
-            <div class="book-controls">
-                <button class="control-btn" onclick="previousChapter()">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                <span class="chapter-info" id="chapterInfo">
-                    <span class="arabic-text">الفصل 1 من 20</span>
-                    <span class="english-text">Chapter 1 of 20</span>
-                </span>
-                <button class="control-btn" onclick="nextChapter()">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="#privacy" class="footer-link">
-                        <span class="arabic-text">سياسة الخصوصية</span>
-                        <span class="english-text">Privacy Policy</span>
-                    </a>
-                    <a href="#terms" class="footer-link">
-                        <span class="arabic-text">الشروط والأحكام</span>
-                        <span class="english-text">Terms & Conditions</span>
-                    </a>
-                    <a href="#contact" class="footer-link">
-                        <span class="arabic-text">اتصل بنا</span>
-                        <span class="english-text">Contact Us</span>
-                    </a>
-                </div>
-                <p class="copyright">
-                    <span class="arabic-text">© 2025 د. محمد الفاضل - جميع الحقوق محفوظة</span>
-                    <span class="english-text">© 2025 Dr. Mohammed Al-Fadil - All Rights Reserved</span>
-                </p>
-            </div>
-        </footer>
     </div>
     
-    <!-- Integrated JavaScript -->
+    <!-- Navigation Header -->
+    <header class="nav-header" id="navHeader">
+        <nav class="nav-container">
+            <div class="logo" onclick="scrollToTop()">
+                <i class="fas fa-brain logo-icon"></i>
+                <span class="arabic-text">الذكاء الأصلي</span>
+                <span class="english-text">Original Intelligence</span>
+            </div>
+            
+            <div class="language-switcher">
+                <button class="lang-ar active" onclick="switchLanguage('ar')">عربي</button>
+                <button class="lang-en" onclick="switchLanguage('en')">English</button>
+                <div class="language-indicator"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-sparkles"></i>
+                <span class="arabic-text">حصري على الإنترنت</span>
+                <span class="english-text">Exclusive Online Edition</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="arabic-text">
+                    <span>الذكاء الأصلي</span>
+                    <span class="title-gradient">مقابل</span>
+                    <span>الذكاء الاصطناعي</span>
+                </span>
+                <span class="english-text">
+                    <span>Original Intelligence</span>
+                    <span class="title-gradient">versus</span>
+                    <span>Artificial Intelligence</span>
+                </span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                <span class="arabic-text">رحلة استكشافية عميقة في جوهر الوعي البشري وعصر الآلة الذكية، تكشف الحدود بين الإبداع الأصيل والذكاء المُصنَّع</span>
+                <span class="english-text">A profound exploration into the essence of human consciousness and the age of intelligent machines, revealing the boundaries between authentic creativity and manufactured intelligence</span>
+            </p>
+            
+            <button class="cta-button" onclick="scrollToPrice()">
+                <span class="arabic-text">احصل على نسختك الآن</span>
+                <span class="english-text">Get Your Copy Now</span>
+                <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+    </section>
+    
+    <!-- Author Section -->
+    <section class="author-section">
+        <div class="author-content">
+            <div class="author-image-container">
+                <div class="author-image">
+                    <div class="author-image-glow"></div>
+                    <div class="author-image-inner">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect width='400' height='400' fill='%230a192f'/><text x='200' y='220' text-anchor='middle' font-size='120' fill='%2300d9ff'>👨‍⚕️</text></svg>" alt="Dr. Mohammed Al-Fadil">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="author-info">
+                <h2 class="author-name">
+                    <span class="arabic-text">د. محمد الفاضل</span>
+                    <span class="english-text">Dr. Mohammed Al-Fadil</span>
+                </h2>
+                <p class="author-title">
+                    <span class="arabic-text">مؤسس BrainSAIT • رائد الذكاء الاصطناعي الطبي</span>
+                    <span class="english-text">Founder of BrainSAIT • Medical AI Pioneer</span>
+                </p>
+                <p class="author-bio">
+                    <span class="arabic-text">طبيب ومبتكر يجمع بين الخبرة الطبية العميقة والرؤية التقنية المتقدمة. يعمل على بناء جسور بين الذكاء البشري والاصطناعي لخلق مستقبل أفضل للرعاية الصحية.</span>
+                    <span class="english-text">A physician and innovator bridging deep medical expertise with advanced technological vision. Working to build bridges between human and artificial intelligence to create a better future for healthcare.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3 class="feature-title">
+                    <span class="arabic-text">ثنائي اللغة</span>
+                    <span class="english-text">Bilingual Edition</span>
+                </h3>
+                <p class="feature-description">
+                    <span class="arabic-text">محتوى كامل باللغتين العربية والإنجليزية مع تبديل سلس</span>
+                    <span class="english-text">Complete content in both Arabic and English with seamless switching</span>
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="feature-title">
+                    <span class="arabic-text">آمن ومحمي</span>
+                    <span class="english-text">Secure & Protected</span>
+                </h3>
+                <p class="feature-description">
+                    <span class="arabic-text">حماية متقدمة للمحتوى مع وصول آمن عبر الإنترنت</span>
+                    <span class="english-text">Advanced content protection with secure online access</span>
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-infinity"></i>
+                </div>
+                <h3 class="feature-title">
+                    <span class="arabic-text">وصول دائم</span>
+                    <span class="english-text">Lifetime Access</span>
+                </h3>
+                <p class="feature-description">
+                    <span class="arabic-text">اقرأ كتابك في أي وقت ومن أي جهاز مع التحديثات المستمرة</span>
+                    <span class="english-text">Read your book anytime, from any device with continuous updates</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricingSection">
+        <div class="pricing-container">
+            <h2 class="section-title">
+                <span class="arabic-text">احصل على نسختك الآن</span>
+                <span class="english-text">Get Your Copy Now</span>
+            </h2>
+            
+            <div class="pricing-card glass">
+                <div class="price-badge">
+                    <span class="arabic-text">خصم 43%</span>
+                    <span class="english-text">43% OFF</span>
+                </div>
+                
+                <div class="currency-selector">
+                    <button class="currency-btn active" onclick="setCurrency('SAR')">
+                        <span>SAR 🇸🇦</span>
+                    </button>
+                    <button class="currency-btn" onclick="setCurrency('USD')">
+                        <span>USD 🇺🇸</span>
+                    </button>
+                </div>
+                
+                <div class="price-display" id="priceDisplay">
+                    <div class="price-original">
+                        <span class="price-sar">230 ر.س</span>
+                        <span class="price-usd" style="display:none">$61</span>
+                    </div>
+                    <div class="price-current">
+                        <span class="price-sar">130</span>
+                        <span class="price-usd" style="display:none">35</span>
+                    </div>
+                </div>
+                
+                <p class="price-note">
+                    <span class="arabic-text">نسخة رقمية كاملة ثنائية اللغة • وصول فوري عبر الإنترنت • تحديثات مدى الحياة</span>
+                    <span class="english-text">Complete bilingual digital edition • Instant online access • Lifetime updates</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="payment-container">
+            <h3 class="section-subtitle">
+                <span class="arabic-text">اختر طريقة الدفع</span>
+                <span class="english-text">Choose Payment Method</span>
+            </h3>
+            
+            <div class="payment-options">
+                <div class="payment-option" data-method="card" onclick="selectPayment('card')">
+                    <i class="payment-icon fas fa-credit-card"></i>
+                    <span class="payment-label">
+                        <span class="arabic-text">بطاقة ائتمان</span>
+                        <span class="english-text">Credit Card</span>
+                    </span>
+                    <i class="fas fa-check-circle payment-check"></i>
+                </div>
+                
+                <div class="payment-option" data-method="apple" onclick="selectPayment('apple')">
+                    <i class="payment-icon fab fa-apple"></i>
+                    <span class="payment-label">Apple Pay</span>
+                    <i class="fas fa-check-circle payment-check"></i>
+                </div>
+                
+                <div class="payment-option" data-method="paypal" onclick="selectPayment('paypal')">
+                    <i class="payment-icon fab fa-paypal"></i>
+                    <span class="payment-label">PayPal</span>
+                    <i class="fas fa-check-circle payment-check"></i>
+                </div>
+            </div>
+            
+            <button class="checkout-button" id="checkoutButton" onclick="processPayment()" disabled>
+                <span class="arabic-text">إتمام الشراء</span>
+                <span class="english-text">Complete Purchase</span>
+            </button>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/privacy" class="footer-link">
+                    <span class="arabic-text">سياسة الخصوصية</span>
+                    <span class="english-text">Privacy Policy</span>
+                </a>
+                <a href="/terms" class="footer-link">
+                    <span class="arabic-text">الشروط والأحكام</span>
+                    <span class="english-text">Terms & Conditions</span>
+                </a>
+                <a href="/contact" class="footer-link">
+                    <span class="arabic-text">اتصل بنا</span>
+                    <span class="english-text">Contact Us</span>
+                </a>
+            </div>
+            <p class="copyright">
+                <span class="arabic-text">© 2025 د. محمد الفاضل - جميع الحقوق محفوظة</span>
+                <span class="english-text">© 2025 Dr. Mohammed Al-Fadil - All Rights Reserved</span>
+            </p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
     <script>
         // Configuration
         const config = {
@@ -906,10 +1256,6 @@
                     book_sar: 'price_1O4QW5L0dRYGmvgk1234SAR',
                     book_usd: 'price_1O4QW5L0dRYGmvgk1234USD'
                 }
-            },
-            paypal: {
-                clientId: 'AZDxjDScFpQtjWTOUtWKbyN_1234567890',
-                currency: 'SAR'
             },
             prices: {
                 SAR: { original: 230, current: 130, currency: 'SAR' },
@@ -922,40 +1268,15 @@
         let state = {
             language: 'ar',
             currency: 'SAR',
-            paymentMethod: null,
-            accessToken: null,
-            currentChapter: 1,
-            totalChapters: 20,
-            bookContent: {
-                ar: [],
-                en: []
-            }
+            paymentMethod: null
         };
         
         // Initialize App
         document.addEventListener('DOMContentLoaded', function() {
             initializeApp();
-            handleURLRoutes();
-            checkExistingAccess();
             setupEventListeners();
             hideLoading();
         });
-        
-        // Handle URL Routes
-        function handleURLRoutes() {
-            const path = window.location.pathname;
-            
-            // If user is trying to access /book, /reader, or /read directly
-            if (path === '/book' || path === '/reader' || path === '/read') {
-                // Check if they have access, if not, redirect to landing
-                const token = sessionStorage.getItem('bookAccess') || localStorage.getItem('bookAccessToken');
-                if (!token) {
-                    // Redirect to landing page
-                    window.location.href = '/';
-                    return;
-                }
-            }
-        }
         
         // App Initialization
         function initializeApp() {
@@ -974,63 +1295,31 @@
             if (typeof Stripe !== 'undefined') {
                 window.stripe = Stripe(config.stripe.publicKey);
             }
-        }
-        
-        // Check Existing Access
-        function checkExistingAccess() {
-            const token = sessionStorage.getItem('bookAccess') || localStorage.getItem('bookAccessToken');
             
-            if (token) {
-                try {
-                    const tokenData = JSON.parse(atob(token));
-                    
-                    // Check if token is expired (be lenient in demo mode)
-                    const now = new Date().getTime();
-                    if (tokenData.expiry && tokenData.expiry < now) {
-                        // In demo mode, extend expiry by 30 days
-                        tokenData.expiry = now + (30 * 24 * 60 * 60 * 1000);
-                        const updatedToken = btoa(JSON.stringify(tokenData));
-                        sessionStorage.setItem('bookAccess', updatedToken);
-                        localStorage.setItem('bookAccessToken', updatedToken);
-                        console.log('Demo mode: Extended access token expiry');
-                    }
-                    
-                    state.accessToken = token;
-                    showBookViewer();
-                    loadBookContent();
-                } catch (error) {
-                    console.error('Token parsing error:', error);
-                    // Clear invalid tokens
-                    sessionStorage.removeItem('bookAccess');
-                    localStorage.removeItem('bookAccessToken');
-                }
-            }
+            // Remove any existing access tokens (force landing page)
+            sessionStorage.removeItem('bookAccess');
+            localStorage.removeItem('bookAccessToken');
         }
         
         // Setup Event Listeners
         function setupEventListeners() {
+            // Scroll handler for nav
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                const nav = document.getElementById('navHeader');
+                
+                if (currentScroll > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+            
             // Prevent right-click
             document.addEventListener('contextmenu', (e) => e.preventDefault());
-            
-            // Prevent text selection in book content
-            document.addEventListener('selectstart', function(e) {
-                if (e.target.closest('.chapter-content')) {
-                    e.preventDefault();
-                }
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', function(e) {
-                if (state.accessToken && document.getElementById('bookViewer').classList.contains('active')) {
-                    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-                        if (state.language === 'ar') {
-                            e.key === 'ArrowLeft' ? nextChapter() : previousChapter();
-                        } else {
-                            e.key === 'ArrowRight' ? nextChapter() : previousChapter();
-                        }
-                    }
-                }
-            });
         }
         
         // Language Switching
@@ -1048,11 +1337,6 @@
             if (save) {
                 localStorage.setItem('oi_language', lang);
             }
-            
-            // Update chapter info if book is open
-            if (state.accessToken) {
-                updateChapterInfo();
-            }
         }
         
         // Currency Switching
@@ -1061,8 +1345,8 @@
             localStorage.setItem('oi_currency', currency);
             
             // Update UI
-            document.querySelectorAll('.currency-option').forEach(opt => {
-                opt.classList.toggle('active', opt.textContent.includes(currency));
+            document.querySelectorAll('.currency-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.includes(currency));
             });
             
             // Update price display
@@ -1072,9 +1356,6 @@
             document.querySelectorAll('.price-usd').forEach(el => {
                 el.style.display = currency === 'USD' ? 'inline' : 'none';
             });
-            
-            // Update PayPal currency
-            config.paypal.currency = currency;
         }
         
         // Payment Selection
@@ -1085,14 +1366,13 @@
             document.querySelectorAll('.payment-option').forEach(opt => {
                 const isSelected = opt.dataset.method === method;
                 opt.classList.toggle('selected', isSelected);
-                opt.querySelector('.fa-check-circle').style.display = isSelected ? 'block' : 'none';
             });
             
             // Enable checkout button
             document.getElementById('checkoutButton').disabled = false;
         }
         
-        // Process Payment (Fake/Demo Mode)
+        // Process Payment
         async function processPayment() {
             if (!state.paymentMethod) {
                 showError('Please select a payment method');
@@ -1104,11 +1384,33 @@
             button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
             
             try {
-                // Simulate payment processing delay
+                // Simulate payment processing
                 await new Promise(resolve => setTimeout(resolve, 2000));
                 
-                // Simulate successful payment
-                await simulatePaymentSuccess();
+                // Grant access
+                const tokenData = {
+                    method: state.paymentMethod,
+                    currency: state.currency,
+                    amount: config.prices[state.currency].current,
+                    transactionId: 'txn_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+                    purchaseDate: new Date().toISOString(),
+                    expiry: new Date().getTime() + config.tokenValidity,
+                    language: state.language
+                };
+                
+                const token = btoa(JSON.stringify(tokenData));
+                
+                // Save tokens
+                sessionStorage.setItem('bookAccess', token);
+                localStorage.setItem('bookAccessToken', token);
+                
+                // Show success
+                button.innerHTML = '<i class="fas fa-check"></i> Payment Successful!';
+                
+                // Redirect to book
+                setTimeout(() => {
+                    window.location.href = '/book.html';
+                }, 1500);
                 
             } catch (error) {
                 console.error('Payment error:', error);
@@ -1118,230 +1420,15 @@
             }
         }
         
-        // Simulate Payment Success (Demo Mode)
-        async function simulatePaymentSuccess() {
-            // Update current payment info
-            state.currentPayment = {
-                method: state.paymentMethod,
-                currency: state.currency,
-                amount: config.prices[state.currency].current
-            };
-            
-            // Show processing message
-            const button = document.getElementById('checkoutButton');
-            button.innerHTML = '<i class="fas fa-check"></i> Payment Successful!';
-            
-            // Grant access after a short delay
-            setTimeout(() => {
-                grantAccess();
-            }, 1000);
+        // Utility Functions
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         
-        // Stripe Payment
-        async function processStripePayment() {
-            const priceId = state.currency === 'SAR' ? 
-                config.stripe.products.book_sar : 
-                config.stripe.products.book_usd;
-            
-            const { error } = await stripe.redirectToCheckout({
-                lineItems: [{ price: priceId, quantity: 1 }],
-                mode: 'payment',
-                successUrl: window.location.origin + '?payment=success',
-                cancelUrl: window.location.origin + '?payment=cancelled',
-            });
-            
-            if (error) {
-                throw error;
-            }
+        function scrollToPrice() {
+            document.getElementById('pricingSection').scrollIntoView({ behavior: 'smooth' });
         }
         
-        // Apple Pay
-        async function processApplePayment() {
-            if (!window.PaymentRequest) {
-                throw new Error('Apple Pay not supported');
-            }
-            
-            const paymentRequest = new PaymentRequest([{
-                supportedMethods: 'https://apple.com/apple-pay',
-                data: {
-                    version: 3,
-                    merchantIdentifier: 'merchant.com.oi.thefadil',
-                    merchantCapabilities: ['supports3DS'],
-                    supportedNetworks: ['visa', 'masterCard', 'amex'],
-                    countryCode: state.currency === 'SAR' ? 'SA' : 'US',
-                }
-            }], {
-                total: {
-                    label: 'OI vs AI Book',
-                    amount: {
-                        currency: state.currency,
-                        value: config.prices[state.currency].current.toString()
-                    }
-                }
-            });
-            
-            const paymentResponse = await paymentRequest.show();
-            // Process payment response
-            await paymentResponse.complete('success');
-            grantAccess();
-        }
-        
-        // PayPal Payment
-        async function processPayPalPayment() {
-            // Simulate PayPal payment flow
-            // In production, integrate with PayPal SDK
-            setTimeout(() => {
-                grantAccess();
-            }, 2000);
-        }
-        
-        // Grant Access
-        function grantAccess() {
-            // Generate access token with payment info
-            const tokenData = {
-                method: state.currentPayment.method,
-                currency: state.currentPayment.currency,
-                amount: state.currentPayment.amount,
-                transactionId: 'txn_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
-                purchaseDate: new Date().toISOString(),
-                expiry: new Date().getTime() + config.tokenValidity,
-                language: state.currentLanguage
-            };
-            
-            const token = btoa(JSON.stringify(tokenData));
-            
-            // Save to both sessionStorage and localStorage
-            sessionStorage.setItem('bookAccess', token);
-            localStorage.setItem('bookAccessToken', token);
-            
-            state.accessToken = token;
-            
-            // Show success message and then show book content
-            showSuccessMessage();
-            
-            // Show book viewer after a short delay
-            setTimeout(() => {
-                showBookViewer();
-                loadBookContent();
-            }, 2000);
-        }
-        
-        // Generate Token
-        function generateToken() {
-            return 'oi_' + Math.random().toString(36).substr(2) + Date.now().toString(36);
-        }
-        
-        // Show Book Viewer
-        function showBookViewer() {
-            document.getElementById('mainContent').style.display = 'none';
-            document.getElementById('bookViewer').classList.add('active');
-        }
-        
-        // Load Book Content
-        async function loadBookContent() {
-            try {
-                // Load Arabic content
-                const arResponse = await fetch('/raw-arabic.html');
-                const arText = await arResponse.text();
-                state.bookContent.ar = parseBookContent(arText, 'ar');
-                
-                // Load English content
-                const enResponse = await fetch('/raw-english.html');
-                const enText = await enResponse.text();
-                state.bookContent.en = parseBookContent(enText, 'en');
-                
-                // Display first chapter
-                displayChapter(1);
-            } catch (error) {
-                console.error('Error loading book content:', error);
-                showError('Failed to load book content');
-            }
-        }
-        
-        // Parse Book Content
-        function parseBookContent(html, lang) {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const chapters = [];
-            
-            // Extract chapters based on structure
-            const chapterElements = doc.querySelectorAll('.chapter, h1, h2');
-            
-            chapterElements.forEach((element, index) => {
-                if (element.tagName === 'H1' || element.classList.contains('chapter-title')) {
-                    const title = element.textContent.trim();
-                    const content = [];
-                    
-                    let nextElement = element.nextElementSibling;
-                    while (nextElement && !nextElement.matches('h1, h2, .chapter-title')) {
-                        if (nextElement.textContent.trim()) {
-                            content.push(nextElement.outerHTML);
-                        }
-                        nextElement = nextElement.nextElementSibling;
-                    }
-                    
-                    chapters.push({
-                        number: chapters.length + 1,
-                        title: title,
-                        content: content.join('\n')
-                    });
-                }
-            });
-            
-            return chapters;
-        }
-        
-        // Display Chapter
-        function displayChapter(chapterNum) {
-            const bookContent = document.getElementById('bookContent');
-            const lang = state.language;
-            const chapter = state.bookContent[lang][chapterNum - 1];
-            
-            if (!chapter) {
-                bookContent.innerHTML = '<p>Chapter not found</p>';
-                return;
-            }
-            
-            bookContent.innerHTML = `
-                <div class="chapter fade-in">
-                    <h1 class="chapter-title">${chapter.title}</h1>
-                    <div class="chapter-content no-select">
-                        ${chapter.content}
-                    </div>
-                </div>
-            `;
-            
-            state.currentChapter = chapterNum;
-            updateChapterInfo();
-            
-            // Scroll to top
-            window.scrollTo(0, 0);
-        }
-        
-        // Navigation Functions
-        function previousChapter() {
-            if (state.currentChapter > 1) {
-                displayChapter(state.currentChapter - 1);
-            }
-        }
-        
-        function nextChapter() {
-            if (state.currentChapter < state.totalChapters) {
-                displayChapter(state.currentChapter + 1);
-            }
-        }
-        
-        // Update Chapter Info
-        function updateChapterInfo() {
-            const info = document.getElementById('chapterInfo');
-            if (state.language === 'ar') {
-                info.innerHTML = `<span class="arabic-text">الفصل ${state.currentChapter} من ${state.totalChapters}</span>`;
-            } else {
-                info.innerHTML = `<span class="english-text">Chapter ${state.currentChapter} of ${state.totalChapters}</span>`;
-            }
-        }
-        
-        // Hide Loading Screen
         function hideLoading() {
             setTimeout(() => {
                 const loadingScreen = document.getElementById('loadingScreen');
@@ -1352,105 +1439,30 @@
             }, 1000);
         }
         
-        // Show Error
         function showError(message) {
             // Create error notification
             const notification = document.createElement('div');
-            notification.className = 'error-notification';
-            notification.textContent = message;
             notification.style.cssText = `
                 position: fixed;
                 top: 100px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: var(--error-color);
+                background: #e74c3c;
                 color: white;
                 padding: 1rem 2rem;
-                border-radius: 10px;
+                border-radius: 100px;
                 z-index: 10000;
-                animation: fadeIn 0.3s ease;
+                animation: fadeInUp 0.3s ease;
+                box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
             `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.remove();
-            }, 3000);
-        }
-        
-        // Show Success Message
-        function showSuccessMessage() {
-            const message = state.language === 'ar' ? 
-                'تم الدفع بنجاح! سيتم توجيهك إلى الكتاب...' : 
-                'Payment successful! Redirecting to the book...';
-                
-            // Create success notification
-            const notification = document.createElement('div');
-            notification.className = 'success-notification';
             notification.textContent = message;
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: var(--success-color);
-                color: white;
-                padding: 1rem 2rem;
-                border-radius: 10px;
-                z-index: 10000;
-                animation: fadeIn 0.3s ease;
-            `;
             
             document.body.appendChild(notification);
             
             setTimeout(() => {
-                notification.remove();
+                notification.style.opacity = '0';
+                setTimeout(() => notification.remove(), 300);
             }, 3000);
-        }
-        
-        // Show Success Message
-        function showSuccessMessage() {
-            const message = state.language === 'ar' ? 
-                'تم الدفع بنجاح! مرحباً بك في الكتاب!' : 
-                'Payment successful! Welcome to the book!';
-                
-            // Create success notification
-            const notification = document.createElement('div');
-            notification.className = 'success-notification';
-            notification.textContent = message;
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: #28a745;
-                color: white;
-                padding: 1rem 2rem;
-                border-radius: 10px;
-                z-index: 10000;
-                animation: fadeIn 0.3s ease;
-                box-shadow: 0 4px 20px rgba(40, 167, 69, 0.3);
-            `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.remove();
-            }, 3000);
-        }
-        
-        // Handle URL parameters (for payment callbacks)
-        const urlParams = new URLSearchParams(window.location.search);
-        const paymentStatus = urlParams.get('payment');
-        
-        if (paymentStatus === 'success') {
-            grantAccess();
-            // Clean URL
-            window.history.replaceState({}, document.title, window.location.pathname);
-        } else if (paymentStatus === 'cancelled') {
-            showError('Payment was cancelled');
-            // Clean URL
-            window.history.replaceState({}, document.title, window.location.pathname);
         }
     </script>
 </body>
